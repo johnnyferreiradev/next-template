@@ -22,8 +22,13 @@ export default function Home() {
       </Text>
       <Text>Colors</Text>
 
-      {colorValueArray.map((color) => (
-        <Text color={color as keyof typeof TextColors} size="2xl" weight="bold">
+      {colorValueArray.map((color, index) => (
+        <Text
+          color={color as keyof typeof TextColors}
+          size="2xl"
+          weight="bold"
+          key={index}
+        >
           aA
         </Text>
       ))}

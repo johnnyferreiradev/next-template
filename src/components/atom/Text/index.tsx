@@ -39,15 +39,19 @@ export default function Text({
   transform = "normal-case",
   size = "base",
 }: TextProps) {
+  let customClassName = "text";
+
+  customClassName += ` ${TextSizes[size]}`;
+  customClassName += ` ${TextWeights[weight]}`;
+  customClassName += ` ${TextAligns[align]}`;
+  customClassName += ` ${TextColors[color]}`;
+  customClassName += ` ${TextDecorations[decoration]}`.trim();
+  customClassName += ` ${TextTansforms[transform]}`.trim();
+  customClassName += ` ${italic ? "italic" : "not-italic"}`;
+  customClassName += ` ${className || ""}`;
+
   return (
-    <TextElement
-      className={`text ${TextSizes[size]} ${TextWeights[weight]} ${
-        TextAligns[align]
-      } ${TextColors[color]} ${TextDecorations[decoration]} ${TextTansforms[transform]} ${
-        italic ? "italic" : "not-italic"
-      } ${className || ""}`.trim()}
-      element={element}
-    >
+    <TextElement className={customClassName} element={element}>
       {children}
     </TextElement>
   );

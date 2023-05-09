@@ -139,12 +139,3 @@ export interface TextProps {
   decoration?: keyof typeof TextDecorations;
   size?: keyof typeof TextSizes;
 }
-
-export interface StyledTextProps {
-  weight?: string;
-  color: string;
-  align?: string;
-  italic?: boolean;
-  transform?: string;
-  decoration?: string;
-}
