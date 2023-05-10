@@ -11,7 +11,9 @@ export default function Home() {
     <main className="p-16">
       <Checkbox>Checkbox</Checkbox>
 
-      <Card className="p-2">Opa</Card>
+      <Card className="p-2" color="grayscale400">
+        Opa
+      </Card>
 
       <Text size="2xl" element="h1" weight="bold">
         Hello World
