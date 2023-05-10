@@ -1,4 +1,5 @@
 import Text from "@/components/atom/Text";
+import Card from "@/components/atom/Card";
 
 import { TextColors } from "@/components/atom/Text/types";
 
@@ -7,6 +8,8 @@ export default function Home() {
 
   return (
     <main>
+      <Card className="p-2">Opa</Card>
+
       <Text size="2xl" element="h1" weight="bold">
         Hello World
       </Text>
