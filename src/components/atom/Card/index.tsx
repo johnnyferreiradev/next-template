@@ -3,20 +3,20 @@ import {
   CardColors,
   CardBorderColors,
   CardBoxShadows,
-} from "./types";
+} from './types';
 
 export default function Card({
-  className = "",
-  color = "grayscale100",
+  className = '',
+  color = 'grayscale100',
   withBorder = false,
-  borderColor = "grayscale200",
-  boxShadow = "shadow-none",
+  borderColor = 'grayscale200',
+  boxShadow = 'shadow-none',
   children,
 }: CardProps) {
-  let customClassName = "card";
+  let customClassName = 'card';
 
   customClassName += ` ${CardColors[color]}`;
-  customClassName += withBorder ? ` ${CardBorderColors[borderColor]}` : "";
+  customClassName += withBorder ? ` ${CardBorderColors[borderColor]}` : '';
   customClassName += ` ${CardBoxShadows[boxShadow]}`;
   customClassName += ` ${className}`;
 

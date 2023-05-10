@@ -1,4 +1,4 @@
-import Text from "@/components/atom/Text";
+import Text from '@/components/atom/Text';
 
 export default function Documentation() {
   return (

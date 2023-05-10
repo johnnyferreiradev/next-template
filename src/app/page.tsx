@@ -1,7 +1,7 @@
-import Text from "@/components/atom/Text";
-import Card from "@/components/atom/Card";
+import Text from '@/components/atom/Text';
+import Card from '@/components/atom/Card';
 
-import { TextColors } from "@/components/atom/Text/types";
+import { TextColors } from '@/components/atom/Text/types';
 
 export default function Home() {
   const colorValueArray = Object.keys(TextColors);
