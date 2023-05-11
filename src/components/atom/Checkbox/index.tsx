@@ -13,11 +13,11 @@ export default function Checkbox({
 }: CheckboxProps) {
   return (
     <label
-      className={`checkbox ${className} relative pl-6 cursor-pointer select-none flex items-center disabled:cursor-default group ${
+      className={`checkbox ${className} ${
         disabled ? 'disabled' : ''
-      }`}
+      }`.trim()}
     >
-      {children && <div className="content mt-0.5">{children}</div>}
+      {children && <div className="checkbox-content">{children}</div>}
       <input
         type="checkbox"
         checked={checked}
@@ -27,9 +27,9 @@ export default function Checkbox({
           }
         }}
         disabled={disabled}
-        className="absolute opacity-0 cursor-pointer h-0 w-0 peer"
+        className="checkbox-input"
       />
-      <span className="checkmark bg-[var(--primary-color-300)] group-hover:bg-[var(--primary-color-300)] group-[.disabled]:hover:bg- w-4 h-4"></span>
+      <span className="checkmark"></span>
     </label>
   );
 }

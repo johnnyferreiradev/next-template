@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --primary-color-100: #99f6e4;
-    --primary-color-200: #34d399;
-    --primary-color-300: #059669;
-    --primary-color-400: #065f46;
-    --primary-color-500: #022c22;
+    --primary-color-100: #1df7f4;
+    --primary-color-200: #08d9d6;
+    --primary-color-300: #06a8a5;
+    --primary-color-400: #065f5b;
+    --primary-color-500: #022c2c;
 
     --secondary-color-100: #f5d0fe;
     --secondary-color-200: #e879f9;

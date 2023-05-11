@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .checkbox {
+    @apply relative pl-7 cursor-pointer select-none flex items-center;
+  }
+
+  .checkmark {
+    @apply absolute top-0 left-0 h-5 w-5 rounded-sm flex items-center justify-center;
+    @apply bg-[var(--light-color)] border border-[var(--grayscale-color-200)];
+    @apply transition-all;
+  }
+
+  .checkmark::after {
+    @apply content-[''] relative hidden -top-0.5 h-3 w-2 border-[var(--light-color)];
+    @apply border-t-0 border-r-2 border-b-2 border-l-0 rotate-45;
+  }
+
+  .checkbox:hover .checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .checkbox.disabled {
+    @apply cursor-default;
+  }
+
+  .checkbox.disabled:hover .checkmark {
+    @apply bg-[var(--light-color)];
+  }
+
+  .checkbox.disabled .checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .checkbox.disabled:hover .checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .checkbox.disabled .checkbox-input:checked ~ .checkmark {
+    @apply opacity-25;
+  }
+
+  .checkbox-content {
+    @apply leading-5;
+  }
+
+  .checkbox-input {
+    @apply absolute opacity-0 cursor-pointer h-0 w-0;
+  }
+
+  .checkbox-input:checked ~ .checkmark {
+    @apply bg-[var(--primary-color-200)] border-[var(--primary-color-200)];
+  }
+
+  .checkbox:hover .checkbox-input:checked ~ .checkmark {
+    @apply bg-[var(--primary-color-200)] border-[var(--primary-color-200)];
+  }
+
+  .checkbox-input:checked ~ .checkmark::after {
+    @apply block;
+  }
+}
