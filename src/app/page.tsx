@@ -31,7 +31,7 @@ export default function Home() {
       >
         Radio button
       </Radio>
-      <SwitchButton id="switch" disabled>Switch Button</SwitchButton>
+      <SwitchButton id="switch">Switch Button</SwitchButton>
 
       <Card className="p-2" color="grayscale400">
         Opa
