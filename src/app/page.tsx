@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { User } from '@phosphor-icons/react';
 
 import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
@@ -8,6 +9,7 @@ import Checkbox from '@/components/atom/Checkbox';
 import Radio from '@/components/atom/Radio';
 import SwitchButton from '@/components/atom/SwitchButton';
 import Collapse from '@/components/atom/Collapse';
+import Icon from '@/components/atom/Icon';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -18,6 +20,10 @@ export default function Home() {
 
   return (
     <main className="p-16">
+      <Icon color="primary200" className="mb-8">
+        <User />
+      </Icon>
+
       <Collapse
         collapseHeader="Opa"
         isOpen={checked}
