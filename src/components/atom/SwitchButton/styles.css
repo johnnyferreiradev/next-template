@@ -17,7 +17,7 @@
 
   .switch-button__input + .switch-button__label {
     @apply block relative cursor-pointer outline-none select-none;
-    @apply p-0.5 w-8 h-5 bg-[var(--grayscale-color-100)] rounded-full transition-all;
+    @apply p-0.5 w-8 h-5 bg-[var(--grayscale-color-200)] rounded-full transition-all;
   }
 
   .switch-button__input + .switch-button__label::after {
