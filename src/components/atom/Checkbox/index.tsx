@@ -13,11 +13,9 @@ export default function Checkbox({
 }: CheckboxProps) {
   return (
     <label
-      className={`checkbox ${className} ${
-        disabled ? 'disabled' : ''
-      }`.trim()}
+      className={`checkbox ${className} ${disabled ? 'disabled' : ''}`.trim()}
     >
-      {children && <div className="checkbox-content">{children}</div>}
+      {children && <div className="checkbox__content">{children}</div>}
       <input
         type="checkbox"
         checked={checked}
@@ -27,9 +25,9 @@ export default function Checkbox({
           }
         }}
         disabled={disabled}
-        className="checkbox-input"
+        className="checkbox__input"
       />
-      <span className="checkmark"></span>
+      <span className="checkbox__checkmark"></span>
     </label>
   );
 }

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
 import Checkbox from '@/components/atom/Checkbox';
+import Radio from '@/components/atom/Radio';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -22,6 +23,13 @@ export default function Home() {
       >
         Checkbox - aqui vai um texto bem grande dentro do meu checkbox
       </Checkbox>
+      <Radio
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+        className="mb-8"
+      >
+        Radio button
+      </Radio>
 
       <Card className="p-2" color="grayscale400">
         Opa

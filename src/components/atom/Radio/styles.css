@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .radio {
+    @apply relative pl-7 cursor-pointer select-none flex items-center;
+  }
+
+  .radio__checkmark {
+    @apply absolute top-0 left-0 h-5 w-5 rounded-full flex items-center justify-center;
+    @apply bg-[var(--light-color)] border border-[var(--grayscale-color-200)];
+    @apply transition-all;
+  }
+
+  .radio__checkmark::after {
+    @apply content-[''] relative hidden h-2 w-2 bg-[var(--light-color)];
+    @apply rounded;
+  }
+
+  .radio:hover .radio__checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .radio.disabled {
+    @apply cursor-default;
+  }
+
+  .radio.disabled:hover .radio__checkmark {
+    @apply bg-[var(--light-color)];
+  }
+
+  .radio.disabled .radio__checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .radio.disabled:hover .radio__checkmark {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .radio.disabled .radio__input:checked ~ .radio__checkmark {
+    @apply opacity-25;
+  }
+
+  .radio__content {
+    @apply leading-5;
+  }
+
+  .radio__input {
+    @apply absolute opacity-0 cursor-pointer h-0 w-0;
+  }
+
+  .radio__input:checked ~ .radio__checkmark {
+    @apply bg-[var(--primary-color-200)] border-[var(--primary-color-200)];
+  }
+
+  .radio:hover .radio__input:checked ~ .radio__checkmark {
+    @apply bg-[var(--primary-color-200)] border-[var(--primary-color-200)];
+  }
+
+  .radio__input:checked ~ .radio__checkmark::after {
+    @apply block;
+  }
+}
