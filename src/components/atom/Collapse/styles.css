@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .collapse-component {
+    @apply w-full;
+  }
+
+  .collapse-component__header {
+    @apply w-full border-b border-[var(--grayscale-color-200)] cursor-pointer;
+  }
+
+  .collapse-component__content {
+    @apply overflow-hidden transition-all;
+  }
+
+  .collapse-component__content > div {
+    @apply py-4;
+  }
+}
