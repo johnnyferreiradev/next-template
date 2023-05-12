@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .switch-button {
+    @apply flex items-center -mt-1;
+  }
+
+  .switch-button__content {
+    @apply ml-2;
+  }
+
+  .switch-button__input {
+    @apply absolute opacity-0 cursor-pointer h-0 w-0;
+  }
+
+  .switch-button__input + .switch-button__label {
+    @apply block relative cursor-pointer outline-none select-none;
+    @apply p-0.5 w-8 h-5 bg-[var(--grayscale-color-100)] rounded-full transition-all;
+  }
+
+  .switch-button__input + .switch-button__label::after {
+    @apply block absolute content-[''] top-0.5 left-0.5 bottom-0.5;
+  }
+
+  .switch-button__input + .switch-button__label::after {
+    @apply w-4 right-0.5 bg-[var(--light-color)] rounded-full transition-all shadow-sm;
+  }
+
+  .switch-button__input:checked + .switch-button__label {
+    @apply bg-[var(--primary-color-200)];
+  }
+
+  .switch-button__input:checked + .switch-button__label::after {
+    @apply translate-x-3;
+  }
+
+  .switch-button.disabled .switch-button__input + .switch-button__label {
+    @apply opacity-60 cursor-default;
+  }
+
+  .switch-button.disabled .switch-button__input:checked + .switch-button__label {
+    @apply opacity-25 cursor-default;
+  }
+
+  .switch-button .switch-button__content_label {
+    @apply cursor-pointer;
+  }
+
+  .switch-button.disabled .switch-button__content_label {
+    @apply cursor-default;
+  }
+}

@@ -6,6 +6,7 @@ import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
 import Checkbox from '@/components/atom/Checkbox';
 import Radio from '@/components/atom/Radio';
+import SwitchButton from '@/components/atom/SwitchButton';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -30,6 +31,7 @@ export default function Home() {
       >
         Radio button
       </Radio>
+      <SwitchButton id="switch" disabled>Switch Button</SwitchButton>
 
       <Card className="p-2" color="grayscale400">
         Opa
