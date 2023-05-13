@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tag {
+    @apply inline-block rounded-sm text-sm w-max py-0.5 px-1;
+    @apply bg-[var(--grayscale-color-200)] text-[var(--dark-color)];
+  }
+}

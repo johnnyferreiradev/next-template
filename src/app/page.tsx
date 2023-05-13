@@ -11,6 +11,7 @@ import SwitchButton from '@/components/atom/SwitchButton';
 import Collapse from '@/components/atom/Collapse';
 import Icon from '@/components/atom/Icon';
 import Range from '@/components/atom/Range';
+import Tag from '@/components/atom/Tag';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -22,6 +23,8 @@ export default function Home() {
 
   return (
     <main className="p-16">
+      <Tag className="mb-8">Minha tag</Tag>
+
       <Range
         min={0}
         max={100}
