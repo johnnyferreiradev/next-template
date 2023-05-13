@@ -27,7 +27,6 @@
     @apply h-6;
   }
 
-
   .range.large .thumb {
     @apply h-6 w-8 rounded-xl border-none left-[-1px];
   }
