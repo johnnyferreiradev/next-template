@@ -5,7 +5,7 @@ import './styles.css';
 export default function Icon({
   children,
   color = 'darkColor',
-  className,
+  className = '',
 }: IconProps) {
   return (
     <div className={`icon ${IconColors[color]} ${className}`.trim()}>

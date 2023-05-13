@@ -10,6 +10,7 @@ import Radio from '@/components/atom/Radio';
 import SwitchButton from '@/components/atom/SwitchButton';
 import Collapse from '@/components/atom/Collapse';
 import Icon from '@/components/atom/Icon';
+import Range from '@/components/atom/Range';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -17,9 +18,23 @@ export default function Home() {
   const colorValueArray = Object.keys(TextColors);
 
   const [checked, setChecked] = useState(false);
+  const [values, setValues] = useState<number[]>([50]);
 
   return (
     <main className="p-16">
+      <Range
+        min={0}
+        max={100}
+        onChange={(values) => setValues(values)}
+        values={values}
+        type="large"
+        icon={
+          <Icon color="lightColor">
+            <User />
+          </Icon>
+        }
+      />
+
       <Icon color="primary200" className="mb-8">
         <User />
       </Icon>
