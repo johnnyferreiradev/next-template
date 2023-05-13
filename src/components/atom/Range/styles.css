@@ -7,27 +7,27 @@
     @apply flex justify-center flex-wrap w-full rounded-3xl;
   }
 
-  .range .outside-track {
+  .range .range__outside-track {
     @apply h-6 flex w-full;
   }
 
-  .range .inside-track {
+  .range .range__inside-track {
     @apply h-2 w-full rounded-full self-center;
   }
 
-  .range .thumb {
+  .range .range__thumb {
     @apply h-4 w-4 rounded-full flex justify-center items-center border outline-none;
   }
 
-  .range.large .outside-track {
+  .range.large .range__outside-track {
     @apply h-8;
   }
 
-  .range.large .inside-track {
+  .range.large .range__inside-track {
     @apply h-6;
   }
 
-  .range.large .thumb {
+  .range.large .range__thumb {
     @apply h-6 w-8 rounded-xl border-none left-[-1px];
   }
 }

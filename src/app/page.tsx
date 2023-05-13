@@ -12,6 +12,7 @@ import Collapse from '@/components/atom/Collapse';
 import Icon from '@/components/atom/Icon';
 import Range from '@/components/atom/Range';
 import Tag from '@/components/atom/Tag';
+import Tooltip from '@/components/atom/Tooltip';
 
 import { TextColors } from '@/components/atom/Text/types';
 
@@ -23,6 +24,10 @@ export default function Home() {
 
   return (
     <main className="p-16">
+      <Tooltip content="My message" id="tooltip-1" className="mb-8">
+        Tooltip
+      </Tooltip>
+
       <Tag className="mb-8">Minha tag</Tag>
 
       <Range

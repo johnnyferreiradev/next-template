@@ -33,14 +33,14 @@ export default function Range({
             <div
               onMouseDown={props.onMouseDown}
               onTouchStart={props.onTouchStart}
-              className="outside-track"
+              className="range__outside-track"
               style={{
                 ...props.style,
               }}
             >
               <div
                 ref={props.ref}
-                className="inside-track"
+                className="range__inside-track"
                 style={{
                   background: getTrackBackground({
                     values: values,
@@ -61,7 +61,7 @@ export default function Range({
             <div
               {...props}
               key={props.key}
-              className="thumb"
+              className="range__thumb"
               style={{
                 ...props.style,
                 backgroundColor: themeContext.theme.colors.primary200,
