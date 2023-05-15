@@ -45,8 +45,8 @@ export default function Text({
   customClassName += ` ${TextWeights[weight]}`;
   customClassName += ` ${TextAligns[align]}`;
   customClassName += ` ${TextColors[color]}`;
-  customClassName += ` ${TextDecorations[decoration]}`.trim();
-  customClassName += ` ${TextTansforms[transform]}`.trim();
+  customClassName += ` ${TextDecorations[decoration]}`;
+  customClassName += ` ${TextTansforms[transform]}`;
   customClassName += ` ${italic ? 'italic' : 'not-italic'}`;
   customClassName += ` ${className || ''}`;
 

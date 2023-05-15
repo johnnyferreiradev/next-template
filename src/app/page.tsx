@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { User } from '@phosphor-icons/react';
+import { useTheme } from 'next-themes';
 
 import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
@@ -19,11 +20,18 @@ import { TextColors } from '@/components/atom/Text/types';
 export default function Home() {
   const colorValueArray = Object.keys(TextColors);
 
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState<number[]>([50]);
 
+  const handleChangePrimaryColor = () => {
+    document.documentElement.style.setProperty('--primary-color-200', 'red');
+  };
+
   return (
-    <main className="p-16">
+    <main className="p-16 dark:bg-[var(--grayscale-color-900)]">
       <Tooltip content="My message" id="tooltip-1" className="mb-8">
         Tooltip
       </Tooltip>
@@ -41,6 +49,7 @@ export default function Home() {
             <User />
           </Icon>
         }
+        className="mb-8"
       />
 
       <Icon color="primary200" className="mb-8">
@@ -58,7 +67,16 @@ export default function Home() {
 
       <Checkbox
         checked={checked}
-        onChange={() => setChecked(!checked)}
+        onChange={() => {
+          handleChangePrimaryColor();
+          setChecked(!checked);
+
+          if (theme == 'dark') {
+            setTheme('light');
+            return;
+          }
+          setTheme('dark');
+        }}
         className="mb-8"
       >
         Checkbox - aqui vai um texto bem grande dentro do meu checkbox
