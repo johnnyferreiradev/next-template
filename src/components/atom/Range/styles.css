@@ -4,7 +4,7 @@
 
 @layer components {
   .range {
-    @apply flex justify-center flex-wrap w-full rounded-3xl;
+    @apply flex justify-center flex-wrap w-full rounded-3xl animate-fade-in;
   }
 
   .range .range__outside-track {
