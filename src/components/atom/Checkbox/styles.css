@@ -9,8 +9,8 @@
 
   .checkbox__checkmark {
     @apply absolute top-0 left-0 h-5 w-5 rounded-sm flex items-center justify-center;
-    @apply bg-[var(--light-color)] border border-[var(--grayscale-color-200)];
-    @apply transition-all;
+    @apply border border-[var(--grayscale-color-200)];
+    @apply transition-all dark:border-[var(--grayscale-color-800)];
   }
 
   .checkbox__checkmark::after {
@@ -19,7 +19,7 @@
   }
 
   .checkbox:hover .checkbox__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .checkbox.disabled {
@@ -27,19 +27,19 @@
   }
 
   .checkbox.disabled:hover .checkbox__checkmark {
-    @apply bg-[var(--light-color)];
+    @apply bg-[var(--light-color)] dark:bg-[var(--dark-color)];
   }
 
   .checkbox.disabled .checkbox__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .checkbox.disabled:hover .checkbox__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .checkbox.disabled .checkbox__input:checked ~ .checkbox__checkmark {
-    @apply opacity-25;
+    @apply opacity-50 bg-[var(--primary-color-200)];
   }
 
   .checkbox__content {

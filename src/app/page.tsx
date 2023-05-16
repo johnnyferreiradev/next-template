@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <main className="p-16 dark:bg-[var(--grayscale-color-900)]">
+    <main className="p-16 dark:bg-[var(--dark-color)]">
       <Tooltip content="My message" id="tooltip-1" className="mb-8">
         Tooltip
       </Tooltip>
@@ -81,6 +81,12 @@ export default function Home() {
       >
         Checkbox - aqui vai um texto bem grande dentro do meu checkbox
       </Checkbox>
+      <Checkbox className="mb-8" disabled>
+        Checkbox
+      </Checkbox>
+      <Checkbox className="mb-8" checked disabled>
+        Checkbox
+      </Checkbox>
       <Radio
         checked={checked}
         onChange={() => setChecked(!checked)}
@@ -92,7 +98,7 @@ export default function Home() {
         Switch Button
       </SwitchButton>
 
-      <Card className="p-2" color="grayscale400">
+      <Card className="p-2" color="grayscale200">
         Opa
       </Card>
 

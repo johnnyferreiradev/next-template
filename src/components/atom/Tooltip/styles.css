@@ -13,6 +13,6 @@
 
   .react-tooltip {
     @apply rounded-lg animate-fade-in;
-    @apply bg-[var(--dark-color)] text-[var(--light-color)];
+    @apply bg-[var(--grayscale-color-900)] text-[var(--light-color)];
   }
 }

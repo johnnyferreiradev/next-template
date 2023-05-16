@@ -9,8 +9,8 @@
 
   .radio__checkmark {
     @apply absolute top-0 left-0 h-5 w-5 rounded-full flex items-center justify-center;
-    @apply bg-[var(--light-color)] border border-[var(--grayscale-color-200)];
-    @apply transition-all;
+    @apply border border-[var(--grayscale-color-200)];
+    @apply transition-all dark:border-[var(--grayscale-color-800)];
   }
 
   .radio__checkmark::after {
@@ -19,7 +19,7 @@
   }
 
   .radio:hover .radio__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .radio.disabled {
@@ -27,15 +27,15 @@
   }
 
   .radio.disabled:hover .radio__checkmark {
-    @apply bg-[var(--light-color)];
+    @apply bg-[var(--light-color)] dark:bg-[var(--dark-color)];
   }
 
   .radio.disabled .radio__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-950)];
   }
 
   .radio.disabled:hover .radio__checkmark {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-950)];
   }
 
   .radio.disabled .radio__input:checked ~ .radio__checkmark {
