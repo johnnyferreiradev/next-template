@@ -87,6 +87,7 @@ export default function Home() {
       <Checkbox className="mb-8" checked disabled>
         Checkbox
       </Checkbox>
+
       <Radio
         checked={checked}
         onChange={() => setChecked(!checked)}
@@ -94,6 +95,18 @@ export default function Home() {
       >
         Radio button
       </Radio>
+      <Radio onChange={() => setChecked(!checked)} className="mb-8" disabled>
+        Radio button
+      </Radio>
+      <Radio
+        onChange={() => setChecked(!checked)}
+        className="mb-8"
+        checked
+        disabled
+      >
+        Radio button
+      </Radio>
+
       <SwitchButton id="switch" className="mb-8">
         Switch Button
       </SwitchButton>

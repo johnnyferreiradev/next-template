@@ -39,7 +39,7 @@
   }
 
   .radio.disabled .radio__input:checked ~ .radio__checkmark {
-    @apply opacity-25;
+    @apply opacity-50 bg-[var(--primary-color-200)];
   }
 
   .radio__content {
