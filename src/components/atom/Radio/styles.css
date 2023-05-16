@@ -31,11 +31,11 @@
   }
 
   .radio.disabled .radio__checkmark {
-    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-950)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .radio.disabled:hover .radio__checkmark {
-    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-950)];
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-900)];
   }
 
   .radio.disabled .radio__input:checked ~ .radio__checkmark {

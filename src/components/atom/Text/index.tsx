@@ -1,3 +1,5 @@
+import { getProportionalDarkColor } from '@/utils/theme';
+
 import {
   TextProps,
   TextWeights,
@@ -44,7 +46,9 @@ export default function Text({
   customClassName += ` ${TextSizes[size]}`;
   customClassName += ` ${TextWeights[weight]}`;
   customClassName += ` ${TextAligns[align]}`;
-  customClassName += ` ${TextColors[color]}`;
+  customClassName += ` ${
+    TextColors[getProportionalDarkColor(color) as keyof typeof TextColors]
+  }`;
   customClassName += ` ${TextDecorations[decoration]}`;
   customClassName += ` ${TextTansforms[transform]}`;
   customClassName += ` ${italic ? 'italic' : 'not-italic'}`;
