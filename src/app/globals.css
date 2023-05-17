@@ -2,68 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --primary-color-100: #1df7f4;
-    --primary-color-200: #08d9d6;
-    --primary-color-300: #06a8a5;
-    --primary-color-400: #065f5b;
-    --primary-color-500: #022c2c;
+:root {
+  --primary-color-100: #1df7f4;
+  --primary-color-200: #08d9d6;
+  --primary-color-300: #06a8a5;
+  --primary-color-400: #065f5b;
+  --primary-color-500: #022c2c;
 
-    --secondary-color-100: #f5d0fe;
-    --secondary-color-200: #e879f9;
-    --secondary-color-300: #c026d3;
-    --secondary-color-400: #86198f;
-    --secondary-color-500: #4a044e;
+  --secondary-color-100: #f5d0fe;
+  --secondary-color-200: #e879f9;
+  --secondary-color-300: #c026d3;
+  --secondary-color-400: #86198f;
+  --secondary-color-500: #4a044e;
 
-    --tertiary-color-100: #fef08a;
-    --tertiary-color-200: #facc15;
-    --tertiary-color-300: #ca8a04;
-    --tertiary-color-400: #854d0e;
-    --tertiary-color-500: #422006;
+  --tertiary-color-100: #fef08a;
+  --tertiary-color-200: #facc15;
+  --tertiary-color-300: #ca8a04;
+  --tertiary-color-400: #854d0e;
+  --tertiary-color-500: #422006;
 
-    --quaternary-color-100: #bfdbfe;
-    --quaternary-color-200: #60a5fa;
-    --quaternary-color-300: #2563eb;
-    --quaternary-color-400: #1e40af;
-    --quaternary-color-500: #172554;
+  --quaternary-color-100: #bfdbfe;
+  --quaternary-color-200: #60a5fa;
+  --quaternary-color-300: #2563eb;
+  --quaternary-color-400: #1e40af;
+  --quaternary-color-500: #172554;
 
-    --quinary-color-100: #fed7aa;
-    --quinary-color-200: #fb923c;
-    --quinary-color-300: #ea580c;
-    --quinary-color-400: #9a3412;
-    --quinary-color-500: #431407;
+  --quinary-color-100: #fed7aa;
+  --quinary-color-200: #fb923c;
+  --quinary-color-300: #ea580c;
+  --quinary-color-400: #9a3412;
+  --quinary-color-500: #431407;
 
-    --grayscale-color-100: #f1f5f9;
-    --grayscale-color-200: #e2e8f0;
-    --grayscale-color-300: #cbd5e1;
-    --grayscale-color-400: #94a3b8;
-    --grayscale-color-500: #64748b;
-    --grayscale-color-600: #475569;
-    --grayscale-color-700: #334155;
-    --grayscale-color-800: #1e293b;
-    --grayscale-color-900: #0f172a;
-    --grayscale-color-950: #020617;
+  --grayscale-color-100: #f1f5f9;
+  --grayscale-color-200: #e2e8f0;
+  --grayscale-color-300: #cbd5e1;
+  --grayscale-color-400: #94a3b8;
+  --grayscale-color-500: #64748b;
+  --grayscale-color-600: #475569;
+  --grayscale-color-700: #334155;
+  --grayscale-color-800: #1e293b;
+  --grayscale-color-900: #0f172a;
+  --grayscale-color-950: #020617;
 
-    --success-color-100: #bbf7d0;
-    --success-color-200: #4ade80;
-    --success-color-300: #16a34a;
-    --success-color-400: #166534;
-    --success-color-500: #1a2e05;
+  --success-color-100: #bbf7d0;
+  --success-color-200: #4ade80;
+  --success-color-300: #16a34a;
+  --success-color-400: #166534;
+  --success-color-500: #1a2e05;
 
-    --failure-color-100: #fecaca;
-    --failure-color-200: #f87171;
-    --failure-color-300: #dc2626;
-    --failure-color-400: #991b1b;
-    --failure-color-500: #450a0a;
+  --failure-color-100: #fecaca;
+  --failure-color-200: #f87171;
+  --failure-color-300: #dc2626;
+  --failure-color-400: #991b1b;
+  --failure-color-500: #450a0a;
 
-    --warning-color-100: #fde68a;
-    --warning-color-200: #fbbf24;
-    --warning-color-300: #d97706;
-    --warning-color-400: #92400e;
-    --warning-color-500: #451a03;
+  --warning-color-100: #fde68a;
+  --warning-color-200: #fbbf24;
+  --warning-color-300: #d97706;
+  --warning-color-400: #92400e;
+  --warning-color-500: #451a03;
 
-    --dark-color: #01030c;
-    --light-color: #ffffff;
-  }
+  --dark-color: #01030c;
+  --light-color: #ffffff;
 }

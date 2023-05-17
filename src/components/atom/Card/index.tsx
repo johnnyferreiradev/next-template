@@ -1,5 +1,3 @@
-import { useTheme } from '@/hooks/useTheme';
-
 import { getProportionalDarkColor } from '@/utils/theme';
 
 import {
@@ -17,15 +15,13 @@ export default function Card({
   boxShadow = 'shadow-none',
   children,
 }: CardProps) {
-  const theme = useTheme();
+  const initialColor = CardColors[color];
+  const proportionalColor =
+    CardColors[getProportionalDarkColor(color) as keyof typeof CardColors];
 
   let customClassName = 'card';
+  customClassName = ` ${initialColor} dark:${proportionalColor}`;
 
-  customClassName += ` ${
-    theme === 'dark'
-      ? CardColors[getProportionalDarkColor(color) as keyof typeof CardColors]
-      : CardColors[color]
-  }`;
   customClassName += withBorder ? ` ${CardBorderColors[borderColor]}` : '';
   customClassName += ` ${CardBoxShadows[boxShadow]}`;
   customClassName += ` ${className}`;

@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text.text__primary100 {
+    @apply text-[var(--primary-color-100)] dark:text-[var(--primary-color-100)];
+  }
+  .text.text__primary200 {
+    @apply text-[var(--primary-color-200)] dark:text-[var(--primary-color-200)];
+  }
+  .text.text__primary300 {
+    @apply text-[var(--primary-color-300)] dark:text-[var(--primary-color-300)];
+  }
+  .text.text__primary400 {
+    @apply text-[var(--primary-color-400)] dark:text-[var(--primary-color-400)];
+  }
+  .text.text__primary500 {
+    @apply text-[var(--primary-color-500)] dark:text-[var(--primary-color-500)];
+  }
+
+  .text.text__secondary100 {
+    @apply text-[var(--secondary-color-100)] dark:text-[var(--secondary-color-100)];
+  }
+  .text.text__secondary200 {
+    @apply text-[var(--secondary-color-200)] dark:text-[var(--secondary-color-200)];
+  }
+  .text.text__secondary300 {
+    @apply text-[var(--secondary-color-300)] dark:text-[var(--secondary-color-300)];
+  }
+  .text.text__secondary400 {
+    @apply text-[var(--secondary-color-400)] dark:text-[var(--secondary-color-400)];
+  }
+  .text.text__secondary500 {
+    @apply text-[var(--secondary-color-500)] dark:text-[var(--secondary-color-500)];
+  }
+
+  .text.text__tertiary100 {
+    @apply text-[var(--tertiary-color-100)] dark:text-[var(--tertiary-color-100)];
+  }
+  .text.text__tertiary200 {
+    @apply text-[var(--tertiary-color-200)] dark:text-[var(--tertiary-color-200)];
+  }
+  .text.text__tertiary300 {
+    @apply text-[var(--tertiary-color-300)] dark:text-[var(--tertiary-color-300)];
+  }
+  .text.text__tertiary400 {
+    @apply text-[var(--tertiary-color-400)] dark:text-[var(--tertiary-color-400)];
+  }
+  .text.text__tertiary500 {
+    @apply text-[var(--tertiary-color-500)] dark:text-[var(--tertiary-color-500)];
+  }
+
+  .text.text__quaternary100 {
+    @apply text-[var(--quaternary-color-100)] dark:text-[var(--quaternary-color-100)];
+  }
+  .text.text__quaternary200 {
+    @apply text-[var(--quaternary-color-200)] dark:text-[var(--quaternary-color-200)];
+  }
+  .text.text__quaternary300 {
+    @apply text-[var(--quaternary-color-300)] dark:text-[var(--quaternary-color-300)];
+  }
+  .text.text__quaternary400 {
+    @apply text-[var(--quaternary-color-400)] dark:text-[var(--quaternary-color-400)];
+  }
+  .text.text__quaternary500 {
+    @apply text-[var(--quaternary-color-500)] dark:text-[var(--quaternary-color-500)];
+  }
+
+  .text.text__quinary100 {
+    @apply text-[var(--quinary-color-100)] dark:text-[var(--quinary-color-100)];
+  }
+  .text.text__quinary200 {
+    @apply text-[var(--quinary-color-200)] dark:text-[var(--quinary-color-200)];
+  }
+  .text.text__quinary300 {
+    @apply text-[var(--quinary-color-300)] dark:text-[var(--quinary-color-300)];
+  }
+  .text.text__quinary400 {
+    @apply text-[var(--quinary-color-400)] dark:text-[var(--quinary-color-400)];
+  }
+  .text.text__quinary500 {
+    @apply text-[var(--quinary-color-500)] dark:text-[var(--quinary-color-500)];
+  }
+
+  .text.text__grayscale100 {
+    @apply text-[var(--grayscale-color-100)] dark:text-[var(--grayscale-color-950)];
+  }
+  .text.text__grayscale200 {
+    @apply text-[var(--grayscale-color-200)] dark:text-[var(--grayscale-color-900)];
+  }
+  .text.text__grayscale300 {
+    @apply text-[var(--grayscale-color-300)] dark:text-[var(--grayscale-color-800)];
+  }
+  .text.text__grayscale400 {
+    @apply text-[var(--grayscale-color-400)] dark:text-[var(--grayscale-color-700)];
+  }
+  .text.text__grayscale500 {
+    @apply text-[var(--grayscale-color-500)] dark:text-[var(--grayscale-color-600)];
+  }
+  .text.text__grayscale600 {
+    @apply text-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-500)];
+  }
+  .text.text__grayscale700 {
+    @apply text-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)];
+  }
+  .text.text__grayscale800 {
+    @apply text-[var(--grayscale-color-800)] dark:text-[var(--grayscale-color-300)];
+  }
+  .text.text__grayscale900 {
+    @apply text-[var(--grayscale-color-900)] dark:text-[var(--grayscale-color-200)];
+  }
+  .text.text__grayscale950 {
+    @apply text-[var(--grayscale-color-950)] dark:text-[var(--grayscale-color-100)];
+  }
+
+  .text.text__success100 {
+    @apply text-[var(--success-color-100)] dark:text-[var(--success-color-100)];
+  }
+  .text.text__success200 {
+    @apply text-[var(--success-color-200)] dark:text-[var(--success-color-200)];
+  }
+  .text.text__success300 {
+    @apply text-[var(--success-color-300)] dark:text-[var(--success-color-300)];
+  }
+  .text.text__success400 {
+    @apply text-[var(--success-color-400)] dark:text-[var(--success-color-400)];
+  }
+  .text.text__success500 {
+    @apply text-[var(--success-color-500)] dark:text-[var(--success-color-500)];
+  }
+
+  .text.text__failure100 {
+    @apply text-[var(--failure-color-100)] dark:text-[var(--failure-color-100)];
+  }
+  .text.text__failure200 {
+    @apply text-[var(--failure-color-200)] dark:text-[var(--failure-color-200)];
+  }
+  .text.text__failure300 {
+    @apply text-[var(--failure-color-300)] dark:text-[var(--failure-color-300)];
+  }
+  .text.text__failure400 {
+    @apply text-[var(--failure-color-400)] dark:text-[var(--failure-color-400)];
+  }
+  .text.text__failure500 {
+    @apply text-[var(--failure-color-500)] dark:text-[var(--failure-color-500)];
+  }
+
+  .text.text__warning100 {
+    @apply text-[var(--warning-color-100)] dark:text-[var(--warning-color-100)];
+  }
+  .text.text__warning200 {
+    @apply text-[var(--warning-color-200)] dark:text-[var(--warning-color-200)];
+  }
+  .text.text__warning300 {
+    @apply text-[var(--warning-color-300)] dark:text-[var(--warning-color-300)];
+  }
+  .text.text__warning400 {
+    @apply text-[var(--warning-color-400)] dark:text-[var(--warning-color-400)];
+  }
+  .text.text__warning500 {
+    @apply text-[var(--warning-color-500)] dark:text-[var(--warning-color-500)];
+  }
+
+  .text.text__darkColor {
+    @apply text-[var(--dark-color)] dark:text-[var(--light-color)];
+  }
+  .text.text__lightColor {
+    @apply text-[var(--light-color)] dark:text-[var(--dark-color)];
+  }
+}
