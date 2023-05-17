@@ -1,11 +1,6 @@
-import { getProportionalDarkColor } from '@/utils/theme';
+import { CardProps, CardBoxShadows } from './types';
 
-import {
-  CardProps,
-  CardColors,
-  CardBorderColors,
-  CardBoxShadows,
-} from './types';
+import './styles.css';
 
 export default function Card({
   className = '',
@@ -15,14 +10,9 @@ export default function Card({
   boxShadow = 'shadow-none',
   children,
 }: CardProps) {
-  const initialColor = CardColors[color];
-  const proportionalColor =
-    CardColors[getProportionalDarkColor(color) as keyof typeof CardColors];
-
   let customClassName = 'card';
-  customClassName = ` ${initialColor} dark:${proportionalColor}`;
-
-  customClassName += withBorder ? ` ${CardBorderColors[borderColor]}` : '';
+  customClassName += ` card__${color}`;
+  customClassName += withBorder ? ` card-border__${borderColor}` : '';
   customClassName += ` ${CardBoxShadows[boxShadow]}`;
   customClassName += ` ${className}`;
 

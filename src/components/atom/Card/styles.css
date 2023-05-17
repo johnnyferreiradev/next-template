@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card.card__primary100 {
+    @apply bg-[var(--primary-color-100)] dark:bg-[var(--primary-color-100)];
+  }
+  .card.card__primary200 {
+    @apply bg-[var(--primary-color-200)] dark:bg-[var(--primary-color-200)];
+  }
+  .card.card__primary300 {
+    @apply bg-[var(--primary-color-300)] dark:bg-[var(--primary-color-300)];
+  }
+  .card.card__primary400 {
+    @apply bg-[var(--primary-color-400)] dark:bg-[var(--primary-color-400)];
+  }
+  .card.card__primary500 {
+    @apply bg-[var(--primary-color-500)] dark:bg-[var(--primary-color-500)];
+  }
+
+  .card.card__secondary100 {
+    @apply bg-[var(--secondary-color-100)] dark:bg-[var(--secondary-color-100)];
+  }
+  .card.card__secondary200 {
+    @apply bg-[var(--secondary-color-200)] dark:bg-[var(--secondary-color-200)];
+  }
+  .card.card__secondary300 {
+    @apply bg-[var(--secondary-color-300)] dark:bg-[var(--secondary-color-300)];
+  }
+  .card.card__secondary400 {
+    @apply bg-[var(--secondary-color-400)] dark:bg-[var(--secondary-color-400)];
+  }
+  .card.card__secondary500 {
+    @apply bg-[var(--secondary-color-500)] dark:bg-[var(--secondary-color-500)];
+  }
+
+  .card.card__tertiary100 {
+    @apply bg-[var(--tertiary-color-100)] dark:bg-[var(--tertiary-color-100)];
+  }
+  .card.card__tertiary200 {
+    @apply bg-[var(--tertiary-color-200)] dark:bg-[var(--tertiary-color-200)];
+  }
+  .card.card__tertiary300 {
+    @apply bg-[var(--tertiary-color-300)] dark:bg-[var(--tertiary-color-300)];
+  }
+  .card.card__tertiary400 {
+    @apply bg-[var(--tertiary-color-400)] dark:bg-[var(--tertiary-color-400)];
+  }
+  .card.card__tertiary500 {
+    @apply bg-[var(--tertiary-color-500)] dark:bg-[var(--tertiary-color-500)];
+  }
+
+  .card.card__quaternary100 {
+    @apply bg-[var(--quaternary-color-100)] dark:bg-[var(--quaternary-color-100)];
+  }
+  .card.card__quaternary200 {
+    @apply bg-[var(--quaternary-color-200)] dark:bg-[var(--quaternary-color-200)];
+  }
+  .card.card__quaternary300 {
+    @apply bg-[var(--quaternary-color-300)] dark:bg-[var(--quaternary-color-300)];
+  }
+  .card.card__quaternary400 {
+    @apply bg-[var(--quaternary-color-400)] dark:bg-[var(--quaternary-color-400)];
+  }
+  .card.card__quaternary500 {
+    @apply bg-[var(--quaternary-color-500)] dark:bg-[var(--quaternary-color-500)];
+  }
+
+  .card.card__quinary100 {
+    @apply bg-[var(--quinary-color-100)] dark:bg-[var(--quinary-color-100)];
+  }
+  .card.card__quinary200 {
+    @apply bg-[var(--quinary-color-200)] dark:bg-[var(--quinary-color-200)];
+  }
+  .card.card__quinary300 {
+    @apply bg-[var(--quinary-color-300)] dark:bg-[var(--quinary-color-300)];
+  }
+  .card.card__quinary400 {
+    @apply bg-[var(--quinary-color-400)] dark:bg-[var(--quinary-color-400)];
+  }
+  .card.card__quinary500 {
+    @apply bg-[var(--quinary-color-500)] dark:bg-[var(--quinary-color-500)];
+  }
+
+  .card.card__grayscale100 {
+    @apply bg-[var(--grayscale-color-100)] dark:bg-[var(--grayscale-color-950)];
+  }
+  .card.card__grayscale200 {
+    @apply bg-[var(--grayscale-color-200)] dark:bg-[var(--grayscale-color-900)];
+  }
+  .card.card__grayscale300 {
+    @apply bg-[var(--grayscale-color-300)] dark:bg-[var(--grayscale-color-800)];
+  }
+  .card.card__grayscale400 {
+    @apply bg-[var(--grayscale-color-400)] dark:bg-[var(--grayscale-color-700)];
+  }
+  .card.card__grayscale500 {
+    @apply bg-[var(--grayscale-color-500)] dark:bg-[var(--grayscale-color-600)];
+  }
+  .card.card__grayscale600 {
+    @apply bg-[var(--grayscale-color-600)] dark:bg-[var(--grayscale-color-500)];
+  }
+  .card.card__grayscale700 {
+    @apply bg-[var(--grayscale-color-700)] dark:bg-[var(--grayscale-color-400)];
+  }
+  .card.card__grayscale800 {
+    @apply bg-[var(--grayscale-color-800)] dark:bg-[var(--grayscale-color-300)];
+  }
+  .card.card__grayscale900 {
+    @apply bg-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-200)];
+  }
+  .card.card__grayscale950 {
+    @apply bg-[var(--grayscale-color-950)] dark:bg-[var(--grayscale-color-100)];
+  }
+
+  .card.card__success100 {
+    @apply bg-[var(--success-color-100)] dark:bg-[var(--success-color-100)];
+  }
+  .card.card__success200 {
+    @apply bg-[var(--success-color-200)] dark:bg-[var(--success-color-200)];
+  }
+  .card.card__success300 {
+    @apply bg-[var(--success-color-300)] dark:bg-[var(--success-color-300)];
+  }
+  .card.card__success400 {
+    @apply bg-[var(--success-color-400)] dark:bg-[var(--success-color-400)];
+  }
+  .card.card__success500 {
+    @apply bg-[var(--success-color-500)] dark:bg-[var(--success-color-500)];
+  }
+
+  .card.card__failure100 {
+    @apply bg-[var(--failure-color-100)] dark:bg-[var(--failure-color-100)];
+  }
+  .card.card__failure200 {
+    @apply bg-[var(--failure-color-200)] dark:bg-[var(--failure-color-200)];
+  }
+  .card.card__failure300 {
+    @apply bg-[var(--failure-color-300)] dark:bg-[var(--failure-color-300)];
+  }
+  .card.card__failure400 {
+    @apply bg-[var(--failure-color-400)] dark:bg-[var(--failure-color-400)];
+  }
+  .card.card__failure500 {
+    @apply bg-[var(--failure-color-500)] dark:bg-[var(--failure-color-500)];
+  }
+
+  .card.card__warning100 {
+    @apply bg-[var(--warning-color-100)] dark:bg-[var(--warning-color-100)];
+  }
+  .card.card__warning200 {
+    @apply bg-[var(--warning-color-200)] dark:bg-[var(--warning-color-200)];
+  }
+  .card.card__warning300 {
+    @apply bg-[var(--warning-color-300)] dark:bg-[var(--warning-color-300)];
+  }
+  .card.card__warning400 {
+    @apply bg-[var(--warning-color-400)] dark:bg-[var(--warning-color-400)];
+  }
+  .card.card__warning500 {
+    @apply bg-[var(--warning-color-500)] dark:bg-[var(--warning-color-500)];
+  }
+
+  .card.card__darkColor {
+    @apply bg-[var(--dark-color)] dark:bg-[var(--light-color)];
+  }
+  .card.card__lightColor {
+    @apply bg-[var(--light-color)] dark:bg-[var(--dark-color)];
+  }
+}
+
+@layer components {
+  .card.card-border__primary100 {
+    @apply border border-[var(--primary-color-100)] dark:border-[var(--primary-color-100)];
+  }
+  .card.card-border__primary200 {
+    @apply border border-[var(--primary-color-200)] dark:border-[var(--primary-color-200)];
+  }
+  .card.card-border__primary300 {
+    @apply border border-[var(--primary-color-300)] dark:border-[var(--primary-color-300)];
+  }
+  .card.card-border__primary400 {
+    @apply border border-[var(--primary-color-400)] dark:border-[var(--primary-color-400)];
+  }
+  .card.card-border__primary500 {
+    @apply border border-[var(--primary-color-500)] dark:border-[var(--primary-color-500)];
+  }
+
+  .card.card-border__secondary100 {
+    @apply border border-[var(--secondary-color-100)] dark:border-[var(--secondary-color-100)];
+  }
+  .card.card-border__secondary200 {
+    @apply border border-[var(--secondary-color-200)] dark:border-[var(--secondary-color-200)];
+  }
+  .card.card-border__secondary300 {
+    @apply border border-[var(--secondary-color-300)] dark:border-[var(--secondary-color-300)];
+  }
+  .card.card-border__secondary400 {
+    @apply border border-[var(--secondary-color-400)] dark:border-[var(--secondary-color-400)];
+  }
+  .card.card-border__secondary500 {
+    @apply border border-[var(--secondary-color-500)] dark:border-[var(--secondary-color-500)];
+  }
+
+  .card.card-border__tertiary100 {
+    @apply border border-[var(--tertiary-color-100)] dark:border-[var(--tertiary-color-100)];
+  }
+  .card.card-border__tertiary200 {
+    @apply border border-[var(--tertiary-color-200)] dark:border-[var(--tertiary-color-200)];
+  }
+  .card.card-border__tertiary300 {
+    @apply border border-[var(--tertiary-color-300)] dark:border-[var(--tertiary-color-300)];
+  }
+  .card.card-border__tertiary400 {
+    @apply border border-[var(--tertiary-color-400)] dark:border-[var(--tertiary-color-400)];
+  }
+  .card.card-border__tertiary500 {
+    @apply border border-[var(--tertiary-color-500)] dark:border-[var(--tertiary-color-500)];
+  }
+
+  .card.card-border__quaternary100 {
+    @apply border border-[var(--quaternary-color-100)] dark:border-[var(--quaternary-color-100)];
+  }
+  .card.card-border__quaternary200 {
+    @apply border border-[var(--quaternary-color-200)] dark:border-[var(--quaternary-color-200)];
+  }
+  .card.card-border__quaternary300 {
+    @apply border border-[var(--quaternary-color-300)] dark:border-[var(--quaternary-color-300)];
+  }
+  .card.card-border__quaternary400 {
+    @apply border border-[var(--quaternary-color-400)] dark:border-[var(--quaternary-color-400)];
+  }
+  .card.card-border__quaternary500 {
+    @apply border border-[var(--quaternary-color-500)] dark:border-[var(--quaternary-color-500)];
+  }
+
+  .card.card-border__quinary100 {
+    @apply border border-[var(--quinary-color-100)] dark:border-[var(--quinary-color-100)];
+  }
+  .card.card-border__quinary200 {
+    @apply border border-[var(--quinary-color-200)] dark:border-[var(--quinary-color-200)];
+  }
+  .card.card-border__quinary300 {
+    @apply border border-[var(--quinary-color-300)] dark:border-[var(--quinary-color-300)];
+  }
+  .card.card-border__quinary400 {
+    @apply border border-[var(--quinary-color-400)] dark:border-[var(--quinary-color-400)];
+  }
+  .card.card-border__quinary500 {
+    @apply border border-[var(--quinary-color-500)] dark:border-[var(--quinary-color-500)];
+  }
+
+  .card.card-border__grayscale100 {
+    @apply border border-[var(--grayscale-color-100)] dark:border-[var(--grayscale-color-950)];
+  }
+  .card.card-border__grayscale200 {
+    @apply border border-[var(--grayscale-color-200)] dark:border-[var(--grayscale-color-900)];
+  }
+  .card.card-border__grayscale300 {
+    @apply border border-[var(--grayscale-color-300)] dark:border-[var(--grayscale-color-800)];
+  }
+  .card.card-border__grayscale400 {
+    @apply border border-[var(--grayscale-color-400)] dark:border-[var(--grayscale-color-700)];
+  }
+  .card.card-border__grayscale500 {
+    @apply border border-[var(--grayscale-color-500)] dark:border-[var(--grayscale-color-600)];
+  }
+  .card.card-border__grayscale600 {
+    @apply border border-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-500)];
+  }
+  .card.card-border__grayscale700 {
+    @apply border border-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-400)];
+  }
+  .card.card-border__grayscale800 {
+    @apply border border-[var(--grayscale-color-800)] dark:border-[var(--grayscale-color-300)];
+  }
+  .card.card-border__grayscale900 {
+    @apply border border-[var(--grayscale-color-900)] dark:border-[var(--grayscale-color-200)];
+  }
+  .card.card-border__grayscale950 {
+    @apply border border-[var(--grayscale-color-950)] dark:border-[var(--grayscale-color-100)];
+  }
+
+  .card.card-border__success100 {
+    @apply border border-[var(--success-color-100)] dark:border-[var(--success-color-100)];
+  }
+  .card.card-border__success200 {
+    @apply border border-[var(--success-color-200)] dark:border-[var(--success-color-200)];
+  }
+  .card.card-border__success300 {
+    @apply border border-[var(--success-color-300)] dark:border-[var(--success-color-300)];
+  }
+  .card.card-border__success400 {
+    @apply border border-[var(--success-color-400)] dark:border-[var(--success-color-400)];
+  }
+  .card.card-border__success500 {
+    @apply border border-[var(--success-color-500)] dark:border-[var(--success-color-500)];
+  }
+
+  .card.card-border__failure100 {
+    @apply border border-[var(--failure-color-100)] dark:border-[var(--failure-color-100)];
+  }
+  .card.card-border__failure200 {
+    @apply border border-[var(--failure-color-200)] dark:border-[var(--failure-color-200)];
+  }
+  .card.card-border__failure300 {
+    @apply border border-[var(--failure-color-300)] dark:border-[var(--failure-color-300)];
+  }
+  .card.card-border__failure400 {
+    @apply border border-[var(--failure-color-400)] dark:border-[var(--failure-color-400)];
+  }
+  .card.card-border__failure500 {
+    @apply border border-[var(--failure-color-500)] dark:border-[var(--failure-color-500)];
+  }
+
+  .card.card-border__warning100 {
+    @apply border border-[var(--warning-color-100)] dark:border-[var(--warning-color-100)];
+  }
+  .card.card-border__warning200 {
+    @apply border border-[var(--warning-color-200)] dark:border-[var(--warning-color-200)];
+  }
+  .card.card-border__warning300 {
+    @apply border border-[var(--warning-color-300)] dark:border-[var(--warning-color-300)];
+  }
+  .card.card-border__warning400 {
+    @apply border border-[var(--warning-color-400)] dark:border-[var(--warning-color-400)];
+  }
+  .card.card-border__warning500 {
+    @apply border border-[var(--warning-color-500)] dark:border-[var(--warning-color-500)];
+  }
+
+  .card.card-border__darkColor {
+    @apply border border-[var(--dark-color)] dark:border-[var(--light-color)];
+  }
+  .card.card-border__lightColor {
+    @apply border border-[var(--light-color)] dark:border-[var(--dark-color)];
+  }
+}

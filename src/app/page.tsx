@@ -111,7 +111,9 @@ export default function Home() {
         Switch Button
       </SwitchButton>
 
-      <Card className="p-2">Opa</Card>
+      <Card className="p-2 mb-8" withBorder borderColor="darkColor">
+        Card
+      </Card>
 
       <Text size="2xl" element="h1" weight="bold">
         Hello World
