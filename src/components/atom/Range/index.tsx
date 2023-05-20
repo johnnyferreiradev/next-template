@@ -2,6 +2,8 @@ import { useContext } from 'react';
 
 import { ThemeContext } from '@/contexts/ThemeContext';
 
+import { useTheme } from '@/hooks/useTheme';
+
 import { Range as ReactRange, getTrackBackground } from 'react-range';
 
 import { RangeProps } from './types';
@@ -19,6 +21,7 @@ export default function Range({
   icon,
 }: RangeProps) {
   const themeContext = useContext(ThemeContext);
+  const currentTheme = useTheme();
 
   return (
     <div className={`range ${type} ${className}`.trim()}>
@@ -46,7 +49,9 @@ export default function Range({
                     values: values,
                     colors: [
                       themeContext.theme.colors.primary300,
-                      themeContext.theme.colors.grayscale200,
+                      currentTheme === 'light'
+                        ? themeContext.theme.colors.grayscale200
+                        : themeContext.theme.colors.grayscale800,
                     ],
                     min: 0,
                     max: 100,
