@@ -6,4 +6,170 @@
   .icon {
     @apply w-max flex items-center justify-center;
   }
+
+  .icon.icon__primary100 {
+    @apply text-[var(--primary-color-100)] dark:text-[var(--primary-color-100)];
+  }
+  .icon.icon__primary200 {
+    @apply text-[var(--primary-color-200)] dark:text-[var(--primary-color-200)];
+  }
+  .icon.icon__primary300 {
+    @apply text-[var(--primary-color-300)] dark:text-[var(--primary-color-300)];
+  }
+  .icon.icon__primary400 {
+    @apply text-[var(--primary-color-400)] dark:text-[var(--primary-color-400)];
+  }
+  .icon.icon__primary500 {
+    @apply text-[var(--primary-color-500)] dark:text-[var(--primary-color-500)];
+  }
+
+  .icon.icon__secondary100 {
+    @apply text-[var(--secondary-color-100)] dark:text-[var(--secondary-color-100)];
+  }
+  .icon.icon__secondary200 {
+    @apply text-[var(--secondary-color-200)] dark:text-[var(--secondary-color-200)];
+  }
+  .icon.icon__secondary300 {
+    @apply text-[var(--secondary-color-300)] dark:text-[var(--secondary-color-300)];
+  }
+  .icon.icon__secondary400 {
+    @apply text-[var(--secondary-color-400)] dark:text-[var(--secondary-color-400)];
+  }
+  .icon.icon__secondary500 {
+    @apply text-[var(--secondary-color-500)] dark:text-[var(--secondary-color-500)];
+  }
+
+  .icon.icon__tertiary100 {
+    @apply text-[var(--tertiary-color-100)] dark:text-[var(--tertiary-color-100)];
+  }
+  .icon.icon__tertiary200 {
+    @apply text-[var(--tertiary-color-200)] dark:text-[var(--tertiary-color-200)];
+  }
+  .icon.icon__tertiary300 {
+    @apply text-[var(--tertiary-color-300)] dark:text-[var(--tertiary-color-300)];
+  }
+  .icon.icon__tertiary400 {
+    @apply text-[var(--tertiary-color-400)] dark:text-[var(--tertiary-color-400)];
+  }
+  .icon.icon__tertiary500 {
+    @apply text-[var(--tertiary-color-500)] dark:text-[var(--tertiary-color-500)];
+  }
+
+  .icon.icon__quaternary100 {
+    @apply text-[var(--quaternary-color-100)] dark:text-[var(--quaternary-color-100)];
+  }
+  .icon.icon__quaternary200 {
+    @apply text-[var(--quaternary-color-200)] dark:text-[var(--quaternary-color-200)];
+  }
+  .icon.icon__quaternary300 {
+    @apply text-[var(--quaternary-color-300)] dark:text-[var(--quaternary-color-300)];
+  }
+  .icon.icon__quaternary400 {
+    @apply text-[var(--quaternary-color-400)] dark:text-[var(--quaternary-color-400)];
+  }
+  .icon.icon__quaternary500 {
+    @apply text-[var(--quaternary-color-500)] dark:text-[var(--quaternary-color-500)];
+  }
+
+  .icon.icon__quinary100 {
+    @apply text-[var(--quinary-color-100)] dark:text-[var(--quinary-color-100)];
+  }
+  .icon.icon__quinary200 {
+    @apply text-[var(--quinary-color-200)] dark:text-[var(--quinary-color-200)];
+  }
+  .icon.icon__quinary300 {
+    @apply text-[var(--quinary-color-300)] dark:text-[var(--quinary-color-300)];
+  }
+  .icon.icon__quinary400 {
+    @apply text-[var(--quinary-color-400)] dark:text-[var(--quinary-color-400)];
+  }
+  .icon.icon__quinary500 {
+    @apply text-[var(--quinary-color-500)] dark:text-[var(--quinary-color-500)];
+  }
+
+  .icon.icon__grayscale100 {
+    @apply text-[var(--grayscale-color-100)] dark:text-[var(--grayscale-color-950)];
+  }
+  .icon.icon__grayscale200 {
+    @apply text-[var(--grayscale-color-200)] dark:text-[var(--grayscale-color-900)];
+  }
+  .icon.icon__grayscale300 {
+    @apply text-[var(--grayscale-color-300)] dark:text-[var(--grayscale-color-800)];
+  }
+  .icon.icon__grayscale400 {
+    @apply text-[var(--grayscale-color-400)] dark:text-[var(--grayscale-color-700)];
+  }
+  .icon.icon__grayscale500 {
+    @apply text-[var(--grayscale-color-500)] dark:text-[var(--grayscale-color-600)];
+  }
+  .icon.icon__grayscale600 {
+    @apply text-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-500)];
+  }
+  .icon.icon__grayscale700 {
+    @apply text-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)];
+  }
+  .icon.icon__grayscale800 {
+    @apply text-[var(--grayscale-color-800)] dark:text-[var(--grayscale-color-300)];
+  }
+  .icon.icon__grayscale900 {
+    @apply text-[var(--grayscale-color-900)] dark:text-[var(--grayscale-color-200)];
+  }
+  .icon.icon__grayscale950 {
+    @apply text-[var(--grayscale-color-950)] dark:text-[var(--grayscale-color-100)];
+  }
+
+  .icon.icon__success100 {
+    @apply text-[var(--success-color-100)] dark:text-[var(--success-color-100)];
+  }
+  .icon.icon__success200 {
+    @apply text-[var(--success-color-200)] dark:text-[var(--success-color-200)];
+  }
+  .icon.icon__success300 {
+    @apply text-[var(--success-color-300)] dark:text-[var(--success-color-300)];
+  }
+  .icon.icon__success400 {
+    @apply text-[var(--success-color-400)] dark:text-[var(--success-color-400)];
+  }
+  .icon.icon__success500 {
+    @apply text-[var(--success-color-500)] dark:text-[var(--success-color-500)];
+  }
+
+  .icon.icon__failure100 {
+    @apply text-[var(--failure-color-100)] dark:text-[var(--failure-color-100)];
+  }
+  .icon.icon__failure200 {
+    @apply text-[var(--failure-color-200)] dark:text-[var(--failure-color-200)];
+  }
+  .icon.icon__failure300 {
+    @apply text-[var(--failure-color-300)] dark:text-[var(--failure-color-300)];
+  }
+  .icon.icon__failure400 {
+    @apply text-[var(--failure-color-400)] dark:text-[var(--failure-color-400)];
+  }
+  .icon.icon__failure500 {
+    @apply text-[var(--failure-color-500)] dark:text-[var(--failure-color-500)];
+  }
+
+  .icon.icon__warning100 {
+    @apply text-[var(--warning-color-100)] dark:text-[var(--warning-color-100)];
+  }
+  .icon.icon__warning200 {
+    @apply text-[var(--warning-color-200)] dark:text-[var(--warning-color-200)];
+  }
+  .icon.icon__warning300 {
+    @apply text-[var(--warning-color-300)] dark:text-[var(--warning-color-300)];
+  }
+  .icon.icon__warning400 {
+    @apply text-[var(--warning-color-400)] dark:text-[var(--warning-color-400)];
+  }
+  .icon.icon__warning500 {
+    @apply text-[var(--warning-color-500)] dark:text-[var(--warning-color-500)];
+  }
+
+  .icon.icon__darkColor {
+    @apply text-[var(--dark-color)] dark:text-[var(--light-color)];
+  }
+  .icon.icon__lightColor {
+    @apply text-[var(--light-color)] dark:text-[var(--dark-color)];
+  }
 }

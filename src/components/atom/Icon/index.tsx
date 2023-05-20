@@ -8,8 +8,6 @@ export default function Icon({
   className = '',
 }: IconProps) {
   return (
-    <div className={`icon ${IconColors[color]} ${className}`.trim()}>
-      {children}
-    </div>
+    <div className={`icon icon__${color} ${className}`.trim()}>{children}</div>
   );
 }

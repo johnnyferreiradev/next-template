@@ -168,6 +168,10 @@
   .card.card__lightColor {
     @apply bg-[var(--light-color)] dark:bg-[var(--dark-color)];
   }
+
+  .card.card__transparent {
+    @apply bg-none dark:bg-none;
+  }
 }
 
 @layer components {
