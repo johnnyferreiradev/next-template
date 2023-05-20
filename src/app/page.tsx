@@ -16,9 +16,11 @@ import Tag from '@/components/atom/Tag';
 import Tooltip from '@/components/atom/Tooltip';
 
 import { TextColors } from '@/components/atom/Text/types';
+import { TagThemes } from '@/components/atom/Tag/types';
 
 export default function Home() {
   const colorValueArray = Object.keys(TextColors);
+  const tagThemesArray = Object.keys(TagThemes);
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -36,7 +38,15 @@ export default function Home() {
         Tooltip
       </Tooltip>
 
-      <Tag className="mb-8">Minha tag</Tag>
+      {tagThemesArray.map((theme, index) => (
+        <Tag
+          className="mb-8"
+          theme={theme as keyof typeof TagThemes}
+          key={index}
+        >
+          Minha tag
+        </Tag>
+      ))}
 
       <Range
         min={0}
