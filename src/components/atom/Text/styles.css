@@ -168,4 +168,8 @@
   .text.text__lightColor {
     @apply text-[var(--light-color)] dark:text-[var(--dark-color)];
   }
+
+  .text.text__transparent {
+    @apply text-transparent dark:text-transparent;
+  }
 }

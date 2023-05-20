@@ -172,4 +172,8 @@
   .icon.icon__lightColor {
     @apply text-[var(--light-color)] dark:text-[var(--dark-color)];
   }
+
+  .icon.icon__transparent {
+    @apply text-transparent dark:text-transparent;
+  }
 }

@@ -15,11 +15,11 @@ import Range from '@/components/atom/Range';
 import Tag from '@/components/atom/Tag';
 import Tooltip from '@/components/atom/Tooltip';
 
-import { TextColors } from '@/components/atom/Text/types';
+import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
 
 export default function Home() {
-  const colorValueArray = Object.keys(TextColors);
+  const colorValueArray = Object.keys(Colors);
   const tagThemesArray = Object.keys(TagThemes);
 
   const { systemTheme, theme, setTheme } = useTheme();
@@ -142,7 +142,7 @@ export default function Home() {
 
       {colorValueArray.map((color, index) => (
         <Text
-          color={color as keyof typeof TextColors}
+          color={color as keyof typeof Colors}
           size="2xl"
           weight="bold"
           key={index}

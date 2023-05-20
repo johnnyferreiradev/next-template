@@ -1,4 +1,4 @@
-import { IconProps, IconColors } from './types';
+import { IconProps } from './types';
 
 import './styles.css';
 

@@ -340,4 +340,8 @@
   .card.card-border__lightColor {
     @apply border border-[var(--light-color)] dark:border-[var(--dark-color)];
   }
+
+  .card.card-border__transparent {
+    @apply border-none dark:border-none;
+  }
 }
