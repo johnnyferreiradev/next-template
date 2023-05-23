@@ -8,7 +8,6 @@
     @apply transition duration-200 ease-in-out;
     @apply rounded-xl text-sm font-semibold decoration-0;
     @apply flex justify-center items-center text-center;
-    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-900)] hover:bg-[var(--grayscale-color-300)];
   }
 
   .button.button__xs {
@@ -40,4 +39,10 @@
   }
 
   /* todo: theme classes */
+
+  .button.button__gray {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-900)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--grayscale-color-100)];
+    @apply hover:bg-[var(--grayscale-color-300)] dark:hover:bg-[var(--grayscale-color-800)];
+  }
 }

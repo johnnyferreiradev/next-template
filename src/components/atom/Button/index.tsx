@@ -59,7 +59,7 @@ export default function Button(props: ButtonProps) {
     leftIcon,
     rightIcon,
     roundButton = false,
-    theme = 'primary',
+    theme = 'gray',
     children,
   } = props;
 
