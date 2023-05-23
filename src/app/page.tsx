@@ -14,6 +14,7 @@ import Icon from '@/components/atom/Icon';
 import Range from '@/components/atom/Range';
 import Tag from '@/components/atom/Tag';
 import Tooltip from '@/components/atom/Tooltip';
+import Button from '@/components/atom/Button';
 
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
@@ -34,6 +35,53 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Button
+        className="mb-8"
+        badge={
+          <Tag theme="primary200" className="rounded-md">
+            Opa
+          </Tag>
+        }
+        onClick={() => console.log('Clicou')}
+        leftIcon={<User />}
+        rightIcon={<User />}
+        roundButton
+        fullWidth
+      >
+        Button
+      </Button>
+      <Button
+        className="mb-8"
+        badge={
+          <Tag theme="primary200" className="rounded-md">
+            Opa
+          </Tag>
+        }
+        to="/documentation"
+        leftIcon={<User />}
+        rightIcon={<User />}
+        roundButton
+        fullWidth
+      >
+        Link
+      </Button>
+      <Button
+        className="mb-8"
+        badge={
+          <Tag theme="primary200" className="rounded-md">
+            Opa
+          </Tag>
+        }
+        href="https://github.com/johnnyferreiradev/next-template"
+        target="_blank"
+        leftIcon={<User />}
+        rightIcon={<User />}
+        roundButton
+        fullWidth
+      >
+        Git repo
+      </Button>
+
       <Tooltip content="My message" id="tooltip-1" className="mb-8">
         Tooltip
       </Tooltip>
