@@ -18,10 +18,12 @@ import Button from '@/components/atom/Button';
 
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
+import { ButtonThemes } from '@/components/atom/Button/types';
 
 export default function Home() {
   const colorValueArray = Object.keys(Colors);
   const tagThemesArray = Object.keys(TagThemes);
+  const buttonThemesArray = Object.keys(ButtonThemes);
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -47,6 +49,7 @@ export default function Home() {
         rightIcon={<User />}
         roundButton
         fullWidth
+        theme="primary"
       >
         Button
       </Button>
@@ -81,6 +84,17 @@ export default function Home() {
       >
         Git repo
       </Button>
+
+      {buttonThemesArray.map((theme, index) => (
+        <Button
+          key={index}
+          leftIcon={<User />}
+          rightIcon={<User />}
+          theme={theme as keyof typeof ButtonThemes}
+        >
+          Button {theme}
+        </Button>
+      ))}
 
       <Tooltip content="My message" id="tooltip-1" className="mb-8">
         Tooltip
