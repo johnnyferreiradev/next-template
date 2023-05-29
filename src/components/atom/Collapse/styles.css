@@ -8,7 +8,7 @@
   }
 
   .collapse-component__header {
-    @apply w-full border-b border-[var(--grayscale-color-200)] cursor-pointer;
+    @apply w-full border-b border-[var(--grayscale-color-200)] dark:border-[var(--grayscale-color-800)] cursor-pointer;
   }
 
   .collapse-component__content {
