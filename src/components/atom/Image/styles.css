@@ -4,7 +4,7 @@
 
 @layer components {
   .image {
-    @apply relative flex justify-center items-center w-32 h-32;
+    @apply relative flex justify-center items-center;
     @apply bg-[var(--grayscale-color-200)] dark:bg-[var(--grayscale-color-800)];
   }
 

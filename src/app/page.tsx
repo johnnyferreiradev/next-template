@@ -16,10 +16,13 @@ import Tag from '@/components/atom/Tag';
 import Tooltip from '@/components/atom/Tooltip';
 import Button from '@/components/atom/Button';
 import Image from '@/components/atom/Image';
+import Divider from '@/components/atom/Divider';
 
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
 import { ButtonThemes } from '@/components/atom/Button/types';
+
+import HelloWorldTextImage from '@/assets/images/hello-world-text.png';
 
 export default function Home() {
   const colorValueArray = Object.keys(Colors);
@@ -38,7 +41,16 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
-      <Image alt="My image" placeholderIcon={<ImageIcon />} />
+      <Divider className="mb-8" />
+
+      <Image
+        alt="My image"
+        placeholderIcon={<ImageIcon />}
+        className="mb-8 w-32 h-32"
+      />
+
+      <Image alt="Hello World" src={HelloWorldTextImage} className="mb-8" />
+
       <Button
         className="mb-8"
         badge={

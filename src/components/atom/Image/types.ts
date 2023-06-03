@@ -1,5 +1,7 @@
+import { StaticImageData } from 'next/image';
+
 export interface ImageProps {
-  src?: string;
+  src?: StaticImageData;
   alt: string;
   className?: string;
   placeholderIcon?: React.ReactNode;

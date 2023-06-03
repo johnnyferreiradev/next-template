@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .divider {
+    @apply border-[var(--grayscale-color-200)] dark:border-[var(--grayscale-color-800)];
+  }
+}

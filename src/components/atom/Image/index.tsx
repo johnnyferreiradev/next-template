@@ -5,7 +5,7 @@ import { ImageProps } from './types';
 import './styles.css';
 
 export default function Image({
-  src = '',
+  src,
   alt,
   className = '',
   placeholderIcon,
