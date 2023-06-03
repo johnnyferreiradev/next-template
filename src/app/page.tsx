@@ -17,6 +17,7 @@ import Tooltip from '@/components/atom/Tooltip';
 import Button from '@/components/atom/Button';
 import Image from '@/components/atom/Image';
 import Divider from '@/components/atom/Divider';
+import Loader from '@/components/atom/Loader';
 
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
@@ -41,6 +42,8 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Loader />
+
       <Divider className="mb-8" />
 
       <Image
