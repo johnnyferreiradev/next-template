@@ -18,6 +18,7 @@ import Button from '@/components/atom/Button';
 import Image from '@/components/atom/Image';
 import Divider from '@/components/atom/Divider';
 import Loader from '@/components/atom/Loader';
+import ProgressBar from '@/components/atom/ProgressBar';
 
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
@@ -42,6 +43,8 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <ProgressBar progress={10} className="mb-8" />
+
       <Loader type="spin" className="mb-8" />
       <Loader type="spinDot" className="mb-8" />
       <Loader type="dot" className="mb-8" />
