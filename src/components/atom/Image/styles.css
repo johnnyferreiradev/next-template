@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .image {
+    @apply relative flex justify-center items-center w-32 h-32;
+    @apply bg-[var(--grayscale-color-200)] dark:bg-[var(--grayscale-color-800)];
+  }
+
+  .image > svg,
+  .image > .icon {
+    @apply text-[var(--grayscale-color-400)] text-3xl;
+  }
+}
