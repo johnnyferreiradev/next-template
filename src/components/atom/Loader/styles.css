@@ -3,31 +3,64 @@
 @tailwind utilities;
 
 @layer components {
-  .loader {
-    @apply w-14 h-14 grid;
-    animation: s4 4s infinite;
+  /* spin */
+  .loader.loader__spin {
+    @apply w-14 h-14 grid animate-spin;
   }
-
-  .loader::before,
-  .loader::after {
-    content: '';
+  .loader.loader__spin::before,
+  .loader.loader__spin::after {
+    @apply content-[''];
     grid-area: 1/1;
-    border: 8px solid;
-    border-radius: 50%;
-    border-color: #766df4 #766df4 #0000 #0000;
-    mix-blend-mode: darken;
-    animation: s4 1s infinite linear;
-
-    /* @apply content-[''] place-items-stretch border-8 border-solid rounded-full; */
+    @apply rounded-[50%] border-8 border-solid;
+    @apply border-r-[var(--primary-color-200)] border-t-[var(--primary-color-200)] border-b-[#0000] border-l-[#0000];
+    @apply mix-blend-darken animate-spin-linear;
   }
-  .loader::after {
-    border-color: #0000 #0000 #e4e4ed #e4e4ed;
+  .loader.loader__spin::after {
+    @apply border-r-[#0000] border-t-[#0000] border-b-[var(--secondary-color-200)] border-l-[var(--secondary-color-200)];
     animation-direction: reverse;
   }
 
-  @keyframes s4 {
-    100% {
-      transform: rotate(1turn);
-    }
+  /* spinDot */
+  .loader.loader__spinDot {
+    @apply w-14 h-14;
+    --c: radial-gradient(farthest-side, var(--primary-color-200) 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    @apply animate-spin-dot;
+  }
+
+  /* dot */
+  .loader.loader__dot {
+    @apply w-14 h-6;
+    background: radial-gradient(
+          circle closest-side,
+          var(--primary-color-200) 90%,
+          #0000
+        )
+        0% 50%,
+      radial-gradient(circle closest-side, var(--primary-color-200) 90%, #0000)
+        50% 50%,
+      radial-gradient(circle closest-side, var(--primary-color-200) 90%, #0000)
+        100% 50%;
+    background-size: calc(100% / 3) 12px;
+    @apply animate-dot bg-no-repeat;
+  }
+
+  /* line */
+  .loader.loader__line {
+    @apply w-9 h-9 text-[var(--primary-color-200)];
+    --c: linear-gradient(currentColor 0 0);
+    background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%,
+      var(--c) 0 100%;
+    @apply animate-line bg-no-repeat;
+  }
+
+  /* shape */
+  .loader.loader__shape {
+    @apply w-10 h-10 rounded-[50%];
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    @apply bg-[var(--primary-color-200)] animate-shape;
   }
 }

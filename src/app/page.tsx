@@ -42,7 +42,11 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
-      <Loader />
+      <Loader type="spin" className="mb-8" />
+      <Loader type="spinDot" className="mb-8" />
+      <Loader type="dot" className="mb-8" />
+      <Loader type="line" className="mb-8" />
+      <Loader type="shape" className="mb-8" />
 
       <Divider className="mb-8" />
 
