@@ -1,10 +1,16 @@
 import { useEffect, useRef } from 'react';
 
-import { CircularProgressProps } from './types';
+import { CircularProgressProps, CircularProgressColors } from './types';
 
 import './styles.css';
 
-export default function CircularProgress({ progress }: CircularProgressProps) {
+export default function CircularProgress({
+  progress,
+  strokeWidth = 10,
+  color = 'primary',
+  className = '',
+  children,
+}: CircularProgressProps) {
   const circleRef = useRef<SVGCircleElement | null>(null);
 
   useEffect(() => {
@@ -18,15 +24,17 @@ export default function CircularProgress({ progress }: CircularProgressProps) {
   }, [progress]);
 
   return (
-    <div className="circular-progress">
+    <div
+      className={`circular-progress inverted progress__${CircularProgressColors[color]} ${className}`}
+    >
       <svg className="progress-circle" viewBox="0 0 100 100">
         <circle
           className="progress-bar-background"
           cx="50"
           cy="50"
           r="45"
-          fill="none"
-          stroke-width="2"
+          strokeWidth={strokeWidth}
+          strokeDasharray={283}
         />
         <circle
           ref={circleRef}
@@ -34,8 +42,10 @@ export default function CircularProgress({ progress }: CircularProgressProps) {
           cx="50"
           cy="50"
           r="45"
+          strokeWidth={strokeWidth}
         />
       </svg>
+      <div className="circular-progress__content">{children}</div>
     </div>
   );
 }
