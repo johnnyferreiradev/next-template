@@ -7,15 +7,15 @@
     @apply w-24 h-24 relative;
   }
 
-  .circular-progress .progress-circle {
+  .circular-progress .circular-progress__circle {
     @apply w-full h-full -rotate-90;
   }
 
-  .circular-progress .progress-bar-background {
+  .circular-progress .circular-progress__background {
     @apply fill-none stroke-[var(--grayscale-color-300)] dark:stroke-[var(--grayscale-color-700)] opacity-50;
   }
 
-  .circular-progress .progress-bar {
+  .circular-progress .circular-progress__progress {
     @apply fill-none;
     @apply transition-[stroke-dashoffset] duration-[0.3s] ease-[ease-in-out];
     stroke-dasharray: 283;
@@ -23,7 +23,7 @@
     stroke-linecap: round;
   }
 
-  .circular-progress.inverted .progress-bar {
+  .circular-progress.inverted .circular-progress__progress {
     @apply transition-[stroke-dashoffset] duration-[0.3s] ease-[ease-in-out];
     stroke-dashoffset: 283;
   }
@@ -33,34 +33,34 @@
   }
 
   /* Colors */
-  .circular-progress.progress__primary .progress-bar {
+  .circular-progress.progress__primary .circular-progress__progress {
     @apply stroke-[var(--primary-color-200)];
   }
-  .circular-progress.progress__secondary .progress-bar {
+  .circular-progress.progress__secondary .circular-progress__progress {
     @apply stroke-[var(--secondary-color-200)];
   }
-  .circular-progress.progress__tertiary .progress-bar {
+  .circular-progress.progress__tertiary .circular-progress__progress {
     @apply stroke-[var(--tertiary-color-200)];
   }
-  .circular-progress.progress__quaternary .progress-bar {
+  .circular-progress.progress__quaternary .circular-progress__progress {
     @apply stroke-[var(--quaternary-color-200)];
   }
-  .circular-progress.progress__quinary .progress-bar {
+  .circular-progress.progress__quinary .circular-progress__progress {
     @apply stroke-[var(--quinary-color-200)];
   }
-  .circular-progress.progress__success .progress-bar {
+  .circular-progress.progress__success .circular-progress__progress {
     @apply stroke-[var(--success-color-200)];
   }
-  .circular-progress.progress__failure .progress-bar {
+  .circular-progress.progress__failure .circular-progress__progress {
     @apply stroke-[var(--failure-color-200)];
   }
-  .circular-progress.progress__warning .progress-bar {
+  .circular-progress.progress__warning .circular-progress__progress {
     @apply stroke-[var(--warning-color-200)];
   }
-  .circular-progress.progress__dark .progress-bar {
+  .circular-progress.progress__dark .circular-progress__progress {
     @apply stroke-[var(--dark-color)] dark:stroke-[var(--light-color)];
   }
-  .circular-progress.progress__light .progress-bar {
+  .circular-progress.progress__light .circular-progress__progress {
     @apply stroke-[var(--light-color)] dark:stroke-[var(--dark-color)];
   }
 }

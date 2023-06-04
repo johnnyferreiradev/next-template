@@ -12,4 +12,36 @@
     @apply h-full w-0 bg-[var(--primary-color-200)];
     @apply transition-[width] duration-[0.3s] ease-[ease-in-out];
   }
+
+  /* Colors */
+  .progress-bar.progress__primary .progress-bar__progress {
+    @apply bg-[var(--primary-color-200)];
+  }
+  .progress-bar.progress__secondary .progress-bar__progress {
+    @apply bg-[var(--secondary-color-200)];
+  }
+  .progress-bar.progress__tertiary .progress-bar__progress {
+    @apply bg-[var(--tertiary-color-200)];
+  }
+  .progress-bar.progress__quaternary .progress-bar__progress {
+    @apply bg-[var(--quaternary-color-200)];
+  }
+  .progress-bar.progress__quinary .progress-bar__progress {
+    @apply bg-[var(--quinary-color-200)];
+  }
+  .progress-bar.progress__success .progress-bar__progress {
+    @apply bg-[var(--success-color-200)];
+  }
+  .progress-bar.progress__failure .progress-bar__progress {
+    @apply bg-[var(--failure-color-200)];
+  }
+  .progress-bar.progress__warning .progress-bar__progress {
+    @apply bg-[var(--warning-color-200)];
+  }
+  .progress-bar.progress__dark .progress-bar__progress {
+    @apply bg-[var(--dark-color)] dark:bg-[var(--light-color)];
+  }
+  .progress-bar.progress__light .progress-bar__progress {
+    @apply bg-[var(--light-color)] dark:bg-[var(--dark-color)];
+  }
 }

@@ -24,6 +24,7 @@ import CircularProgress from '@/components/atom/CircularProgress';
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
 import { ButtonThemes } from '@/components/atom/Button/types';
+import { ProgressBarColors } from '@/components/atom/ProgressBar/types';
 import { CircularProgressColors } from '@/components/atom/CircularProgress/types';
 
 import HelloWorldTextImage from '@/assets/images/hello-world-text.png';
@@ -32,6 +33,7 @@ export default function Home() {
   const colorValueArray = Object.keys(Colors);
   const tagThemesArray = Object.keys(TagThemes);
   const buttonThemesArray = Object.keys(ButtonThemes);
+  const progressBarColors = Object.keys(ProgressBarColors);
   const circularProgressColors = Object.keys(CircularProgressColors);
 
   const { systemTheme, theme, setTheme } = useTheme();
@@ -59,7 +61,14 @@ export default function Home() {
         </CircularProgress>
       ))}
 
-      <ProgressBar progress={10} className="mb-8" />
+      {progressBarColors.map((item, index) => (
+        <ProgressBar
+          key={index}
+          progress={10}
+          color={item as keyof typeof ProgressBarColors}
+          className="mb-8"
+        />
+      ))}
 
       <Loader type="spin" className="mb-8" />
       <Loader type="spinDot" className="mb-8" />

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { CircularProgressProps, CircularProgressColors } from './types';
+import { CircularProgressProps } from './types';
 
 import './styles.css';
 
@@ -25,11 +25,11 @@ export default function CircularProgress({
 
   return (
     <div
-      className={`circular-progress inverted progress__${CircularProgressColors[color]} ${className}`}
+      className={`circular-progress inverted progress__${color} ${className}`}
     >
-      <svg className="progress-circle" viewBox="0 0 100 100">
+      <svg className="circular-progress__circle" viewBox="0 0 100 100">
         <circle
-          className="progress-bar-background"
+          className="circular-progress__background"
           cx="50"
           cy="50"
           r="45"
@@ -38,7 +38,7 @@ export default function CircularProgress({
         />
         <circle
           ref={circleRef}
-          className="progress-bar"
+          className="circular-progress__progress"
           cx="50"
           cy="50"
           r="45"
