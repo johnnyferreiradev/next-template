@@ -21,6 +21,8 @@ import Loader from '@/components/atom/Loader';
 import ProgressBar from '@/components/atom/ProgressBar';
 import CircularProgress from '@/components/atom/CircularProgress';
 
+import Alert from '@/components/molecule/Alert';
+
 import { Colors } from '@/types/globals';
 import { TagThemes } from '@/components/atom/Tag/types';
 import { ButtonThemes } from '@/components/atom/Button/types';
@@ -48,6 +50,8 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Alert />
+
       {circularProgressColors.map((item, index) => (
         <CircularProgress
           key={index}

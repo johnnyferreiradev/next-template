@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .alert {
+    @apply h-full flex items-center justify-between p-4 rounded-xl bg-[var(--warning-color-200)] border-l-4 border-[var(--warning-color-200)];
+    @apply animate-down-slide-fade-in;
+  }
+}

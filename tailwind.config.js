@@ -91,6 +91,15 @@ module.exports = {
           clipPath: 'polygon(50% 0, 50% 0, 100% 100%, 0 100%)',
         },
       },
+      downSlideFadeIn: {
+        '0%': {
+          opacity: 0,
+          translate: '0px -20px',
+        },
+        '100%': {
+          opacity: 1,
+        },
+      },
     },
     animation: {
       'fade-in': 'fadeIn 0.4s linear forwards',
@@ -100,6 +109,7 @@ module.exports = {
       dot: 'dot 1s infinite linear',
       line: 'line1 2s infinite, line2 2s infinite',
       shape: 'shape 2s infinite cubic-bezier(0.3, 1, 0, 1)',
+      'down-slide-fade-in': 'downSlideFadeIn 0.5s linear forwards',
     },
   },
   darkMode: 'class',
