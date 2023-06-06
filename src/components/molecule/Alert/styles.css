@@ -47,6 +47,7 @@
   }
 
   .alert .alert__icon-section .icon,
+  .alert .alert__icon-section svg,
   .alert .alert__info-section .alert__title,
   .alert .alert__right-side .alert__close-section .button .icon,
   .alert .alert__content-section > .text {

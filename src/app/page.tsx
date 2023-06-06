@@ -20,6 +20,7 @@ import Divider from '@/components/atom/Divider';
 import Loader from '@/components/atom/Loader';
 import ProgressBar from '@/components/atom/ProgressBar';
 import CircularProgress from '@/components/atom/CircularProgress';
+import CopyToClipboard from '@/components/molecule/CopyToClipboard';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -50,6 +51,15 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <CopyToClipboard
+        id="copy-1"
+        successCopyMessage="Copiado!"
+        textToCopy="Meu texto a ser copiado"
+        className="mb-8"
+      >
+        <Button theme="primary-flat">Clique aqui</Button>
+      </CopyToClipboard>
+
       <Alert
         title="Título do alerta"
         description="Descrição do alerta"
