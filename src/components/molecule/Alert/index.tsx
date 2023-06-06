@@ -15,38 +15,33 @@ export default function Alert({
   onClose,
   theme = 'warning',
   title,
+  className = '',
 }: AlertProps) {
   return (
     <div
-      className={`alert ${description ? 'align-start' : ''} ${theme}`.trim()}
+      className={`alert alert__${theme} ${
+        description ? 'items-start' : ''
+      } ${className}`.trim()}
     >
-      <div className="left-side">
-        {icon && (
-          <div className="icon-section">
-            <Icon>{icon}</Icon>
-          </div>
-        )}
-        <div className="info-section">
+      <div className="alert__left-side">
+        {icon && <div className="alert__icon-section">{icon}</div>}
+        <div className="alert__info-section">
           {title && (
-            <Text className="alert-title" size="xl" weight="bold">
+            <Text className="alert__title" weight="bold">
               {title}
             </Text>
           )}
           {description && (
-            <Text
-              className="alert-description"
-              color="grayscale400"
-              weight="bold"
-            >
+            <Text className="alert__description" weight="bold">
               {description}
             </Text>
           )}
         </div>
       </div>
-      <div className="right-side">
-        {children && <div className="content-section">{children}</div>}
+      <div className="alert__right-side">
+        {children && <div className="alert__content-section">{children}</div>}
         {onClose && (
-          <div className="close-section">
+          <div className="alert__close-section">
             <Button size="sm" roundButton theme="link-dark" onClick={onClose}>
               <Icon>
                 <X size={20} />

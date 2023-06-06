@@ -11,4 +11,5 @@ export interface AlertProps {
   icon?: React.ReactNode;
   onClose?: () => void;
   theme?: keyof typeof AlertThemes;
+  className?: string;
 }

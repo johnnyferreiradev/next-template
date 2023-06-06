@@ -50,7 +50,35 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
-      <Alert />
+      <Alert
+        title="Título do alerta"
+        description="Descrição do alerta"
+        icon={<User />}
+        onClose={() => undefined}
+        className="mb-8"
+      >
+        <Text size="lg">Warning</Text>
+      </Alert>
+
+      <Alert
+        title="Título do alerta"
+        icon={<User />}
+        onClose={() => undefined}
+        theme="success"
+        className="mb-8"
+      >
+        <Text size="lg">Success</Text>
+      </Alert>
+
+      <Alert
+        title="Título do alerta"
+        icon={<User />}
+        onClose={() => undefined}
+        theme="failure"
+        className="mb-8"
+      >
+        <Text size="lg">Failure</Text>
+      </Alert>
 
       {circularProgressColors.map((item, index) => (
         <CircularProgress

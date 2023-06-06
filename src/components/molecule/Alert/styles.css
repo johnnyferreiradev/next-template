@@ -4,7 +4,74 @@
 
 @layer components {
   .alert {
-    @apply h-full flex items-center justify-between p-4 rounded-xl bg-[var(--warning-color-200)] border-l-4 border-[var(--warning-color-200)];
-    @apply animate-down-slide-fade-in;
+    @apply h-full flex items-center justify-between p-4 rounded-xl border-l-4;
+    @apply bg-[var(--grayscale-color-100)] animate-down-slide-fade-in;
+  }
+
+  .alert .alert__left-side,
+  .alert .alert__right-side {
+    @apply flex items-center;
+  }
+
+  .alert .alert__left-side {
+    @apply items-start pr-8;
+  }
+
+  .alert .alert__icon-section {
+    @apply mr-4;
+  }
+
+  .alert .alert__icon-section .icon,
+  .alert .alert__icon-section svg {
+    @apply text-lg;
+  }
+
+  .alert .alert__info-section .alert__title {
+    @apply leading-5;
+  }
+
+  .alert .alert__info-section .alert__description {
+    @apply mt-1 text-[var(--grayscale-color-500)];
+  }
+
+  .alert .alert__right-side {
+    @apply -m-2;
+  }
+
+  .alert .alert__right-side .alert__close-section {
+    @apply pl-8;
+  }
+
+  .alert .alert__right-side .alert__close-section .button {
+    @apply w-9 h-9 hover:bg-[var(--grayscale-color-300)];
+  }
+
+  .alert .alert__icon-section .icon,
+  .alert .alert__info-section .alert__title,
+  .alert .alert__right-side .alert__close-section .button .icon,
+  .alert .alert__content-section > .text {
+    @apply text-[var(--dark-color)] dark:text-[var(--dark-color)];
+  }
+
+  /* Themes */
+  .alert.alert__success {
+    @apply bg-[var(--success-color-100)] border-[var(--success-color-200)];
+  }
+  .alert.alert__success .alert__close-section .button {
+    @apply hover:bg-[var(--success-color-200)];
+  }
+
+  .alert.alert__failure {
+    @apply bg-[var(--failure-color-100)] border-[var(--failure-color-200)];
+  }
+  .alert.alert__failure .alert__close-section .button {
+    @apply hover:bg-[var(--failure-color-200)];
+  }
+
+  .alert.alert__warning {
+    @apply bg-[var(--warning-color-100)] border-[var(--warning-color-200)];
+  }
+  .alert.alert__warning .alert__close-section .button {
+    @apply hover:bg-[var(--warning-color-200)];
   }
 }
