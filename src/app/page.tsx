@@ -22,6 +22,7 @@ import ProgressBar from '@/components/atom/ProgressBar';
 import CircularProgress from '@/components/atom/CircularProgress';
 import CopyToClipboard from '@/components/molecule/CopyToClipboard';
 import DatePicker from '@/components/molecule/DatePicker';
+import Input from '@/components/molecule/Input';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -52,6 +53,15 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Input
+        id="input-1"
+        label="Label"
+        icon={<User />}
+        placeholder="placeholder"
+        hasError
+        rounded
+      />
+
       <DatePicker
         id="date-picker"
         value={new Date()}
@@ -63,6 +73,8 @@ export default function Home() {
           </Button>
         }
         errorMessage="Erro"
+        hasError
+        rounded
       />
       <DatePicker
         id="date-picker"

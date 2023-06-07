@@ -15,10 +15,6 @@
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-200)] placeholder-[var(--grayscale-color-100)];
   }
 
-  .datepicker.has-error .input-content {
-    @apply border-[var(--failure-color-200)];
-  }
-
   .datepicker > label {
     @apply block text-sm text-[var(--grayscale-color-400)] mb-1;
   }
@@ -26,6 +22,10 @@
   .datepicker > .input-content {
     @apply flex items-center py-2 px-3 border;
     @apply rounded-xl border-solid;
+  }
+
+  .datepicker.datepicker__rounded > .input-content {
+    @apply rounded-full;
   }
 
   .datepicker > .input-content > .icon,
@@ -215,6 +215,9 @@
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
   }
+  .datepicker.datepicker__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
 
   /* Gray */
   .datepicker.datepicker__gray > .input-content {
@@ -233,6 +236,9 @@
     @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
   }
+  .datepicker.datepicker__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
 
   /* Gray primary */
   .datepicker.datepicker__gray-primary > .input-content {
@@ -250,6 +256,9 @@
   .datepicker.datepicker__gray-primary.disabled > .input-content input {
     @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .datepicker.datepicker__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
   }
 
   /* No border */
@@ -286,5 +295,8 @@
   .datepicker.datepicker__shadow.disabled > .input-content input {
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .datepicker.datepicker__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
   }
 }

@@ -36,10 +36,10 @@ export default function DatePicker({
     <div
       className={`datepicker ${className || ''} ${disabled ? 'disabled' : ''} ${
         hasError ? 'has-error' : ''
-      } datepicker__${theme}`.trim()}
+      } datepicker__${theme} ${rounded ? 'datepicker__rounded' : ''}`.trim()}
     >
       {label && <label htmlFor={id}>{label}</label>}
-      <div className={`input-content ${rounded ? 'rounded' : ''}`}>
+      <div className="input-content">
         {icon}
         <ReactDatePicker
           selected={value}

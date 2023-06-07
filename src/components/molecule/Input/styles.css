@@ -3,5 +3,152 @@
 @tailwind utilities;
 
 @layer components {
+  .input > label {
+    @apply mb-1 block text-sm h-4 text-[var(--grayscale-color-400)];
+  }
 
+  .input > .input-content {
+    @apply flex items-center py-2 px-3 rounded-xl;
+  }
+
+  .input.input__rounded > .input-content {
+    @apply rounded-full;
+  }
+
+  .input > .input-content .icon,
+  .input > .input-content svg {
+    @apply mr-2 text-lg text-[var(--primary-color-200)];
+  }
+
+  .input > .input-content input {
+    @apply w-full text-lg border-none outline-none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  .input > .input-content input::-webkit-inner-spin-button,
+  .input > .input-content input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  .input
+    > .input-content
+    input[type='time']::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .input > .input-content .input-actions {
+    @apply ml-3;
+  }
+
+  .input > .input-count {
+    @apply mt-1 flex justify-end h-4;
+  }
+
+  .input .input-error-message {
+    @apply mt-1;
+  }
+
+  /* Themes */
+  /* Default */
+  .input.input__default > .input-content {
+    @apply border border-[var(--grayscale-color-200)] bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-700)] dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .input.input__default > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .input.input__default.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .input.input__default.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
+
+  /* Gray */
+  .input.input__gray > .input-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)];
+  }
+  .input.input__gray > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__gray.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .input.input__gray.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
+
+  /* Gray primary */
+  .input.input__gray-primary > .input-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .input.input__gray-primary > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__gray-primary.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .input.input__gray-primary.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
+
+  /* No border */
+  .input.input__noBorder > .input-content {
+    @apply border-none bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .input.input__noBorder > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .input.input__noBorder.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .input.input__noBorder.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+
+  /* Shadow */
+  .input.input__shadow > .input-content {
+    @apply border-none shadow-md bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)] dark:shadow-[var(--grayscale-color-900)];
+  }
+  .input.input__shadow > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .input.input__shadow.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .input.input__shadow.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__default.has-error > .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
 }

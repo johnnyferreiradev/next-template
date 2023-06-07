@@ -96,12 +96,12 @@ export default function Input({
     <div
       className={`input ${className || ''} ${disabled ? 'disabled' : ''} ${
         hasError ? 'has-error' : ''
-      } ${rounded ? 'rounded' : ''} input__${theme}`.trim()}
+      } input__${theme} ${rounded ? 'input__rounded' : ''}`.trim()}
     >
       {(label || placeholderAsLabel) && (
         <label htmlFor={id}>{renderLabel()}</label>
       )}
-      <div className="input-content">
+      <div className={`input-content`}>
         {icon}
         {!mask && (
           <input
