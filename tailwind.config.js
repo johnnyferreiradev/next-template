@@ -109,7 +109,7 @@ module.exports = {
       dot: 'dot 1s infinite linear',
       line: 'line1 2s infinite, line2 2s infinite',
       shape: 'shape 2s infinite cubic-bezier(0.3, 1, 0, 1)',
-      'down-slide-fade-in': 'downSlideFadeIn 0.5s linear forwards',
+      'down-slide-fade-in': 'downSlideFadeIn 0.2s linear forwards',
     },
   },
   darkMode: 'class',

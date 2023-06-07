@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .datepicker {
+    @apply w-full;
+  }
+
+  .datepicker.disabled .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+  }
+
+  .datepicker.disabled input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-200)] placeholder-[var(--grayscale-color-200)];
+  }
+
+  .datepicker.has-error .input-content {
+    @apply border-[var(--failure-color-200)];
+  }
+
+  .datepicker > label {
+    @apply block text-sm text-[var(--grayscale-color-400)] mb-1;
+  }
+
+  .datepicker > .input-content {
+    @apply flex items-center py-2 px-3 border border-[var(--grayscale-color-100)];
+    @apply rounded-xl border-solid focus-within:border-[var(--primary-color-200)];
+  }
+
+  .datepicker > .input-content > .icon,
+  .datepicker > .input-content > svg {
+    @apply text-lg mr-2 text-[var(--primary-color-200)];
+  }
+
+  .datepicker > .input-content input {
+    @apply w-full text-base text-[var(--dark-color)] dark:text-[var(--dark-color)] border-0 outline-none;
+    @apply placeholder-[var(--grayscale-color-200)];
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  .datepicker > .input-content input::-webkit-inner-spin-button,
+  .datepicker > .input-content input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .datepicker
+    > .input-content
+    input[type='time']::-webkit-calendar-picker-indicator {
+    @apply hidden;
+  }
+
+  .datepicker > .input-content > .input-actions {
+    @apply ml-3;
+  }
+
+  .datepicker > .input-error-message {
+    @apply mt-1;
+  }
+
+  .datepicker-popper {
+    @apply px-0 py-4;
+  }
+
+  .datepicker-popper .react-datepicker {
+    @apply shadow-lg opacity-0 animate-down-slide-fade-in;
+    @apply rounded-xl border-0 bg-[var(--light-color)] top-2;
+  }
+
+  .datepicker-popper .react-datepicker__triangle {
+    @apply hidden;
+  }
+
+  .datepicker-popper .react-datepicker__navigation {
+    @apply top-3.5 hover:bg-[var(--grayscale-color-200)] h-7 w-7 rounded-full mx-1;
+  }
+
+  .datepicker-popper .react-datepicker__navigation-icon::before {
+    @apply w-2 h-2 border-[var(--grayscale-color-400)] border-t-2 border-r-2 border-b-0 border-l-0 top-3;
+  }
+
+  .datepicker-popper .react-datepicker__navigation-icon--previous::before {
+    margin-right: 3px;
+  }
+
+  .datepicker-popper .react-datepicker__navigation-icon--next::before {
+    margin-left: 3px;
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__header {
+    @apply pt-4 rounded-full border-0 bg-[var(--light-color)];
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__current-month {
+    @apply text-base font-bold text-[var(--grayscale-color-400)];
+  }
+
+  .datepicker-popper .react-datepicker__day-names {
+    @apply mt-3 flex justify-around px-1.5;
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__day-name {
+    @apply text-[var(--grayscale-color-300)] uppercase text-xs w-7;
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__month
+    .react-datepicker__day:not(.react-datepicker__day--disabled) {
+    @apply w-7 h-7 leading-7;
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__month
+    .react-datepicker__day {
+    @apply text-base rounded-full outline-none transition-all hover:bg-[var(--grayscale-color-300)];
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__day.react-datepicker__day--keyboard-selected {
+    @apply bg-[var(--grayscale-color-100)];
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__day.react-datepicker__day--selected {
+    @apply text-[var(--light-color)] bg-[var(--primary-color-200)] hover:bg-[var(--primary-color-300)];
+  }
+
+  .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__day.react-datepicker__day--disabled {
+    @apply text-[var(--grayscale-color-100)];
+  }
+}
