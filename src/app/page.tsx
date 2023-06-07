@@ -64,6 +64,259 @@ export default function Home() {
         }
         errorMessage="Erro"
       />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        value={new Date()}
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+        className="mb-16"
+      />
+
+      <DatePicker
+        id="date-picker"
+        value={new Date()}
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        value={new Date()}
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+        theme="gray"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray"
+        disabled
+        className="mb-16"
+      />
+
+      <DatePicker
+        id="date-picker"
+        value={new Date()}
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray-primary"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray-primary"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        value={new Date()}
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+        theme="gray-primary"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="gray-primary"
+        disabled
+        className="mb-16"
+      />
+
+      <DatePicker
+        id="date-picker"
+        value={new Date()}
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="noBorder"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="noBorder"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        value={new Date()}
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+        theme="noBorder"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="noBorder"
+        disabled
+        className="mb-16"
+      />
+
+      <DatePicker
+        id="date-picker"
+        value={new Date()}
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="shadow"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="shadow"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        value={new Date()}
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        disabled
+        theme="shadow"
+      />
+      <DatePicker
+        id="date-picker"
+        label="Date picker"
+        icon={<User />}
+        actions={
+          <Button theme="link-primary" size="xs">
+            Teste
+          </Button>
+        }
+        errorMessage="Erro"
+        theme="shadow"
+        disabled
+        className="mb-16"
+      />
 
       <CopyToClipboard
         id="copy-1"

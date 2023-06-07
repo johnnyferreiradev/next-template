@@ -37,7 +37,7 @@ export default function DatePicker({
     <div
       className={`datepicker ${className || ''} ${disabled ? 'disabled' : ''} ${
         hasError ? 'has-error' : ''
-      } ${theme}`.trim()}
+      } datepicker__${theme}`.trim()}
     >
       {label && <label htmlFor={id}>{label}</label>}
       <div className={`input-content ${rounded ? 'rounded' : ''}`}>

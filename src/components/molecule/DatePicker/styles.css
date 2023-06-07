@@ -12,7 +12,7 @@
   }
 
   .datepicker.disabled input {
-    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-200)] placeholder-[var(--grayscale-color-200)];
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-200)] placeholder-[var(--grayscale-color-100)];
   }
 
   .datepicker.has-error .input-content {
@@ -24,8 +24,8 @@
   }
 
   .datepicker > .input-content {
-    @apply flex items-center py-2 px-3 border border-[var(--grayscale-color-100)];
-    @apply rounded-xl border-solid focus-within:border-[var(--primary-color-200)];
+    @apply flex items-center py-2 px-3 border;
+    @apply rounded-xl border-solid;
   }
 
   .datepicker > .input-content > .icon,
@@ -34,8 +34,7 @@
   }
 
   .datepicker > .input-content input {
-    @apply w-full text-base text-[var(--dark-color)] dark:text-[var(--dark-color)] border-0 outline-none;
-    @apply placeholder-[var(--grayscale-color-200)];
+    @apply w-full text-base border-0 outline-none;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
@@ -65,8 +64,8 @@
   }
 
   .datepicker-popper .react-datepicker {
-    @apply shadow-lg opacity-0 animate-down-slide-fade-in;
-    @apply rounded-xl border-0 bg-[var(--light-color)] top-2;
+    @apply shadow-xl opacity-0 animate-down-slide-fade-in;
+    @apply rounded-xl border-0 top-2;
   }
 
   .datepicker-popper .react-datepicker__triangle {
@@ -74,11 +73,11 @@
   }
 
   .datepicker-popper .react-datepicker__navigation {
-    @apply top-3.5 hover:bg-[var(--grayscale-color-200)] h-7 w-7 rounded-full mx-1;
+    @apply top-3.5 h-7 w-7 rounded-full mx-1;
   }
 
   .datepicker-popper .react-datepicker__navigation-icon::before {
-    @apply w-2 h-2 border-[var(--grayscale-color-400)] border-t-2 border-r-2 border-b-0 border-l-0 top-3;
+    @apply w-2 h-2 border-t-2 border-r-2 border-b-0 border-l-0 top-3;
   }
 
   .datepicker-popper .react-datepicker__navigation-icon--previous::before {
@@ -92,13 +91,13 @@
   .datepicker-popper
     .react-datepicker__month-container
     .react-datepicker__header {
-    @apply pt-4 rounded-full border-0 bg-[var(--light-color)];
+    @apply pt-4 rounded-full border-0;
   }
 
   .datepicker-popper
     .react-datepicker__month-container
     .react-datepicker__current-month {
-    @apply text-base font-bold text-[var(--grayscale-color-400)];
+    @apply text-base font-bold;
   }
 
   .datepicker-popper .react-datepicker__day-names {
@@ -108,7 +107,7 @@
   .datepicker-popper
     .react-datepicker__month-container
     .react-datepicker__day-name {
-    @apply text-[var(--grayscale-color-300)] uppercase text-xs w-7;
+    @apply uppercase text-xs w-7;
   }
 
   .datepicker-popper
@@ -122,24 +121,170 @@
     .react-datepicker__month-container
     .react-datepicker__month
     .react-datepicker__day {
-    @apply text-base rounded-full outline-none transition-all hover:bg-[var(--grayscale-color-300)];
+    @apply text-base rounded-full outline-none transition-all;
   }
 
-  .datepicker-popper
+  /* Popper colors */
+  .datepicker .datepicker-popper .react-datepicker {
+    @apply bg-[var(--light-color)];
+    @apply dark:bg-[var(--grayscale-color-800)];
+  }
+  .datepicker
+    .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__header {
+    @apply bg-[var(--light-color)];
+    @apply dark:bg-[var(--grayscale-color-800)];
+  }
+
+  .datepicker
+    .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__header
+    .react-datepicker__current-month {
+    @apply text-[var(--grayscale-color-400)];
+    @apply dark:text-[var(--grayscale-color-200)];
+  }
+
+  .datepicker .datepicker-popper .react-datepicker__navigation {
+    @apply hover:bg-[var(--grayscale-color-200)];
+    @apply dark:hover:bg-[var(--grayscale-color-600)];
+  }
+
+  .datepicker .datepicker-popper .react-datepicker__navigation-icon::before {
+    @apply border-[var(--grayscale-color-400)];
+    @apply dark:border-[var(--grayscale-color-200)];
+  }
+
+  .datepicker
+    .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__day-name {
+    @apply text-[var(--grayscale-color-300)];
+    @apply dark:text-[var(--grayscale-color-500)];
+  }
+
+  .datepicker
+    .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__month
+    .react-datepicker__day {
+    @apply hover:bg-[var(--grayscale-color-300)] text-[var(--grayscale-color-950)];
+    @apply dark:hover:bg-[var(--grayscale-color-600)] dark:text-[var(--light-color)];
+  }
+
+  .datepicker
+    .datepicker-popper
+    .react-datepicker__month-container
+    .react-datepicker__month
+    .react-datepicker__day.react-datepicker__day--selected {
+    @apply text-[var(--light-color)] bg-[var(--primary-color-300)] hover:bg-[var(--primary-color-400)];
+  }
+
+  .datepicker
+    .datepicker-popper
     .react-datepicker__month-container
     .react-datepicker__day.react-datepicker__day--keyboard-selected {
     @apply bg-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)];
   }
 
-  .datepicker-popper
-    .react-datepicker__month-container
-    .react-datepicker__day.react-datepicker__day--selected {
-    @apply text-[var(--light-color)] bg-[var(--primary-color-200)] hover:bg-[var(--primary-color-300)];
-  }
-
-  .datepicker-popper
+  .datepicker
+    .datepicker-popper
     .react-datepicker__month-container
     .react-datepicker__day.react-datepicker__day--disabled {
     @apply text-[var(--grayscale-color-100)];
+    @apply dark:text-[var(--grayscale-color-500)];
+  }
+
+  /* Field themes */
+  /* Default */
+  .datepicker.datepicker__default > .input-content {
+    @apply border border-[var(--grayscale-color-200)] bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-700)] dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .datepicker.datepicker__default > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .datepicker.datepicker__default.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .datepicker.datepicker__default.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+
+  /* Gray */
+  .datepicker.datepicker__gray > .input-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)];
+  }
+  .datepicker.datepicker__gray > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .datepicker.datepicker__gray.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .datepicker.datepicker__gray.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+
+  /* Gray primary */
+  .datepicker.datepicker__gray-primary > .input-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .datepicker.datepicker__gray-primary > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .datepicker.datepicker__gray-primary.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .datepicker.datepicker__gray-primary.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+
+  /* No border */
+  .datepicker.datepicker__noBorder > .input-content {
+    @apply border-none bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .datepicker.datepicker__noBorder > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .datepicker.datepicker__noBorder.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .datepicker.datepicker__noBorder.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+
+  /* Shadow */
+  .datepicker.datepicker__shadow > .input-content {
+    @apply border-none shadow-md bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)] dark:shadow-[var(--grayscale-color-900)];
+  }
+  .datepicker.datepicker__shadow > .input-content input {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .datepicker.datepicker__shadow.disabled > .input-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .datepicker.datepicker__shadow.disabled > .input-content input {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
   }
 }
