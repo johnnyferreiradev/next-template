@@ -25,7 +25,6 @@ export default function DatePicker({
   rounded = false,
   className = '',
   dateFormat = 'dd/MM/yyyy',
-  size = 'md',
 }: DatePickerProps) {
   const handleChange = (date: Date) => {
     if (onChange) {

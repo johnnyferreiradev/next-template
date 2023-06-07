@@ -7,12 +7,6 @@ enum DatePickerThemes {
   'gray-primary' = 'gray-primary',
 }
 
-enum DatePickerSizes {
-  sm = 'sm',
-  md = 'md',
-  lg = 'lg',
-}
-
 export interface DatePickerProps {
   label?: string;
   id?: string;
@@ -30,5 +24,4 @@ export interface DatePickerProps {
   rounded?: boolean;
   className?: string;
   dateFormat?: string;
-  size?: keyof typeof DatePickerSizes;
 }
