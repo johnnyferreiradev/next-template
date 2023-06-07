@@ -60,6 +60,7 @@ export default function Home() {
         placeholder="placeholder"
         hasError
         rounded
+        limit={30}
       />
 
       <DatePicker

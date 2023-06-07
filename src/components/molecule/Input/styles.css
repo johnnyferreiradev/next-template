@@ -70,6 +70,9 @@
   .input.input__default.has-error > .input-content {
     @apply border-[var(--failure-color-200)];
   }
+  .input.input__default .input-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
 
   /* Gray */
   .input.input__gray > .input-content {
@@ -90,6 +93,9 @@
   }
   .input.input__default.has-error > .input-content {
     @apply border-[var(--failure-color-200)];
+  }
+  .input.input__default .input-count .text {
+    @apply text-[var(--grayscale-color-400)];
   }
 
   /* Gray primary */
@@ -112,6 +118,9 @@
   .input.input__default.has-error > .input-content {
     @apply border-[var(--failure-color-200)];
   }
+  .input.input__default .input-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
 
   /* No border */
   .input.input__noBorder > .input-content {
@@ -129,6 +138,9 @@
   .input.input__noBorder.disabled > .input-content input {
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .input.input__default .input-count .text {
+    @apply text-[var(--grayscale-color-400)];
   }
 
   /* Shadow */
@@ -150,5 +162,8 @@
   }
   .input.input__default.has-error > .input-content {
     @apply border-[var(--failure-color-200)];
+  }
+  .input.input__default .input-count .text {
+    @apply text-[var(--grayscale-color-400)];
   }
 }
