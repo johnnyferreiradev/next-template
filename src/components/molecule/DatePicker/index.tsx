@@ -64,7 +64,7 @@ export default function DatePicker({
       </div>
       {errorMessage && (
         <div className="input-error-message">
-          <Text size="sm" color="failure200">
+          <Text size="xs" color="failure200">
             {errorMessage}
           </Text>
         </div>

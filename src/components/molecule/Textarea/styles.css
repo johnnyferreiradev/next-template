@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .textarea > label {
+    @apply mb-1 block text-sm h-4 text-[var(--grayscale-color-400)];
+  }
+
+  .textarea > .textarea-content {
+    @apply flex items-center py-2 px-3 rounded-xl;
+  }
+
+  .textarea.textarea__rounded > .textarea-content {
+    @apply rounded-full;
+  }
+
+  .textarea > .textarea-content .icon,
+  .textarea > .textarea-content svg {
+    @apply mr-2 text-lg text-[var(--primary-color-200)];
+  }
+
+  .textarea > .textarea-content textarea {
+    @apply w-full text-lg border-none outline-none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  .textarea > .textarea-content textarea::-webkit-inner-spin-button,
+  .textarea > .textarea-content textarea::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  .textarea
+    > .textarea-content
+    textarea[type='time']::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .textarea > .textarea-content .textarea-actions {
+    @apply ml-3;
+  }
+
+  .textarea > .textarea-count {
+    @apply mt-1 flex justify-end h-4;
+  }
+
+  .textarea .textarea-error-message {
+    @apply mt-1;
+  }
+
+  /* Themes */
+  /* Default */
+  .textarea.textarea__default > .textarea-content {
+    @apply border border-[var(--grayscale-color-200)] bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-700)] dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .textarea.textarea__default > .textarea-content textarea {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .textarea.textarea__default.disabled > .textarea-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .textarea.textarea__default.disabled > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__default.has-error > .textarea-content {
+    @apply border-[var(--failure-color-200)];
+  }
+  .textarea.textarea__default .textarea-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
+
+  /* Gray */
+  .textarea.textarea__gray > .textarea-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)];
+  }
+  .textarea.textarea__gray > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__gray.disabled > .textarea-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .textarea.textarea__gray.disabled > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__default.has-error > .textarea-content {
+    @apply border-[var(--failure-color-200)];
+  }
+  .textarea.textarea__default .textarea-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
+
+  /* Gray primary */
+  .textarea.textarea__gray-primary > .textarea-content {
+    @apply border border-[var(--grayscale-color-100)] bg-[var(--grayscale-color-100)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-900)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .textarea.textarea__gray-primary > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__gray-primary.disabled > .textarea-content {
+    @apply bg-[var(--grayscale-color-200)] border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:border-[var(--grayscale-color-600)];
+  }
+  .textarea.textarea__gray-primary.disabled > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__default.has-error > .textarea-content {
+    @apply border-[var(--failure-color-200)];
+  }
+  .textarea.textarea__default .textarea-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
+
+  /* No border */
+  .textarea.textarea__noBorder > .textarea-content {
+    @apply border-none bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)];
+  }
+  .textarea.textarea__noBorder > .textarea-content textarea {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .textarea.textarea__noBorder.disabled > .textarea-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .textarea.textarea__noBorder.disabled > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__default .textarea-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
+
+  /* Shadow */
+  .textarea.textarea__shadow > .textarea-content {
+    @apply border-none shadow-md bg-[var(--light-color)] focus-within:border-[var(--primary-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:focus-within:border-[var(--primary-color-400)] dark:shadow-[var(--grayscale-color-900)];
+  }
+  .textarea.textarea__shadow > .textarea-content textarea {
+    @apply bg-[var(--light-color)] text-[var(--dark-color)] placeholder-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)] dark:placeholder-[var(--grayscale-color-600)];
+  }
+  .textarea.textarea__shadow.disabled > .textarea-content {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-700)];
+  }
+  .textarea.textarea__shadow.disabled > .textarea-content textarea {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-400)] placeholder-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--grayscale-color-400)] dark:placeholder-[var(--grayscale-color-500)];
+  }
+  .textarea.textarea__default.has-error > .textarea-content {
+    @apply border-[var(--failure-color-200)];
+  }
+  .textarea.textarea__default .textarea-count .text {
+    @apply text-[var(--grayscale-color-400)];
+  }
+}

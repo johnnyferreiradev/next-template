@@ -23,6 +23,7 @@ import CircularProgress from '@/components/atom/CircularProgress';
 import CopyToClipboard from '@/components/molecule/CopyToClipboard';
 import DatePicker from '@/components/molecule/DatePicker';
 import Input from '@/components/molecule/Input';
+import Textarea from '@/components/molecule/Textarea';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -53,6 +54,8 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Textarea />
+
       <Input
         id="input-1"
         label="Label"
@@ -61,6 +64,8 @@ export default function Home() {
         hasError
         rounded
         limit={30}
+        errorMessage="Error"
+        className="mb-8"
       />
 
       <DatePicker

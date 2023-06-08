@@ -1,41 +1,39 @@
 import { useState } from 'react';
-import MaskedInput from 'react-text-mask';
+import TextareaAutosize from 'react-textarea-autosize';
 
 import Text from '@/components/atom/Text';
 
-import { InputProps } from './types';
+import { TextareaProps } from './types';
 
 import './styles.css';
 
-export default function Input({
-  actions,
+export default function Textarea({
+  autoFocus,
+  autoResize,
   className,
   disabled,
   errorMessage,
   hasError,
-  icon,
   id,
   label,
   limit,
   limitDisplayType = 'always',
-  mask,
   onBlur,
   onChange,
   onFocus,
   onKeyDown,
   placeholder,
   placeholderAsLabel,
-  rounded,
+  rows = 3,
   theme = 'default',
-  type = 'text',
   value,
-}: InputProps) {
+}: TextareaProps) {
   const [count, setCount] = useState(
     value ? value.substring(0, limit).length : 0,
   );
   const [focused, setFocused] = useState(false);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (limit) {
       const newValue = event.target.value.substring(0, limit);
       setCount(newValue.length);
@@ -61,7 +59,7 @@ export default function Input({
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     onKeyDown?.(event);
   };
 
@@ -94,18 +92,16 @@ export default function Input({
 
   return (
     <div
-      className={`input ${className || ''} ${disabled ? 'disabled' : ''} ${
-        hasError ? 'has-error' : ''
-      } input__${theme} ${rounded ? 'input__rounded' : ''}`.trim()}
+      className={`textarea ${hasError ? 'has-error' : ''} textarea__${theme} ${
+        disabled ? 'disabled' : ''
+      } ${className || ''}`.trim()}
     >
       {(label || placeholderAsLabel) && (
         <label htmlFor={id}>{renderLabel()}</label>
       )}
-      <div className="input-content">
-        {icon}
-        {!mask && (
-          <input
-            type={type}
+      <div className="textarea-content">
+        {!autoResize && (
+          <textarea
             id={id}
             name={id}
             placeholder={placeholder}
@@ -115,10 +111,16 @@ export default function Input({
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
             onKeyDown={handleKeyDown}
+            rows={rows}
+            ref={(currentRef) => {
+              if (autoFocus) {
+                currentRef?.focus();
+              }
+            }}
           />
         )}
-        {mask && (
-          <MaskedInput
+        {autoResize && (
+          <TextareaAutosize
             id={id}
             name={id}
             placeholder={placeholder}
@@ -128,16 +130,17 @@ export default function Input({
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
             onKeyDown={handleKeyDown}
-            mask={mask || []}
-            keepCharPositions
-            guide
+            ref={(currentRef) => {
+              if (autoFocus) {
+                currentRef?.focus();
+              }
+            }}
           />
         )}
-        {actions && <div className="input-actions">{actions}</div>}
       </div>
-      {limit && <div className="input-count">{renderCount()}</div>}
+      {limit && <div className="textarea-count">{renderCount()}</div>}
       {errorMessage && (
-        <div className="input-error-message">
+        <div className="textarea-error-message">
           <Text size="xs" color="failure200">
             {errorMessage}
           </Text>
