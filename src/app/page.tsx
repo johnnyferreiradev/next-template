@@ -11,7 +11,7 @@ import Radio from '@/components/atom/Radio';
 import SwitchButton from '@/components/atom/SwitchButton';
 import Collapse from '@/components/atom/Collapse';
 import Icon from '@/components/atom/Icon';
-import Range from '@/components/atom/Range';
+// import Range from '@/components/atom/Range';
 import Tag from '@/components/atom/Tag';
 import Tooltip from '@/components/atom/Tooltip';
 import Button from '@/components/atom/Button';
@@ -24,6 +24,7 @@ import CopyToClipboard from '@/components/molecule/CopyToClipboard';
 import DatePicker from '@/components/molecule/DatePicker';
 import Input from '@/components/molecule/Input';
 import Textarea from '@/components/molecule/Textarea';
+import Select from '@/components/molecule/Select';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -54,7 +55,25 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
-      <Textarea />
+      <Select
+        options={[
+          {
+            label: <Button theme="link-dark">Option 1</Button>,
+            value: 'op1',
+          },
+          {
+            label: <Button theme="link-dark">Option 2</Button>,
+            value: 'op2',
+          },
+        ]}
+        value={{
+          label: <Button theme="link-dark">Option 1</Button>,
+          value: 'op1',
+        }}
+        className="mb-8"
+      />
+
+      <Textarea className="mb-8" />
 
       <Input
         id="input-1"
@@ -488,6 +507,7 @@ export default function Home() {
         </Tag>
       ))}
 
+      {/*
       <Range
         min={0}
         max={100}
@@ -500,7 +520,7 @@ export default function Home() {
           </Icon>
         }
         className="mb-8"
-      />
+      /> */}
 
       <Icon color="primary200" className="mb-8">
         <User />
