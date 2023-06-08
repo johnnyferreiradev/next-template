@@ -357,6 +357,7 @@ export default function Home() {
 
       <Alert
         title="Título do alerta"
+        description="Descrição do alerta"
         icon={<User />}
         onClose={() => undefined}
         theme="success"
@@ -367,6 +368,7 @@ export default function Home() {
 
       <Alert
         title="Título do alerta"
+        description="Descrição do alerta"
         icon={<User />}
         onClose={() => undefined}
         theme="failure"
