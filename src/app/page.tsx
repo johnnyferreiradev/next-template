@@ -25,6 +25,7 @@ import DatePicker from '@/components/molecule/DatePicker';
 import Input from '@/components/molecule/Input';
 import Textarea from '@/components/molecule/Textarea';
 import Select from '@/components/molecule/Select';
+import Dropdown from '@/components/molecule/Dropdown';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -48,6 +49,7 @@ export default function Home() {
 
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState<number[]>([50]);
+  const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
 
   const handleChangePrimaryColor = () => {
     document.documentElement.style.setProperty('--primary-color-200', 'red');
@@ -55,6 +57,37 @@ export default function Home() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Dropdown
+        toggleElement="Clique aqui"
+        open={dropdownIsOpen}
+        setOpen={(value) => {
+          setDropdownIsOpen(value);
+        }}
+        className="mb-16 p-2"
+        contentClassName="p-2"
+      >
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+      </Dropdown>
+
+      <Dropdown
+        toggleElement="Clique aqui"
+        open={dropdownIsOpen}
+        setOpen={(value) => {
+          setDropdownIsOpen(value);
+        }}
+        className="mb-16 ml-56 p-2"
+        contentClassName="p-2"
+        contentPlace="right"
+      >
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+        <div>Dropdown content</div>
+      </Dropdown>
+
       <Select
         options={[
           {

@@ -3,5 +3,24 @@
 @tailwind utilities;
 
 @layer components {
+  .dropdown {
+    @apply relative w-max;
+  }
 
+  .dropdown .dropdown__content.card {
+    @apply absolute w-max z-20 shadow-[var(--grayscale-color-300)] hidden animate-down-slide-fade-in;
+    @apply rounded-md dark:shadow-[var(--grayscale-color-900)];
+  }
+
+  .dropdown.dropdown__open .dropdown__content.card {
+    @apply block;
+  }
+
+  .dropdown.dropdown__open.dropdown__left .dropdown__content.card {
+    @apply left-0;
+  }
+
+  .dropdown.dropdown__open.dropdown__right .dropdown__content.card {
+    @apply right-0;
+  }
 }

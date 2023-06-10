@@ -34,11 +34,15 @@ export default function Dropdown({
       className={`dropdown dropdown__${contentPlace} ${
         open ? 'dropdown__open' : ''
       } ${className}`.trim()}
+      tabIndex={0}
     >
-      {toggleElement}
+      <div className="dropdown__toggle-element" onClick={() => setOpen(!open)}>
+        {toggleElement}
+      </div>
       <Card
-        className={`dropdown__content ${contentClassName}`}
+        className={`dropdown__content ${contentClassName}`.trim()}
         color={dropdownContentColor}
+        boxShadow="shadow-xl"
       >
         {children}
       </Card>
