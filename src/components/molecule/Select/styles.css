@@ -4,7 +4,7 @@
 
 @layer components {
   .select > .react-select-lib .react_select__control {
-    @apply shadow-none border border-[var(--grayscale-color-200)] rounded-xl bg-[var(--light-color)] min-h-[40px];
+    @apply shadow-none border border-[var(--grayscale-color-200)] rounded-xl bg-[var(--light-color)] min-h-[46px];
     @apply dark:border-[var(--grayscale-color-700)] dark:bg-[var(--dark-color)];
   }
 
