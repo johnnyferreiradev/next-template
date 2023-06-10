@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { User, Image as ImageIcon } from '@phosphor-icons/react';
 import { useTheme } from 'next-themes';
+
+import { ModalContext } from '@/contexts/ModalContext';
 
 import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
@@ -37,7 +39,7 @@ import { CircularProgressColors } from '@/components/atom/CircularProgress/types
 
 import HelloWorldTextImage from '@/assets/images/hello-world-text.png';
 
-export default function Home() {
+export default function Documentation() {
   const colorValueArray = Object.keys(Colors);
   const tagThemesArray = Object.keys(TagThemes);
   const buttonThemesArray = Object.keys(ButtonThemes);
@@ -47,6 +49,8 @@ export default function Home() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
+  const modalContext = useContext(ModalContext);
+
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState<number[]>([50]);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
@@ -55,8 +59,18 @@ export default function Home() {
     document.documentElement.style.setProperty('--primary-color-200', 'red');
   };
 
+  const handleShowModal = () => {
+    modalContext?.showModal({
+      title: 'Modal test',
+      subtitle: 'Modal subtitle',
+      content: <Text>Modal content</Text>,
+    });
+  };
+
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Button onClick={handleShowModal}>Show modal</Button>
+
       <Dropdown
         toggleElement="Clique aqui"
         open={dropdownIsOpen}
