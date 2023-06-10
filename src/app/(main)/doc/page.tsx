@@ -69,7 +69,9 @@ export default function Documentation() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
-      <Button onClick={handleShowModal}>Show modal</Button>
+      <Button onClick={handleShowModal} className="mb-8">
+        Show modal
+      </Button>
 
       <Dropdown
         toggleElement="Clique aqui"
