@@ -71,6 +71,73 @@ export default function Home() {
           value: 'op1',
         }}
         className="mb-8"
+        disabled
+      />
+      <Select
+        options={[
+          {
+            label: <Button theme="link-dark">Option 1</Button>,
+            value: 'op1',
+          },
+          {
+            label: <Button theme="link-dark">Option 2</Button>,
+            value: 'op2',
+          },
+        ]}
+        value={{
+          label: <Button theme="link-dark">Option 1</Button>,
+          value: 'op1',
+        }}
+        className="mb-8"
+      />
+      <Select
+        options={[
+          {
+            label: 'Option 1',
+            value: 'op1',
+          },
+          {
+            label: 'Option 2',
+            value: 'op2',
+          },
+        ]}
+        value={[
+          {
+            label: 'Option 1',
+            value: 'op1',
+          },
+          {
+            label: 'Option 2',
+            value: 'op2',
+          },
+        ]}
+        className="mb-8"
+        isMulti
+      />
+      <Select
+        options={[
+          {
+            label: 'Option 1',
+            value: 'op1',
+          },
+          {
+            label: 'Option 2',
+            value: 'op2',
+          },
+        ]}
+        value={[
+          {
+            label: 'Option 1',
+            value: 'op1',
+          },
+          {
+            label: 'Option 2',
+            value: 'op2',
+          },
+        ]}
+        className="mb-8"
+        isMulti
+        disabled
       />
 
       <Textarea className="mb-8" />

@@ -10,6 +10,13 @@
 
   .select
     > .react-select-lib
+    .react_select__control.react_select__control--is-focused {
+    @apply border-[var(--primary-color-100)];
+    @apply dark:border-[var(--primary-color-300)];
+  }
+
+  .select
+    > .react-select-lib
     .react_select__control
     .react_select__value-container {
     @apply p-0;
@@ -21,6 +28,7 @@
     .react_select__value-container
     .react_select__multi-value {
     @apply rounded-xl bg-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)];
   }
 
   .select
@@ -36,7 +44,8 @@
     .react_select__control
     .react_select__value-container
     .react_select__multi-value__label {
-    @apply py-1 px-2;
+    @apply py-1 px-2 text-[var(--dark-color)];
+    @apply dark:text-[var(--light-color)];
   }
 
   .select
@@ -44,7 +53,8 @@
     .react_select__control
     .react_select__value-container
     .react_select__multi-value__remove {
-    @apply rounded-xl bg-[var(--grayscale-color-200)];
+    @apply rounded-xl bg-[var(--grayscale-color-100)] hover:text-[var(--grayscale-color-600)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:hover:text-[var(--grayscale-color-400)];
   }
 
   .select
@@ -82,7 +92,7 @@
     .react_select__control
     .react_select__indicators
     .react_select__indicator {
-    @apply p-1 rounded-full hover:bg-[var(--grayscale-color-100)];
+    @apply p-1 rounded-full hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
   }
 
   .select
@@ -103,7 +113,9 @@
   }
 
   .select > .react-select-lib .react_select__menu {
-    @apply rounded-xl shadow-lg border border-[var(--grayscale-color-200)] overflow-hidden animate-fade-in;
+    @apply rounded-xl shadow-md shadow-[var(--grayscale-color-100)] border border-[var(--grayscale-color-200)] overflow-hidden animate-down-slide-fade-in;
+    @apply bg-[var(--light-color)];
+    @apply dark:shadow-[var(--grayscale-color-800)] dark:bg-[var(--grayscale-color-800)] dark:border-[var(--grayscale-color-700)];
   }
 
   .select > .react-select-lib .react_select__menu .react_select__menu-list {
@@ -116,6 +128,7 @@
     .react_select__menu-list
     .react_select__option {
     @apply p-0 cursor-pointer text-base text-[var(--dark-color)];
+    @apply dark:text-[var(--light-color)];
   }
 
   .select
@@ -124,6 +137,7 @@
     .react_select__menu-list
     .react_select__option.react_select__option--is-focused {
     @apply bg-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-900)];
   }
 
   .select
@@ -132,6 +146,7 @@
     .react_select__menu-list
     .react_select__option.react_select__option--is-selected {
     @apply bg-[var(--grayscale-color-200)] text-[var(--dark-color)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:text-[var(--light-color)];
   }
 
   .select
@@ -145,6 +160,7 @@
 
   .select > .react-select-lib.react_select--is-disabled .react_select__control {
     @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-700)] dark:border-[var(--grayscale-color-900)];
   }
 
   .select
@@ -152,7 +168,28 @@
     .react_select__control
     .react_select__value-container
     .react_select__multi-value {
-    @apply bg-[var(--grayscale-color-100)];
+    @apply bg-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-600)];
+  }
+
+  .select
+    > .react-select-lib.react_select--is-disabled
+    .react_select__control
+    .react_select__value-container
+    .react_select__multi-value
+    .react_select__multi-value__label {
+    @apply text-[var(--grayscale-color-500)];
+    @apply dark:text-[var(--grayscale-color-500)];
+  }
+
+  .select
+    > .react-select-lib.react_select--is-disabled
+    .react_select__control
+    .react_select__value-container
+    .react_select__multi-value
+    .react_select__multi-value__remove {
+    @apply text-[var(--grayscale-color-500)] bg-[var(--grayscale-color-200)];
+    @apply dark:text-[var(--grayscale-color-500)] dark:bg-[var(--grayscale-color-600)];
   }
 
   .select
@@ -161,6 +198,7 @@
     .react_select__value-container
     .react_select__placeholder {
     @apply text-[var(--grayscale-color-200)];
+    @apply dark:text-[var(--grayscale-color-800)];
   }
 
   .select
@@ -170,5 +208,6 @@
     .react_select__indicator
     svg {
     @apply text-[var(--grayscale-color-200)];
+    @apply dark:text-[var(--grayscale-color-800)];
   }
 }
