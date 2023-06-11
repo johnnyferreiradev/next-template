@@ -76,6 +76,7 @@ export default function Documentation() {
         'Description aqui vai uma descrição bem grande, com muitos caracteres',
       icon: <User />,
       position: 'top-right',
+      theme: 'failure',
     });
   };
 

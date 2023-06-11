@@ -1,5 +1,9 @@
 enum ToasterThemes {
   primary = 'primary',
+  secondary = 'secondary',
+  tertiary = 'tertiary',
+  quaternary = 'quaternary',
+  quinary = 'quinary',
   warning = 'warning',
   success = 'success',
   failure = 'failure',

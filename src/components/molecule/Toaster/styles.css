@@ -14,7 +14,7 @@
 
   .toaster .toaster__content {
     @apply w-max min-w-[400px] max-w-[500px] flex justify-between p-4;
-    @apply rounded-xl bg-[var(--light-color)] shadow-md border-l-4 border-[var(--primary-color-200)];
+    @apply rounded-xl bg-[var(--light-color)] shadow-md border-l-4;
     @apply pointer-events-auto dark:bg-[var(--grayscale-color-800)];
   }
 
@@ -52,11 +52,107 @@
   }
 
   .toaster .toaster__content .toaster__right-side .close-section .button {
-    @apply w-8 h-8 hover:bg-[var(--primary-color-100)] text-lg;
-    @apply dark:hover:bg-[var(--primary-color-300)];
+    @apply w-8 h-8 text-lg;
   }
 
   .toaster .toaster__content .toaster__right-side .close-section .button svg {
     @apply text-lg;
+  }
+
+  /* Themes */
+  .toaster.toaster__primary .toaster__content {
+    @apply border-[var(--primary-color-200)];
+  }
+  .toaster.toaster__primary
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--primary-color-100)];
+    @apply dark:hover:bg-[var(--primary-color-300)];
+  }
+
+  .toaster.toaster__secondary .toaster__content {
+    @apply border-[var(--secondary-color-200)];
+  }
+  .toaster.toaster__secondary
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--secondary-color-100)];
+    @apply dark:hover:bg-[var(--secondary-color-300)];
+  }
+
+  .toaster.toaster__tertiary .toaster__content {
+    @apply border-[var(--tertiary-color-200)];
+  }
+  .toaster.toaster__tertiary
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--tertiary-color-100)];
+    @apply dark:hover:bg-[var(--tertiary-color-300)];
+  }
+
+  .toaster.toaster__quaternary .toaster__content {
+    @apply border-[var(--quaternary-color-200)];
+  }
+  .toaster.toaster__quaternary
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--quaternary-color-100)];
+    @apply dark:hover:bg-[var(--quaternary-color-300)];
+  }
+
+  .toaster.toaster__quinary .toaster__content {
+    @apply border-[var(--quinary-color-200)];
+  }
+  .toaster.toaster__quinary
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--quinary-color-100)];
+    @apply dark:hover:bg-[var(--quinary-color-300)];
+  }
+
+  .toaster.toaster__success .toaster__content {
+    @apply border-[var(--success-color-200)];
+  }
+  .toaster.toaster__success
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--success-color-100)];
+    @apply dark:hover:bg-[var(--success-color-300)];
+  }
+
+  .toaster.toaster__failure .toaster__content {
+    @apply border-[var(--failure-color-200)];
+  }
+  .toaster.toaster__failure
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--failure-color-100)];
+    @apply dark:hover:bg-[var(--failure-color-300)];
+  }
+
+  .toaster.toaster__warning .toaster__content {
+    @apply border-[var(--warning-color-200)];
+  }
+  .toaster.toaster__warning
+    .toaster__content
+    .toaster__right-side
+    .close-section
+    .button {
+    @apply hover:bg-[var(--warning-color-100)];
+    @apply dark:hover:bg-[var(--warning-color-300)];
   }
 }
