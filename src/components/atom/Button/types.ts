@@ -46,6 +46,17 @@ export enum ButtonThemes {
   'outline-warning' = 'outline-warning',
   'outline-dark' = 'outline-dark',
   'outline-light' = 'outline-light',
+
+  'gray-primary' = 'gray-primary',
+  'gray-secondary' = 'gray-secondary',
+  'gray-tertiary' = 'gray-tertiary',
+  'gray-quaternary' = 'gray-quaternary',
+  'gray-quinary' = 'gray-quinary',
+  'gray-success' = 'gray-success',
+  'gray-failure' = 'gray-failure',
+  'gray-warning' = 'gray-warning',
+  'gray-dark' = 'gray-dark',
+  'gray-light' = 'gray-light',
 }
 
 enum ButtonSizes {
