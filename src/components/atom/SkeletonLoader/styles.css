@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .skeleton-loader > div {
+    @apply h-max;
+  }
+
+  .skeleton-loader .skeleton-box {
+    @apply inline-block h-6 relative overflow-hidden bg-[var(--grayscale-color-200)] rounded;
+    @apply dark:bg-[var(--grayscale-color-800)];
+  }
+
+  .skeleton-loader .skeleton-box::after {
+    @apply content-[''] absolute top-0 right-0 bottom-0 left-0;
+    @apply bg-[linear-gradient(_90deg,var(--grayscale-color-200),var(--grayscale-color-300),var(--grayscale-color-200)_)];
+    @apply animate-shimmer -translate-x-full;
+    @apply dark:bg-[linear-gradient(_90deg,var(--grayscale-color-800),var(--grayscale-color-700),var(--grayscale-color-800)_)];
+  }
+}

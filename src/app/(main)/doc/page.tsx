@@ -29,6 +29,7 @@ import Input from '@/components/molecule/Input';
 import Textarea from '@/components/molecule/Textarea';
 import Select from '@/components/molecule/Select';
 import Dropdown from '@/components/molecule/Dropdown';
+import SkeletonLoader from '@/components/atom/SkeletonLoader';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -82,6 +83,8 @@ export default function Documentation() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <SkeletonLoader type="paragraph" className="mb-8" />
+
       <Button onClick={handleShowMessage} className="mb-8">
         Show toaster
       </Button>

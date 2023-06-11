@@ -100,6 +100,11 @@ module.exports = {
           opacity: 1,
         },
       },
+      shimmer: {
+        '100%': {
+          transform: 'translateX(100%)',
+        },
+      },
     },
     animation: {
       'fade-in': 'fadeIn 0.4s linear forwards',
@@ -110,6 +115,7 @@ module.exports = {
       line: 'line1 2s infinite, line2 2s infinite',
       shape: 'shape 2s infinite cubic-bezier(0.3, 1, 0, 1)',
       'down-slide-fade-in': 'downSlideFadeIn 0.2s linear forwards',
+      shimmer: 'shimmer 2s infinite',
     },
   },
   darkMode: 'class',
