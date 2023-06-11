@@ -573,7 +573,7 @@ export default function Documentation() {
       <Button
         className="mb-8"
         badge={
-          <Tag theme="primary200" className="rounded-md">
+          <Tag theme="primary300" className="rounded-md">
             Opa
           </Tag>
         }
