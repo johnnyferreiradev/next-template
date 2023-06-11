@@ -2,24 +2,23 @@
 
 import { useContext } from 'react';
 
-import { ThemeContext } from '@/contexts/ThemeContext';
 import { ModalContext } from '@/contexts/ModalContext';
-// import { ToasterContext } from '@/contexts/ToasterContext';
+import { ToasterContext } from '@/contexts/ToasterContext';
 
 import Modal from '@/components/organism/Modal';
+import Toaster from '@/components/molecule/Toaster';
 
 export default function DocumentationLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const themeState = useContext(ThemeContext);
   const modalState = useContext(ModalContext);
-  // const toasterState = useContext(ToasterContext);
+  const toasterState = useContext(ToasterContext);
 
   return (
     <div className="main-layout">
-      {/* <Toaster
+      <Toaster
         actions={toasterState?.toaster.actions}
         description={toasterState?.toaster.description}
         icon={toasterState?.toaster.icon}
@@ -31,7 +30,7 @@ export default function DocumentationLayout({
         position={toasterState?.toaster.position}
       >
         {toasterState?.toaster.children}
-      </Toaster> */}
+      </Toaster>
       {modalState?.modal.show && (
         <Modal
           content={modalState.modal.content}

@@ -5,6 +5,7 @@ import { User, Image as ImageIcon } from '@phosphor-icons/react';
 import { useTheme } from 'next-themes';
 
 import { ModalContext } from '@/contexts/ModalContext';
+import { ToasterContext } from '@/contexts/ToasterContext';
 
 import Text from '@/components/atom/Text';
 import Card from '@/components/atom/Card';
@@ -50,6 +51,7 @@ export default function Documentation() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   const modalContext = useContext(ModalContext);
+  const toasterContext = useContext(ToasterContext);
 
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState<number[]>([50]);
@@ -67,8 +69,21 @@ export default function Documentation() {
     });
   };
 
+  const handleShowMessage = () => {
+    toasterContext?.showToaster({
+      title: 'Title',
+      description: 'Description',
+      icon: <User />,
+      position: 'top-right',
+    });
+  };
+
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Button onClick={handleShowMessage} className="mb-8">
+        Show toaster
+      </Button>
+
       <Button onClick={handleShowModal} className="mb-8">
         Show modal
       </Button>

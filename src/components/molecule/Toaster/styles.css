@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .toaster {
+    @apply w-full hidden pointer-events-none animate-down-slide-fade-in;
+    @apply p-8 absolute left-0 z-50;
+  }
+
+  .toaster.toaster_show {
+    @apply flex;
+  }
+
+  .toaster .toaster__content {
+    @apply w-max min-w-[400px] max-w-[700px] flex items-start justify-between p-4;
+    @apply rounded-xl bg-[var(--light-color)] shadow-sm border-l-4 border-[var(--primary-color-200)];
+    @apply pointer-events-auto;
+  }
+
+  .toaster .toaster__content .toaster__left-side,
+  .toaster .toaster__content .toaster__right-side {
+    @apply flex;
+  }
+
+  .toaster .toaster__content .toaster__left-side {
+    @apply items-start pr-8;
+  }
+
+  .toaster .toaster__content .toaster__left-side .icon-section {
+    @apply mr-4;
+  }
+
+  .toaster .toaster__content .toaster__left-side .icon-section svg {
+    @apply text-lg;
+  }
+
+  .toaster .toaster__content .toaster__left-side .toaster-title {
+    @apply leading-5;
+  }
+
+  .toaster .toaster__content .toaster__right-side {
+    @apply items-center;
+  }
+
+  .toaster .toaster__content .toaster__right-side .close-section {
+    @apply pl-8;
+  }
+
+  .toaster .toaster__content .toaster__right-side .close-section .button {
+    @apply w-8 h-8 hover:bg-[var(--primary-color-100)] text-lg;
+  }
+
+  .toaster .toaster__content .toaster__right-side .close-section .button svg {
+    @apply text-lg;
+  }
+}
