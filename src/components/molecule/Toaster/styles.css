@@ -13,9 +13,9 @@
   }
 
   .toaster .toaster__content {
-    @apply w-max min-w-[400px] max-w-[700px] flex items-start justify-between p-4;
-    @apply rounded-xl bg-[var(--light-color)] shadow-sm border-l-4 border-[var(--primary-color-200)];
-    @apply pointer-events-auto;
+    @apply w-max min-w-[400px] max-w-[500px] flex justify-between p-4;
+    @apply rounded-xl bg-[var(--light-color)] shadow-md border-l-4 border-[var(--primary-color-200)];
+    @apply pointer-events-auto dark:bg-[var(--grayscale-color-800)];
   }
 
   .toaster .toaster__content .toaster__left-side,
@@ -28,7 +28,7 @@
   }
 
   .toaster .toaster__content .toaster__left-side .icon-section {
-    @apply mr-4;
+    @apply mr-4 mt-0.5;
   }
 
   .toaster .toaster__content .toaster__left-side .icon-section svg {
@@ -37,6 +37,10 @@
 
   .toaster .toaster__content .toaster__left-side .toaster-title {
     @apply leading-5;
+  }
+
+  .toaster .toaster__content .toaster__left-side .toaster-description {
+    @apply dark:text-[var(--grayscale-color-500)];
   }
 
   .toaster .toaster__content .toaster__right-side {
@@ -49,6 +53,7 @@
 
   .toaster .toaster__content .toaster__right-side .close-section .button {
     @apply w-8 h-8 hover:bg-[var(--primary-color-100)] text-lg;
+    @apply dark:hover:bg-[var(--primary-color-300)];
   }
 
   .toaster .toaster__content .toaster__right-side .close-section .button svg {

@@ -72,7 +72,8 @@ export default function Documentation() {
   const handleShowMessage = () => {
     toasterContext?.showToaster({
       title: 'Title',
-      description: 'Description',
+      description:
+        'Description aqui vai uma descrição bem grande, com muitos caracteres',
       icon: <User />,
       position: 'top-right',
     });

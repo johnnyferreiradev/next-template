@@ -56,11 +56,15 @@ export default function Toaster({
   customClassName += show ? ' toaster_show' : '';
   customClassName += ` toaster__${theme}`;
   customClassName += ` ${positionClasses[position]}`;
-  customClassName += !!description || !!children ? ' text-left' : '';
+  // customClassName += !!description || !!children ? ' items-start' : '';
 
   return (
     <div className={customClassName}>
-      <div className="toaster__content">
+      <div
+        className={`toaster__content ${
+          !description ? 'items-center' : 'items-start'
+        }`.trim()}
+      >
         <div className="toaster__left-side">
           {icon && (
             <div className="icon-section">
@@ -74,7 +78,7 @@ export default function Toaster({
               </Text>
             )}
             {description && (
-              <Text className="toaster-description" color="grayscale500">
+              <Text className="toaster-description" color="grayscale400">
                 {description}
               </Text>
             )}
