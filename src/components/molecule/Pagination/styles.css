@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .pagination {
+    @apply w-full flex items-center;
+  }
+
+  .pagination ul {
+    @apply flex items-center;
+  }
+
+  .pagination ul li {
+    @apply my-0 mr-2;
+    @apply w-max box-border cursor-pointer relative transition-[background] duration-[0.2s];
+    @apply rounded-full border-none outline-none;
+  }
+
+  .pagination ul li a {
+    @apply text-[var(--dark-color)] h-8 min-w-[32px] flex items-center justify-center;
+    @apply dark:text-[var(--light-color)];
+  }
+
+  .pagination ul li:hover a {
+    @apply text-[var(--grayscale-color-500)];
+    @apply dark:text-[var(--grayscale-color-300)];
+  }
+
+  .pagination ul li:disabled,
+  .pagination ul li.disabled {
+    @apply pointer-events-none cursor-default text-[var(--grayscale-color-200)];
+    @apply dark:text-[var(--grayscale-color-600)];
+  }
+
+  .pagination ul li.selected {
+    @apply bg-[var(--primary-color-200)];
+  }
+
+  .pagination ul li.selected:hover {
+    @apply bg-[var(--primary-color-200)] cursor-default;
+  }
+
+  .pagination ul li.selected a {
+    @apply text-[var(--light-color)] font-bold;
+  }
+
+  .pagination ul li.next,
+  .pagination ul li.previous {
+    @apply w-8 h-8;
+  }
+
+  .pagination ul li.next:hover,
+  .pagination ul li.previous:hover {
+    @apply bg-[var(--grayscale-color-100)] w-8 h-8;
+    @apply dark:bg-[var(--grayscale-color-900)];
+  }
+
+  .pagination ul li.next svg,
+  .pagination ul li.previous svg {
+    @apply text-2xl;
+  }
+
+  .pagination ul li.next.disabled svg,
+  .pagination ul li.previous.disabled svg {
+    @apply text-[var(--grayscale-color-200)];
+    @apply dark:text-[var(--grayscale-color-600)];
+  }
+}

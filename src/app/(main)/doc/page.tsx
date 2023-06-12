@@ -31,6 +31,7 @@ import Select from '@/components/molecule/Select';
 import Dropdown from '@/components/molecule/Dropdown';
 import SkeletonLoader from '@/components/atom/SkeletonLoader';
 import TabMenu from '@/components/molecule/TabMenu';
+import Pagination from '@/components/molecule/Pagination';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -85,6 +86,12 @@ export default function Documentation() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <Pagination
+        pageCount={10}
+        onChangePage={() => undefined}
+        className="mb-8"
+      />
+
       <TabMenu
         className="mb-8"
         options={[
