@@ -93,6 +93,7 @@ export default function Documentation() {
             label: 'Option 1',
             active: activeTab === 'option1',
             onClick: (key) => setActiveTab(key),
+            disabled: true,
           },
           {
             key: 'option2',
@@ -108,6 +109,32 @@ export default function Documentation() {
             disabled: true,
           },
         ]}
+      />
+      <TabMenu
+        className="mb-8"
+        options={[
+          {
+            key: 'option1',
+            label: 'Option 1',
+            active: activeTab === 'option1',
+            onClick: (key) => setActiveTab(key),
+            disabled: true,
+          },
+          {
+            key: 'option2',
+            label: 'Option 2',
+            active: activeTab === 'option2',
+            onClick: (key) => setActiveTab(key),
+          },
+          {
+            key: 'option3',
+            label: 'Option 3',
+            active: activeTab === 'option3',
+            onClick: (key) => setActiveTab(key),
+            disabled: true,
+          },
+        ]}
+        type="minimal"
       />
 
       <SkeletonLoader type="paragraph" className="mb-8" />

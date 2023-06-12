@@ -15,4 +15,27 @@
   .tab-menu .button.active-tab {
     @apply text-[var(--primary-color-200)] hover:text-[var(--primary-color-200)] pointer-events-none cursor-default;
   }
+
+  .tab-menu .button.active-tab:disabled {
+    @apply text-[var(--grayscale-color-300)];
+    @apply dark:text-[var(--grayscale-color-600)];
+  }
+
+  /* Minimal style */
+  .tab-menu.minimal {
+    @apply bg-transparent rounded-none p-0;
+  }
+
+  .tab-menu.minimal .button {
+    @apply py-3 px-4 rounded-none;
+  }
+
+  .tab-menu.minimal .button.active-tab {
+    @apply bg-transparent border-b-2 border-solid border-[var(--primary-color-200)];
+  }
+
+  .tab-menu.minimal .button.active-tab:disabled {
+    @apply border-[var(--grayscale-color-300)] text-[var(--grayscale-color-300)];
+    @apply dark:border-[var(--grayscale-color-600)] dark:text-[var(--grayscale-color-600)];
+  }
 }

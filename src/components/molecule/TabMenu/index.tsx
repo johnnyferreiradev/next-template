@@ -4,7 +4,11 @@ import { TabMenuProps, TabOption } from './types';
 
 import './styles.css';
 
-export default function TabMenu({ className = '', options }: TabMenuProps) {
+export default function TabMenu({
+  className = '',
+  options,
+  type = 'classic',
+}: TabMenuProps) {
   const handleTabClick = (option: TabOption) => {
     if (option.onClick) {
       option.onClick(option.key);
@@ -12,7 +16,7 @@ export default function TabMenu({ className = '', options }: TabMenuProps) {
   };
 
   return (
-    <div className={`tab-menu ${className}`.trim()}>
+    <div className={`tab-menu ${type} ${className}`.trim()}>
       {options.map((option, index) => (
         <Button
           key={index}

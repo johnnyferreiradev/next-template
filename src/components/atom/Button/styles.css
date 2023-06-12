@@ -113,66 +113,6 @@
     @apply dark:bg-[var(--grayscale-color-800)] dark:text-[var(--grayscale-color-600)];
   }
 
-  /* Link themes */
-  /* .button.button__link-primary {
-    @apply bg-none text-[var(--primary-color-200)];
-    @apply hover:text-[var(--primary-color-300)];
-  }
-
-  .button.button__link-secondary {
-    @apply bg-none text-[var(--secondary-color-200)];
-    @apply hover:text-[var(--secondary-color-300)];
-  }
-
-  .button.button__link-tertiary {
-    @apply bg-none text-[var(--tertiary-color-200)];
-    @apply hover:text-[var(--tertiary-color-300)];
-  }
-
-  .button.button__link-quaternary {
-    @apply bg-none text-[var(--quaternary-color-200)];
-    @apply hover:text-[var(--quaternary-color-300)];
-  }
-
-  .button.button__link-quinary {
-    @apply bg-none text-[var(--quinary-color-200)];
-    @apply hover:text-[var(--quinary-color-300)];
-  }
-
-  .button.button__link-gray {
-    @apply bg-none text-[var(--grayscale-color-400)];
-    @apply hover:text-[var(--grayscale-color-500)];
-  }
-
-  .button.button__link-success {
-    @apply bg-none text-[var(--success-color-200)];
-    @apply hover:text-[var(--success-color-300)];
-  }
-
-  .button.button__link-failure {
-    @apply bg-none text-[var(--failure-color-200)];
-    @apply hover:text-[var(--failure-color-300)];
-  }
-
-  .button.button__link-warning {
-    @apply bg-none text-[var(--warning-color-200)];
-    @apply hover:text-[var(--warning-color-300)];
-  }
-
-  .button.button__link-dark {
-    @apply bg-none text-[var(--dark-color)];
-    @apply hover:text-[var(--grayscale-color-900)];
-    @apply dark:text-[var(--light-color)] dark:hover:text-[var(--grayscale-color-200)];
-  }
-
-  .button.button__link-light {
-    @apply bg-none text-[var(--light-color)];
-    @apply hover:text-[var(--grayscale-color-200)];
-    @apply dark:text-[var(--dark-color)] dark:hover:text-[var(--grayscale-color-900)];
-  } */
-
-  /*  */
-
   /* Flat themes */
   .button.button__primary-flat {
     @apply bg-none text-[var(--primary-color-200)];

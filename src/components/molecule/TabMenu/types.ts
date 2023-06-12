@@ -6,7 +6,13 @@ export interface TabOption {
   onClick?: (key: string) => void;
 }
 
+enum TabMenuTypes {
+  classic = 'classic',
+  minimal = 'minimal',
+}
+
 export interface TabMenuProps {
   className?: string;
   options: TabOption[];
+  type?: keyof typeof TabMenuTypes;
 }
