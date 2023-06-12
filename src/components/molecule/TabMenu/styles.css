@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tab-menu {
+    @apply w-max flex items-center bg-[var(--grayscale-color-200)] rounded-xl p-1;
+    @apply dark:bg-[var(--grayscale-color-800)];
+  }
+
+  .tab-menu .button {
+    @apply dark:text-[var(--grayscale-color-300)] dark:hover:text-[var(--grayscale-color-400)] rounded-lg;
+  }
+
+  .tab-menu .button.active-tab {
+    @apply text-[var(--primary-color-200)] hover:text-[var(--primary-color-200)] pointer-events-none cursor-default;
+  }
+}

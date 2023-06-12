@@ -30,6 +30,7 @@ import Textarea from '@/components/molecule/Textarea';
 import Select from '@/components/molecule/Select';
 import Dropdown from '@/components/molecule/Dropdown';
 import SkeletonLoader from '@/components/atom/SkeletonLoader';
+import TabMenu from '@/components/molecule/TabMenu';
 
 import Alert from '@/components/molecule/Alert';
 
@@ -57,6 +58,7 @@ export default function Documentation() {
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState<number[]>([50]);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('option1');
 
   const handleChangePrimaryColor = () => {
     document.documentElement.style.setProperty('--primary-color-200', 'red');
@@ -83,6 +85,31 @@ export default function Documentation() {
 
   return (
     <main className="p-16 dark:bg-[var(--dark-color)]">
+      <TabMenu
+        className="mb-8"
+        options={[
+          {
+            key: 'option1',
+            label: 'Option 1',
+            active: activeTab === 'option1',
+            onClick: (key) => setActiveTab(key),
+          },
+          {
+            key: 'option2',
+            label: 'Option 2',
+            active: activeTab === 'option2',
+            onClick: (key) => setActiveTab(key),
+          },
+          {
+            key: 'option3',
+            label: 'Option 3',
+            active: activeTab === 'option3',
+            onClick: (key) => setActiveTab(key),
+            disabled: true,
+          },
+        ]}
+      />
+
       <SkeletonLoader type="paragraph" className="mb-8" />
 
       <Button onClick={handleShowMessage} className="mb-8">
