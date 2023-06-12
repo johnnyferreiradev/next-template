@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, KeyboardEvent } from 'react';
 import { X } from '@phosphor-icons/react';
 
 import { ModalContext } from '@/contexts/ModalContext';
@@ -19,6 +19,7 @@ export default function Modal({
   hideCloseButton,
   subtitle,
   title,
+  disableCloseWithEsc = false,
 }: ModalProps) {
   const modalContext = useContext(ModalContext);
 
@@ -40,6 +41,20 @@ export default function Modal({
       handleClose();
     }
   };
+
+  const handleKeyPress = (event: globalThis.KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      handleClose();
+    }
+  };
+
+  useEffect(() => {
+    if (disableCloseWithEsc) return;
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
 
   return (
     <div className="modal default-scroll" onClick={clickAwayListener}>

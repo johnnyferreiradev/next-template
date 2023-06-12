@@ -9,6 +9,7 @@ export interface Modal {
   hideCloseButton?: boolean;
   title?: string;
   subtitle?: string;
+  disableCloseWithEsc?: boolean;
 }
 
 export interface ModalParams extends Omit<Modal, 'show'> {}

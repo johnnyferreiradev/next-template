@@ -40,6 +40,7 @@ export default function DocumentationLayout({
           subtitle={modalState.modal.subtitle}
           title={modalState.modal.title}
           width={modalState.modal.width}
+          disableCloseWithEsc={modalState.modal.disableCloseWithEsc}
         />
       )}
       {children}

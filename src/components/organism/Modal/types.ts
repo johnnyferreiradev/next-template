@@ -30,4 +30,5 @@ export interface ModalProps {
   hideCloseButton?: boolean;
   title?: string;
   subtitle?: string;
+  disableCloseWithEsc?: boolean;
 }

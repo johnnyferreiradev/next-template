@@ -16,6 +16,7 @@ const initialState: Modal = {
   hideCloseButton: false,
   title: undefined,
   subtitle: undefined,
+  disableCloseWithEsc: false,
 };
 
 export const ModalContext = createContext<ModalContextProps | null>(null);
