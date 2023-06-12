@@ -98,8 +98,23 @@
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
   }
 
+  .button.button__primary:disabled,
+  .button.button__secondary:disabled,
+  .button.button__tertiary:disabled,
+  .button.button__quaternary:disabled,
+  .button.button__quinary:disabled,
+  .button.button__gray:disabled,
+  .button.button__success:disabled,
+  .button.button__failure:disabled,
+  .button.button__warning:disabled,
+  .button.button__dark:disabled,
+  .button.button__light:disabled {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-300)];
+    @apply dark:bg-[var(--grayscale-color-800)] dark:text-[var(--grayscale-color-600)];
+  }
+
   /* Link themes */
-  .button.button__link-primary {
+  /* .button.button__link-primary {
     @apply bg-none text-[var(--primary-color-200)];
     @apply hover:text-[var(--primary-color-300)];
   }
@@ -154,7 +169,9 @@
     @apply bg-none text-[var(--light-color)];
     @apply hover:text-[var(--grayscale-color-200)];
     @apply dark:text-[var(--dark-color)] dark:hover:text-[var(--grayscale-color-900)];
-  }
+  } */
+
+  /*  */
 
   /* Flat themes */
   .button.button__primary-flat {
@@ -214,6 +231,21 @@
     @apply dark:text-[var(--dark-color)];
   }
 
+  .button.button__primary-flat:disabled,
+  .button.button__secondary-flat:disabled,
+  .button.button__tertiary-flat:disabled,
+  .button.button__quaternary-flat:disabled,
+  .button.button__quinary-flat:disabled,
+  .button.button__gray-flat:disabled,
+  .button.button__success-flat:disabled,
+  .button.button__failure-flat:disabled,
+  .button.button__warning-flat:disabled,
+  .button.button__dark-flat:disabled,
+  .button.button__light-flat:disabled {
+    @apply text-[var(--grayscale-color-300)] hover:bg-transparent;
+    @apply dark:text-[var(--grayscale-color-600)] dark:hover:bg-transparent;
+  }
+
   /* Link themes */
   .button.button__link-primary {
     @apply bg-none text-[var(--primary-color-200)];
@@ -270,6 +302,21 @@
     @apply bg-none text-[var(--light-color)];
     @apply hover:text-[var(--grayscale-color-200)];
     @apply dark:text-[var(--dark-color)] dark:hover:text-[var(--grayscale-color-900)];
+  }
+
+  .button.button__link-primary:disabled,
+  .button.button__link-secondary:disabled,
+  .button.button__link-tertiary:disabled,
+  .button.button__link-quaternary:disabled,
+  .button.button__link-quinary:disabled,
+  .button.button__link-gray:disabled,
+  .button.button__link-success:disabled,
+  .button.button__link-failure:disabled,
+  .button.button__link-warning:disabled,
+  .button.button__link-dark:disabled,
+  .button.button__link-light:disabled {
+    @apply text-[var(--grayscale-color-300)] hover:text-[var(--grayscale-color-300)];
+    @apply dark:text-[var(--grayscale-color-600)] dark:hover:text-[var(--grayscale-color-600)];
   }
 
   /* Outline themes */
@@ -339,6 +386,21 @@
     @apply border border-solid border-[var(--light-color)] dark:border-[var(--dark-color)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply dark:text-[var(--dark-color)];
+  }
+
+  .button.button__outline-primary:disabled,
+  .button.button__outline-secondary:disabled,
+  .button.button__outline-tertiary:disabled,
+  .button.button__outline-quaternary:disabled,
+  .button.button__outline-quinary:disabled,
+  .button.button__outline-gray:disabled,
+  .button.button__outline-success:disabled,
+  .button.button__outline-failure:disabled,
+  .button.button__outline-warning:disabled,
+  .button.button__outline-dark:disabled,
+  .button.button__outline-light:disabled {
+    @apply text-[var(--grayscale-color-300)] border-[var(--grayscale-color-300)] hover:bg-transparent;
+    @apply dark:text-[var(--grayscale-color-600)]  dark:border-[var(--grayscale-color-600)] dark:hover:bg-transparent;
   }
 
   /* Gray themes */
@@ -421,5 +483,19 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--light-color)] active:text-[var(--dark-color)];
     @apply dark:active:bg-[var(--dark-color)] dark:active:text-[var(--light-color)];
+  }
+
+  .button.button__gray-primary:disabled,
+  .button.button__gray-secondary:disabled,
+  .button.button__gray-tertiary:disabled,
+  .button.button__gray-quaternary:disabled,
+  .button.button__gray-quinary:disabled,
+  .button.button__gray-success:disabled,
+  .button.button__gray-failure:disabled,
+  .button.button__gray-warning:disabled,
+  .button.button__gray-dark:disabled,
+  .button.button__gray-light:disabled {
+    @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-300)] hover:bg-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--grayscale-color-800)]  dark:text-[var(--grayscale-color-600)] dark:hover:bg-[var(--grayscale-color-800)];
   }
 }

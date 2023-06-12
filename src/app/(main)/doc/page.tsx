@@ -651,6 +651,7 @@ export default function Documentation() {
           leftIcon={<User />}
           rightIcon={<User />}
           theme={theme as keyof typeof ButtonThemes}
+          disabled
         >
           Button {theme}
         </Button>
