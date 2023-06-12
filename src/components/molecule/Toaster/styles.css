@@ -5,7 +5,7 @@
 @layer components {
   .toaster {
     @apply w-full hidden pointer-events-none animate-down-slide-fade-in;
-    @apply p-8 absolute left-0 z-50;
+    @apply p-8 fixed left-0 z-50;
   }
 
   .toaster.toaster_show {
