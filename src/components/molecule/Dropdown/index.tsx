@@ -42,7 +42,7 @@ export default function Dropdown({
       <Card
         className={`dropdown__content ${contentClassName}`.trim()}
         color={dropdownContentColor}
-        boxShadow="shadow-xl"
+        boxShadow="shadow-lg"
       >
         {children}
       </Card>

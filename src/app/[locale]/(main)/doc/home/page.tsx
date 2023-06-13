@@ -1,4 +1,5 @@
-import Logo from '@/components/atom/Logo';
+'use client';
+
 import Text from '@/components/atom/Text';
 import Button from '@/components/atom/Button';
 import Header from '@/components/organism/Header';
@@ -16,7 +17,7 @@ export default function DocHomepage() {
         <Text size="5xl" weight="bold" align="center" className="mb-12">
           Construindo Harmonia: Crie Aplicações Web com um Design System Moderno
         </Text>
-        <Text size="xl" color="grayscale400" className="mb-8" align="center">
+        <Text size="xl" color="grayscale600" className="mb-8" align="center">
           Construa aplicações web com facilidade usando nosso{' '}
           <Text element="span" size="xl" color="primary300">
             Design System

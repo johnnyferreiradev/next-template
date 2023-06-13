@@ -1,0 +1,13 @@
+{
+	"stack": "react",
+	"host": "https://ms.i18n.useflow.tech",
+	"app_id": "0e32cf7d-1692-4bbc-9258-7710887c4efa",
+	"app_key": "e4224e5a339a892beee50d78bb197dfebfdcbc69",
+	"trans_path": "public/locales",
+	"trans_filename": "translation",
+	"strings": [
+		"Light",
+		"Dark",
+		"System"
+	]
+}

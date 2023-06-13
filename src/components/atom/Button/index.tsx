@@ -8,7 +8,7 @@ function ButtonType({
   onClick,
   to,
   href,
-  className,
+  className = '',
   disabled = false,
   children,
   target = '_self',
@@ -23,7 +23,7 @@ function ButtonType({
 
   if (href) {
     return (
-      <a href={href} className={className} target={target}>
+      <a href={href} target={target} className={className}>
         {children}
       </a>
     );
@@ -34,8 +34,8 @@ function ButtonType({
       <button
         type="button"
         onClick={onClick}
-        className={className}
         disabled={disabled}
+        className={className}
       >
         {children}
       </button>
@@ -43,7 +43,7 @@ function ButtonType({
   }
 
   return (
-    <button type="submit" className={className} disabled={disabled}>
+    <button type="submit" disabled={disabled} className={className}>
       {children}
     </button>
   );
@@ -61,6 +61,10 @@ export default function Button(props: ButtonProps) {
     roundButton = false,
     theme = 'gray',
     children,
+    href,
+    onClick,
+    target,
+    to,
   } = props;
 
   let customClassName = 'button';
@@ -72,7 +76,21 @@ export default function Button(props: ButtonProps) {
   customClassName += className ? ` ${className}` : '';
 
   return (
-    <ButtonType {...props} className={customClassName}>
+    <ButtonType
+      badge={badge}
+      disabled={disabled}
+      fullWidth={fullWidth}
+      href={href}
+      leftIcon={leftIcon}
+      onClick={onClick}
+      rightIcon={rightIcon}
+      roundButton={roundButton}
+      size={size}
+      target={target}
+      theme={theme}
+      to={to}
+      className={customClassName}
+    >
       {leftIcon && <span className="button__left-icon">{leftIcon}</span>}
       {children}
       {rightIcon && <span className="button__right-icon">{rightIcon}</span>}

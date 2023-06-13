@@ -1,4 +1,5 @@
 import Logo from '@/components/atom/Logo';
+import DarkModeSelect from '@/components/organism/DarkModeSelect';
 
 import { HeaderProps } from './types';
 
@@ -21,7 +22,7 @@ export default function Header({
         {rightSideContent && (
           <div className="right-side-content">{rightSideContent}</div>
         )}
-        <p>Dark mode button</p>
+        <DarkModeSelect />
         <p>Language select</p>
       </div>
     </header>
