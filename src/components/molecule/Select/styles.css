@@ -118,7 +118,7 @@
     .react_select__indicators
     .react_select__indicator
     svg {
-    @apply text-[var(--grayscale-color-300)];
+    @apply text-[var(--grayscale-color-400)];
   }
 
   .select
@@ -233,5 +233,61 @@
     svg {
     @apply text-[var(--grayscale-color-200)];
     @apply dark:text-[var(--grayscale-color-800)];
+  }
+
+  /* Themes */
+  /* Gray */
+  .select.select__gray > .react-select-lib .react_select__control {
+    @apply bg-[var(--grayscale-color-100)] border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:bg-[var(--grayscale-color-900)] dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-800)];
+  }
+  .select.select__gray
+    > .react-select-lib
+    .react_select__control.react_select__control--is-focused {
+    @apply border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-800)];
+  }
+
+  /* Shadow */
+  .select.select__shadow > .react-select-lib .react_select__control {
+    @apply shadow-sm bg-[var(--light-color)] border-[var(--light-color)] hover:border-[var(--grayscale-color-100)] hover:shadow-none;
+    @apply dark:bg-[var(--dark-color)] dark:border-[var(--dark-color)] dark:hover:border-[var(--grayscale-color-900)];
+  }
+  .select.select__shadow
+    > .react-select-lib
+    .react_select__control.react_select__control--is-focused {
+    @apply border-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)] shadow-none;
+  }
+
+  /* Light */
+  .select.select__light > .react-select-lib .react_select__control {
+    @apply bg-[var(--light-color)] border-[var(--light-color)] hover:border-[var(--grayscale-color-100)];
+    @apply dark:bg-[var(--dark-color)] dark:border-[var(--dark-color)] dark:hover:border-[var(--grayscale-color-900)];
+  }
+  .select.select__light
+    > .react-select-lib
+    .react_select__control.react_select__control--is-focused {
+    @apply border-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--grayscale-color-900)];
+  }
+
+  /* Dark */
+  .select.select__dark > .react-select-lib .react_select__control {
+    @apply bg-[var(--dark-color)] border-[var(--dark-color)] hover:border-[var(--grayscale-color-900)];
+    @apply dark:bg-[var(--light-color)] dark:border-[var(--light-color)] dark:hover:border-[var(--grayscale-color-100)];
+  }
+  .select.select__dark
+    > .react-select-lib
+    .react_select__control.react_select__control--is-focused {
+    @apply border-[var(--grayscale-color-900)];
+    @apply dark:border-[var(--grayscale-color-100)];
+  }
+  .select.select__dark
+    > .react-select-lib
+    .react_select__control
+    .react_select__indicators
+    .react_select__indicator {
+    @apply hover:bg-[var(--grayscale-color-800)] dark:hover:bg-[var(--grayscale-color-200)];
   }
 }

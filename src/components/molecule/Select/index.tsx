@@ -83,7 +83,7 @@ export default function Select({
 
   return (
     <div
-      className={`select select__${size} select__${menuPlace} ${theme} ${className}`.trim()}
+      className={`select select__${size} select__${menuPlace} select__${theme} ${className}`.trim()}
     >
       {themeContext && (
         <ReactSelect
