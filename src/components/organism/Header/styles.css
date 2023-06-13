@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply w-full px-4 py-2 flex items-center justify-between border-b backdrop-blur-sm;
+    @apply border-[var(--grayscale-color-100)] dark:border-[var(--grayscale-color-800)];
+  }
+
+  .header > .left-side {
+    @apply flex items-center;
+  }
+
+  .header > .left-side .logo {
+    @apply mr-8 w-36;
+  }
+
+  .header > .left-side .left-side-content {
+    @apply flex items-center;
+  }
+
+  .header > .right-side {
+    @apply flex items-center;
+  }
+}

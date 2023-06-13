@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .logo path {
+    @apply fill-[var(--dark-color)] dark:fill-[var(--light-color)];
+  }
+}

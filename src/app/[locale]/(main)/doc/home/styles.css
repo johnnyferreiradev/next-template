@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .doc-homepage {
+    @apply relative flex flex-col justify-center items-center;
+  }
+
+  .doc-homepage .doc-home-header {
+    @apply fixed top-0 z-10;
+  }
+
+  .doc-homepage .doc-home-content {
+    @apply h-full w-full flex items-center justify-center flex-col p-4 pb-28;
+  }
+
+  .doc-homepage .doc-home-content > * {
+    @apply z-10;
+  }
+
+  .doc-homepage .doc-home-content .content-background {
+    @apply w-full h-full absolute top-0 left-0 z-0 opacity-5 backdrop-blur-sm;
+    background: radial-gradient(
+        circle at 20% 22%,
+        var(--primary-color-100) 0%,
+        rgba(252, 70, 107, 0) 10%
+      ),
+      radial-gradient(
+        circle at 81% 56%,
+        var(--secondary-color-200) 0%,
+        rgba(252, 70, 107, 0) 18%
+      );
+  }
+
+  .doc-homepage .doc-home-content .links {
+    @apply flex items-center justify-center;
+  }
+
+  .doc-homepage footer {
+    @apply w-full flex items-center justify-between px-4 py-2 h-14 z-10;
+  }
+}
