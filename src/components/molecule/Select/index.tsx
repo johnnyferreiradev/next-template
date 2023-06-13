@@ -16,7 +16,7 @@ import './styles.css';
 const DropdownIndicator = (props: DropdownIndicatorProps<SelectOption>) => {
   return (
     <components.DropdownIndicator {...props}>
-      <CaretDown size={20} />
+      <CaretDown size={16} />
     </components.DropdownIndicator>
   );
 };
@@ -24,7 +24,7 @@ const DropdownIndicator = (props: DropdownIndicatorProps<SelectOption>) => {
 const ClearIndicator = (props: ClearIndicatorProps<SelectOption>) => {
   return (
     <components.ClearIndicator {...props}>
-      <X size={20} />
+      <X size={16} />
     </components.ClearIndicator>
   );
 };
@@ -32,7 +32,7 @@ const ClearIndicator = (props: ClearIndicatorProps<SelectOption>) => {
 const MultiValueRemove = (props: MultiValueRemoveProps<SelectOption>) => {
   return (
     <components.MultiValueRemove {...props}>
-      <X size={20} />
+      <X size={16} />
     </components.MultiValueRemove>
   );
 };
@@ -52,6 +52,7 @@ export default function Select({
   isOpen,
   className = '',
   theme = 'default',
+  size = 'md',
 }: SelectProps) {
   const themeContext = useContext(ThemeContext);
 
@@ -80,7 +81,7 @@ export default function Select({
   };
 
   return (
-    <div className={`select ${theme} ${className}`.trim()}>
+    <div className={`select select__${size} ${theme} ${className}`.trim()}>
       {themeContext && (
         <ReactSelect
           key={selectKey}

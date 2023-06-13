@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-
+  .select .react_select__control .language-option-label {
+    @apply py-0 px-1;
+  }
 }

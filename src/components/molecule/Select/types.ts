@@ -17,6 +17,13 @@ enum SelectThemes {
   dark = 'dark',
 }
 
+enum SelectSizes {
+  xs = 'xs',
+  sm = 'sm',
+  md = 'md',
+  lg = 'lg',
+}
+
 export interface SelectProps {
   isMulti?: boolean;
   value: SelectedOptionValue | null;
@@ -32,4 +39,5 @@ export interface SelectProps {
   isOpen?: boolean;
   className?: string;
   theme?: keyof typeof SelectThemes;
+  size?: keyof typeof SelectSizes;
 }

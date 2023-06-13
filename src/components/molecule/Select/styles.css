@@ -15,6 +15,23 @@
     @apply dark:border-[var(--primary-color-300)];
   }
 
+  /* Select sizes */
+  .select.select__xs > .react-select-lib .react_select__control {
+    @apply min-h-[28px];
+  }
+
+  .select.select__sm > .react-select-lib .react_select__control {
+    @apply min-h-[36px];
+  }
+
+  .select.select__md > .react-select-lib .react_select__control {
+    @apply min-h-[44px];
+  }
+
+  .select.select__lg > .react-select-lib .react_select__control {
+    @apply min-h-[60px];
+  }
+
   .select
     > .react-select-lib
     .react_select__control
@@ -113,7 +130,7 @@
   }
 
   .select > .react-select-lib .react_select__menu {
-    @apply rounded-md shadow-lg overflow-hidden animate-down-slide-fade-in bg-[var(--light-color)];
+    @apply rounded-md shadow-lg overflow-hidden animate-down-slide-fade-in bg-[var(--light-color)] w-max;
     @apply dark:shadow-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-800)];
   }
 
