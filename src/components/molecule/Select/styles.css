@@ -113,13 +113,12 @@
   }
 
   .select > .react-select-lib .react_select__menu {
-    @apply rounded-xl shadow-md shadow-[var(--grayscale-color-100)] border border-[var(--grayscale-color-200)] overflow-hidden animate-down-slide-fade-in;
-    @apply bg-[var(--light-color)];
-    @apply dark:shadow-[var(--grayscale-color-800)] dark:bg-[var(--grayscale-color-800)] dark:border-[var(--grayscale-color-700)];
+    @apply rounded-md shadow-lg overflow-hidden animate-down-slide-fade-in bg-[var(--light-color)];
+    @apply dark:shadow-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-800)];
   }
 
   .select > .react-select-lib .react_select__menu .react_select__menu-list {
-    @apply py-2 px-0;
+    @apply p-2;
   }
 
   .select
@@ -127,7 +126,7 @@
     .react_select__menu
     .react_select__menu-list
     .react_select__option {
-    @apply p-0 cursor-pointer text-base text-[var(--dark-color)];
+    @apply p-0 cursor-pointer text-base text-[var(--dark-color)] rounded-lg;
     @apply dark:text-[var(--light-color)];
   }
 
