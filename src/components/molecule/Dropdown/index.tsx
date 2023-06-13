@@ -19,7 +19,7 @@ export default function Dropdown({
     const currentTarget = event.currentTarget;
 
     setTimeout(() => {
-      if (!currentTarget.contains(document.activeElement)) {
+      if (!currentTarget.contains(document.activeElement) && open) {
         setOpen(false);
         if (onOutsideClick) {
           onOutsideClick(event);

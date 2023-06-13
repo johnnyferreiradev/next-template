@@ -9,7 +9,7 @@
 
   .dropdown .dropdown__content.card {
     @apply absolute w-max z-20 shadow-[var(--grayscale-color-300)] hidden animate-down-slide-fade-in;
-    @apply rounded-md dark:shadow-[var(--grayscale-color-900)];
+    @apply rounded-md dark:shadow-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-800)];
   }
 
   .dropdown.dropdown__open .dropdown__content.card {
