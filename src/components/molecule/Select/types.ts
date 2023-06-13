@@ -24,6 +24,11 @@ enum SelectSizes {
   lg = 'lg',
 }
 
+enum SelectMenuPlaces {
+  right = 'right',
+  left = 'left',
+}
+
 export interface SelectProps {
   isMulti?: boolean;
   value: SelectedOptionValue | null;
@@ -40,4 +45,5 @@ export interface SelectProps {
   className?: string;
   theme?: keyof typeof SelectThemes;
   size?: keyof typeof SelectSizes;
+  menuPlace?: keyof typeof SelectMenuPlaces;
 }

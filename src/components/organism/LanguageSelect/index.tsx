@@ -49,6 +49,7 @@ export default function LanguageSelect({
         value={selectedOption}
         onChange={(option) => setSelectedOption(option)}
         size="sm"
+        menuPlace="right"
       />
     </div>
   );

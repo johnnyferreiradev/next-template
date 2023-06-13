@@ -53,6 +53,7 @@ export default function Select({
   className = '',
   theme = 'default',
   size = 'md',
+  menuPlace = 'left',
 }: SelectProps) {
   const themeContext = useContext(ThemeContext);
 
@@ -81,7 +82,9 @@ export default function Select({
   };
 
   return (
-    <div className={`select select__${size} ${theme} ${className}`.trim()}>
+    <div
+      className={`select select__${size} select__${menuPlace} ${theme} ${className}`.trim()}
+    >
       {themeContext && (
         <ReactSelect
           key={selectKey}

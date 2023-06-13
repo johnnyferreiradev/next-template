@@ -134,6 +134,14 @@
     @apply dark:shadow-[var(--grayscale-color-900)] dark:bg-[var(--grayscale-color-800)];
   }
 
+  .select.select__left > .react-select-lib .react_select__menu {
+    @apply left-0;
+  }
+
+  .select.select__right > .react-select-lib .react_select__menu {
+    @apply right-0;
+  }
+
   .select > .react-select-lib .react_select__menu .react_select__menu-list {
     @apply p-2;
   }
