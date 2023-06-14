@@ -17,7 +17,7 @@ export default function DocumentationLayout({
   const toasterState = useContext(ToasterContext);
 
   return (
-    <div className="main-layout dark:bg-[var(--dark-color)]">
+    <div className="main-layout">
       <Toaster
         actions={toasterState?.toaster.actions}
         description={toasterState?.toaster.description}

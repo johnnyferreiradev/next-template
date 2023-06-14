@@ -130,68 +130,68 @@
 
   /* Flat themes */
   .button.button__primary-flat {
-    @apply bg-none text-[var(--primary-color-200)];
+    @apply bg-none text-[var(--primary-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
-    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
+    @apply hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__secondary-flat {
-    @apply bg-none text-[var(--secondary-color-200)];
+    @apply bg-none text-[var(--secondary-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__tertiary-flat {
-    @apply bg-none text-[var(--tertiary-color-200)];
+    @apply bg-none text-[var(--tertiary-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__quaternary-flat {
-    @apply bg-none text-[var(--quaternary-color-200)];
+    @apply bg-none text-[var(--quaternary-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__quinary-flat {
-    @apply bg-none text-[var(--quinary-color-200)];
+    @apply bg-none text-[var(--quinary-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-flat {
-    @apply bg-none text-[var(--grayscale-color-400)];
+    @apply bg-none text-[var(--grayscale-color-400)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__success-flat {
-    @apply bg-none text-[var(--success-color-200)];
+    @apply bg-none text-[var(--success-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__failure-flat {
-    @apply bg-none text-[var(--failure-color-200)];
+    @apply bg-none text-[var(--failure-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__warning-flat {
-    @apply bg-none text-[var(--warning-color-200)];
+    @apply bg-none text-[var(--warning-color-200)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__dark-flat {
-    @apply bg-none text-[var(--dark-color)];
+    @apply bg-none text-[var(--dark-color)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
     @apply dark:text-[var(--light-color)];
   }
 
   .button.button__light-flat {
-    @apply bg-none text-[var(--light-color)];
+    @apply bg-none text-[var(--light-color)] border border-solid border-transparent;
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
     @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
     @apply dark:text-[var(--dark-color)];

@@ -143,7 +143,7 @@
   }
 
   .select > .react-select-lib .react_select__menu .react_select__menu-list {
-    @apply p-2;
+    @apply p-2 z-20;
   }
 
   .select

@@ -13,10 +13,24 @@
 
   .doc-homepage .doc-home-content {
     @apply h-full w-full flex items-center justify-center flex-col p-4 pb-28;
+    @apply pt-32 sm:pt-4;
   }
 
   .doc-homepage .doc-home-content > * {
     @apply z-10;
+  }
+
+  .doc-homepage .doc-home-content .title {
+    @apply 2xl:text-5xl xl:text-5xl lg:text-5xl md:text-3xl sm:text-3xl text-3xl;
+    @apply mb-4 sm:mb-12 z-0;
+  }
+
+  .doc-homepage .doc-home-content .subtitle {
+    @apply mb-8 text-base sm:text-xl;
+  }
+
+  .doc-homepage .doc-home-content .subtitle .text {
+    @apply text-base sm:text-xl;
   }
 
   .doc-homepage .doc-home-content .content-background {
@@ -38,6 +52,15 @@
   }
 
   .doc-homepage footer {
-    @apply w-full flex items-center justify-between px-4 py-2 h-14 z-10;
+    @apply w-full flex items-center justify-center px-4 py-2 h-14 z-10;
+    @apply sm:justify-between;
+  }
+
+  .doc-homepage footer .footer-links {
+    @apply hidden sm:block;
+  }
+
+  .doc-homepage footer .profile-link {
+    @apply pl-1;
   }
 }

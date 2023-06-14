@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} default-scroll`}>
+      <body className={`${inter.className} default-scroll dark:bg-[var(--dark-color)]`}>
         <Providers>{children}</Providers>
       </body>
     </html>
