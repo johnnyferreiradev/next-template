@@ -26,7 +26,7 @@ export default function DocHomepage() {
           para uma experiência visualmente coerente.
         </Text>
         <div className="links">
-          <Button className="mr-2" theme="primary" size="xs">
+          <Button className="mr-2" theme="primary">
             Get started
           </Button>
           <Button theme="outline-primary">Git repo</Button>

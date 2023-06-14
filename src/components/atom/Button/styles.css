@@ -42,60 +42,74 @@
   /* Normal themes */
   .button.button__primary {
     @apply bg-[var(--primary-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--primary-color-300)];
+    @apply border border-solid border-[var(--primary-color-200)];
+    @apply hover:bg-[var(--primary-color-300)] hover:border-[var(--primary-color-300)];
   }
 
   .button.button__secondary {
     @apply bg-[var(--secondary-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--secondary-color-300)];
+    @apply border border-solid border-[var(--secondary-color-200)];
+    @apply hover:bg-[var(--secondary-color-300)] hover:border-[var(--secondary-color-300)];
   }
 
   .button.button__tertiary {
     @apply bg-[var(--tertiary-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--tertiary-color-300)];
+    @apply border border-solid border-[var(--tertiary-color-200)];
+    @apply hover:bg-[var(--tertiary-color-300)] hover:border-[var(--tertiary-color-300)];
   }
 
   .button.button__quaternary {
     @apply bg-[var(--quaternary-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--quaternary-color-300)];
+    @apply border border-solid border-[var(--quaternary-color-200)];
+    @apply hover:bg-[var(--quaternary-color-300)] hover:border-[var(--quaternary-color-300)];
   }
 
   .button.button__quinary {
     @apply bg-[var(--quinary-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--quinary-color-300)];
+    @apply border border-solid border-[var(--quinary-color-200)];
+    @apply hover:bg-[var(--quinary-color-300)] hover:border-[var(--quinary-color-300)];
   }
 
   .button.button__gray {
     @apply bg-[var(--grayscale-color-200)] text-[var(--grayscale-color-900)];
     @apply dark:bg-[var(--grayscale-color-900)] dark:text-[var(--grayscale-color-100)];
+    @apply border border-solid border-[var(--grayscale-color-200)] dark:border-[var(--grayscale-color-900)];
     @apply hover:bg-[var(--grayscale-color-300)] dark:hover:bg-[var(--grayscale-color-800)];
+    @apply hover:border-[var(--grayscale-color-300)] dark:hover:border-[var(--grayscale-color-800)];
   }
 
   .button.button__success {
     @apply bg-[var(--success-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--success-color-300)];
+    @apply border border-solid border-[var(--success-color-200)];
+    @apply hover:bg-[var(--success-color-300)] hover:border-[var(--success-color-300)];
   }
 
   .button.button__failure {
     @apply bg-[var(--failure-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--failure-color-300)];
+    @apply border border-solid border-[var(--failure-color-200)];
+    @apply hover:bg-[var(--failure-color-300)] hover:border-[var(--success-color-300)];
   }
 
   .button.button__warning {
     @apply bg-[var(--warning-color-200)] text-[var(--light-color)];
-    @apply hover:bg-[var(--warning-color-300)];
+    @apply border border-solid border-[var(--warning-color-200)];
+    @apply hover:bg-[var(--warning-color-300)] hover:border-[var(--success-color-300)];
   }
 
   .button.button__dark {
     @apply bg-[var(--dark-color)] text-[var(--light-color)];
     @apply dark:bg-[var(--light-color)] dark:text-[var(--dark-color)];
     @apply hover:bg-[var(--grayscale-color-900)] dark:hover:bg-[var(--grayscale-color-100)];
+    @apply border border-solid border-[var(--dark-color)] hover:border-[var(--grayscale-color-900)];
+    @apply dark:border-[var(--light-color)] hover:border-[var(--grayscale-color-100)];
   }
 
   .button.button__light {
     @apply bg-[var(--light-color)] text-[var(--dark-color)];
     @apply dark:bg-[var(--dark-color)] dark:text-[var(--light-color)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply border border-solid border-[var(--light-color)] hover:border-[var(--grayscale-color-100)];
+    @apply dark:border-[var(--dark-color)] hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__primary:disabled,
@@ -111,63 +125,75 @@
   .button.button__light:disabled {
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-300)];
     @apply dark:bg-[var(--grayscale-color-800)] dark:text-[var(--grayscale-color-600)];
+    @apply border-[var(--grayscale-color-100)] dark:border-[var(--grayscale-color-800)];
   }
 
   /* Flat themes */
   .button.button__primary-flat {
     @apply bg-none text-[var(--primary-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__secondary-flat {
     @apply bg-none text-[var(--secondary-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__tertiary-flat {
     @apply bg-none text-[var(--tertiary-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__quaternary-flat {
     @apply bg-none text-[var(--quaternary-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__quinary-flat {
     @apply bg-none text-[var(--quinary-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-flat {
     @apply bg-none text-[var(--grayscale-color-400)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__success-flat {
     @apply bg-none text-[var(--success-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__failure-flat {
     @apply bg-none text-[var(--failure-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__warning-flat {
     @apply bg-none text-[var(--warning-color-200)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__dark-flat {
     @apply bg-none text-[var(--dark-color)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
     @apply dark:text-[var(--light-color)];
   }
 
   .button.button__light-flat {
     @apply bg-none text-[var(--light-color)];
     @apply hover:bg-[var(--grayscale-color-100)] dark:hover:bg-[var(--grayscale-color-900)];
+    @apply hover:border border-solid hover:border-[var(--grayscale-color-100)] dark:hover:border-[var(--grayscale-color-900)];
     @apply dark:text-[var(--dark-color)];
   }
 
@@ -350,6 +376,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--primary-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--primary-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-secondary {
@@ -358,6 +386,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--secondary-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--secondary-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-tertiary {
@@ -366,6 +396,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--tertiary-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--tertiary-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-quaternary {
@@ -374,6 +406,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--quaternary-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--quaternary-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-quinary {
@@ -382,6 +416,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--quinary-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--quinary-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-success {
@@ -390,6 +426,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--success-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--success-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-failure {
@@ -398,6 +436,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--failure-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--failure-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-warning {
@@ -406,6 +446,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--warning-color-200)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--warning-color-200)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-dark {
@@ -414,6 +456,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--dark-color)] active:text-[var(--light-color)];
     @apply dark:active:bg-[var(--light-color)] dark:active:text-[var(--dark-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-light {
@@ -423,6 +467,8 @@
     @apply hover:bg-[var(--grayscale-color-200)] dark:hover:bg-[var(--grayscale-color-800)];
     @apply active:bg-[var(--light-color)] active:text-[var(--dark-color)];
     @apply dark:active:bg-[var(--dark-color)] dark:active:text-[var(--light-color)];
+    @apply border border-solid border-[var(--grayscale-color-100)] hover:border-[var(--grayscale-color-200)];
+    @apply dark:border-[var(--grayscale-color-900)] dark:hover:border-[var(--grayscale-color-900)];
   }
 
   .button.button__gray-primary:disabled,
@@ -437,5 +483,6 @@
   .button.button__gray-light:disabled {
     @apply bg-[var(--grayscale-color-100)] text-[var(--grayscale-color-300)] hover:bg-[var(--grayscale-color-100)];
     @apply dark:bg-[var(--grayscale-color-800)]  dark:text-[var(--grayscale-color-600)] dark:hover:bg-[var(--grayscale-color-800)];
+    @apply border-[var(--grayscale-color-100)] dark:border-[var(--grayscale-color-800)];
   }
 }
