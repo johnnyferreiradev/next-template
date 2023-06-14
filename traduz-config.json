@@ -6,6 +6,11 @@
 	"trans_path": "public/locales",
 	"trans_filename": "translation",
 	"strings": [
+		"Building Harmony: Create Web Applications with a Modern Design System",
+		"Build web applications with ease using our",
+		"Design System",
+		"Reusable components, pre-built styles and a comprehensive guide to a visually coherent experience",
+		"Get started",
 		"Light",
 		"Dark",
 		"System"

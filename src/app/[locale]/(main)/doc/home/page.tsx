@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import Text from '@/components/atom/Text';
 import Button from '@/components/atom/Button';
 import Header from '@/components/organism/Header';
@@ -10,6 +12,8 @@ import './styles.css';
 import { GithubLogo } from '@phosphor-icons/react';
 
 export default function DocHomepage() {
+  const t = useTranslations();
+
   return (
     <div className="doc-homepage w-full h-screen">
       <Header className="doc-home-header" />
@@ -18,19 +22,28 @@ export default function DocHomepage() {
         <div className="content-background"></div>
 
         <Text size="5xl" weight="bold" align="center" className="title">
-          Construindo Harmonia: Crie Aplicações Web com um Design System Moderno
+          {t(
+            'Building Harmony: Create Web Applications with a Modern Design System',
+          )}
         </Text>
-        <Text size="xl" color="grayscale600" className="subtitle" align="center">
-          Construa aplicações web com facilidade usando nosso{' '}
-          <Text element="span" color="primary300">
-            Design System
+        <Text
+          size="xl"
+          color="grayscale600"
+          className="subtitle"
+          align="center"
+        >
+          {t('Build web applications with ease using our')}
+          <Text element="span" color="primary300" className="mx-1">
+            {t('Design System')}.
           </Text>
-          . Componentes reutilizáveis, estilos pré-definidos e um guia completo
-          para uma experiência visualmente coerente.
+          {t(
+            'Reusable components, pre-built styles and a comprehensive guide to a visually coherent experience',
+          )}
+          .
         </Text>
         <div className="links">
           <Button className="mr-2" theme="primary">
-            Get started
+            {t('Get started')}
           </Button>
           <Button
             theme="outline-primary"

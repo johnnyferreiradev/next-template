@@ -4,7 +4,7 @@
 
 @layer components {
   .header {
-    @apply w-full px-4 py-2 flex items-center bg-white/75 dark:bg-slate-950/75 justify-between border-b backdrop-blur-sm;
+    @apply w-full px-4 py-2 flex items-center bg-white/75 dark:bg-black/75 justify-between border-b backdrop-blur-sm;
     @apply border-[var(--grayscale-color-100)] dark:border-[var(--grayscale-color-800)];
   }
 

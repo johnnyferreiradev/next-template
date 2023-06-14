@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import { useLocale } from 'next-intl';
+
+import { DEFAULT_LOCALE } from '@/settings';
 
 import Select from '@/components/molecule/Select';
 import Text from '@/components/atom/Text';
@@ -11,6 +15,10 @@ import './styles.css';
 export default function LanguageSelect({
   className = '',
 }: LanguageSelectProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const locale = useLocale();
+
   const options: SelectOption[] = [
     {
       label: (
@@ -38,19 +46,44 @@ export default function LanguageSelect({
     },
   ];
 
-  const [selectedOption, setSelectedOption] = useState<SelectOption>(
-    options[0],
+  const [selectedOption, setSelectedOption] = useState<SelectOption | null>(
+    null,
   );
+
+  const handleOnChange = (option: SelectOption) => {
+    setSelectedOption(option);
+
+    let newPathname = '';
+
+    if (locale !== DEFAULT_LOCALE) {
+      const parts = pathname.split('/');
+      const language = parts[1];
+      const pathnameWithoutLanguage = pathname.replace('/' + language, '');
+      newPathname = `/${option.value}${pathnameWithoutLanguage}`;
+    } else {
+      newPathname = `/${option.value}${pathname}`;
+    }
+
+    router.push(newPathname);
+  };
+
+  useEffect(() => {
+    const currentLanguageOption = options.find(
+      (option) => option.value === locale,
+    );
+    setSelectedOption(currentLanguageOption || null);
+  }, []);
 
   return (
     <div className={`language-select ${className}`.trim()}>
       <Select
         options={options}
         value={selectedOption}
-        onChange={(option) => setSelectedOption(option)}
+        onChange={handleOnChange}
         size="sm"
         menuPlace="right"
         theme="light"
+        placeholder=""
       />
     </div>
   );
