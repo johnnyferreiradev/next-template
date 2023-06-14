@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} default-scroll dark:bg-[var(--dark-color)]`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} default-scroll dark:bg-[var(--dark-color)]`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
