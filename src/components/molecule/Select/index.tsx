@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import ReactSelect, {
   ClearIndicatorProps,
   components,
@@ -6,6 +6,7 @@ import ReactSelect, {
   MultiValueRemoveProps,
 } from 'react-select';
 import { CaretDown, X } from '@phosphor-icons/react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { ThemeContext } from '@/contexts/ThemeContext';
 
@@ -57,6 +58,8 @@ export default function Select({
 }: SelectProps) {
   const themeContext = useContext(ThemeContext);
 
+  const [instanceId, setInstanceId] = useState<string | null>(null);
+
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Home' || event.key === 'End') {
       event.preventDefault();
@@ -80,6 +83,10 @@ export default function Select({
       onChange(values as SelectOption);
     }
   };
+
+  useEffect(() => {
+    setInstanceId(uuidv4());
+  }, []);
 
   return (
     <div
@@ -126,6 +133,7 @@ export default function Select({
           components={{ DropdownIndicator, ClearIndicator, MultiValueRemove }}
           isDisabled={disabled}
           menuIsOpen={isOpen}
+          instanceId={`react-select__${instanceId}`}
         />
       )}
     </div>
