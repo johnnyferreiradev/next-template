@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .get-started-page {
+  .introduction-page {
     @apply w-full;
+  }
+
+  .introduction-page .text-link {
+    @apply p-0 text-base;
   }
 }

@@ -1,5 +1,9 @@
 'use client';
 
+import { useState } from 'react';
+import { List } from '@phosphor-icons/react';
+import { usePathname } from 'next/navigation';
+
 import Header from '@/components/organism/Header';
 import Footer from '@/components/organism/Footer';
 import Text from '@/components/atom/Text';
@@ -12,11 +16,25 @@ export default function DocumentationLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const activeMenuPath = pathname.split('doc')[1];
+
+  const [mobileNavIsHidden, setMobileNavIsHidden] = useState(true);
+
   return (
     <div className="documentation-layout">
       <Header />
+      <Button
+        leftIcon={<List size={20} />}
+        fullWidth
+        className="doc-menu-button justify-start"
+        theme="link-dark"
+        onClick={() => setMobileNavIsHidden(!mobileNavIsHidden)}
+      >
+        Menu
+      </Button>
       <div className="layout-content">
-        <nav>
+        <nav className={mobileNavIsHidden ? 'nav__hidden' : ''}>
           <div className="nav-group">
             <Text
               color="darkColor"
@@ -26,11 +44,29 @@ export default function DocumentationLayout({
             >
               Get Started
             </Text>
-            <Button theme="link-gray" size="sm" className="mb-1">
+            <Button
+              theme={
+                activeMenuPath === '/get-started/introduction'
+                  ? 'link-primary'
+                  : 'link-gray'
+              }
+              size="sm"
+              className="mb-1"
+              to="/doc/get-started/introduction"
+            >
               Introduction
             </Button>
-            <Button theme="link-gray" size="sm" className="mb-1">
-              Atmoic Design
+            <Button
+              theme={
+                activeMenuPath === '/get-started/atomic-design'
+                  ? 'link-primary'
+                  : 'link-gray'
+              }
+              size="sm"
+              className="mb-1"
+              to="/doc/get-started/atomic-design"
+            >
+              Atomic Design
             </Button>
           </div>
           <div className="nav-group">

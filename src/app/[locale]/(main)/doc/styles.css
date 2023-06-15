@@ -8,7 +8,14 @@
   }
 
   .documentation-layout .header {
-    @apply fixed z-30;
+    @apply fixed z-40;
+  }
+
+  .documentation-layout .doc-menu-button {
+    @apply fixed top-[64px] rounded-none bg-white/75 dark:bg-black/75 backdrop-blur-sm z-30;
+    @apply border border-solid border-b-[var(--grayscale-color-100)] dark:border-b-[var(--grayscale-color-800)];
+    @apply border-t-transparent border-l-transparent border-r-transparent;
+    @apply flex md:hidden;
   }
 
   .documentation-layout .layout-content {
@@ -16,7 +23,13 @@
   }
 
   .documentation-layout .layout-content nav {
-    @apply w-60 h-screen sticky top-16 z-20 pt-16;
+    @apply h-screen block fixed top-32 z-20 w-full backdrop-blur-sm bg-[var(--light-color)];
+    @apply dark:bg-[var(--dark-color)] top-16 z-20 pt-[78px] pl-4 animate-down-slide-fade-in;
+    @apply md:w-60 md:top-0 md:sticky;
+  }
+
+  .documentation-layout .layout-content nav.nav__hidden {
+    @apply hidden md:block;
   }
 
   .documentation-layout .layout-content nav .nav-group {
@@ -24,7 +37,7 @@
   }
 
   .documentation-layout .layout-content nav .nav-group .button {
-    @apply pl-0;
+    @apply pl-0 justify-start;
   }
 
   .documentation-layout .layout-content article {

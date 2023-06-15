@@ -43,7 +43,11 @@ export default function DocHomepage() {
           .
         </Text>
         <div className="links">
-          <Button className="mr-2" theme="primary" to="/doc/get-started">
+          <Button
+            className="mr-2"
+            theme="primary"
+            to="/doc/get-started/introduction"
+          >
             {t('Get started')}
           </Button>
           <Button
