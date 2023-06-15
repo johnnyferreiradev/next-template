@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer {
+    @apply w-full flex items-center justify-center px-4 py-2 h-14 z-10;
+    @apply sm:justify-between;
+  }
+
+  .footer .footer-links {
+    @apply hidden sm:block;
+  }
+
+  .footer .profile-link {
+    @apply pl-1;
+  }
+}

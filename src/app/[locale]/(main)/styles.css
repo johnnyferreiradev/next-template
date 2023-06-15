@@ -50,17 +50,4 @@
   .doc-homepage .doc-home-content .links {
     @apply flex items-center justify-center;
   }
-
-  .doc-homepage footer {
-    @apply w-full flex items-center justify-center px-4 py-2 h-14 z-10;
-    @apply sm:justify-between;
-  }
-
-  .doc-homepage footer .footer-links {
-    @apply hidden sm:block;
-  }
-
-  .doc-homepage footer .profile-link {
-    @apply pl-1;
-  }
 }
