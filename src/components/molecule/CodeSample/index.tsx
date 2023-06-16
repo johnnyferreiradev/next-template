@@ -33,18 +33,20 @@ export default function CodeSample({
         {icon}
         <Text>{title}</Text>
       </div>
-      <SyntaxHighlighter
-        language={language}
-        style={currentTheme === 'dark' ? dark : lightfair}
-        customStyle={{
-          background:
-            currentTheme === 'dark'
-              ? 'var(--grayscale-color-900)'
-              : 'var(--grayscale-color-100)',
-        }}
-      >
-        {codeString}
-      </SyntaxHighlighter>
+      {currentTheme && (
+        <SyntaxHighlighter
+          language={language}
+          style={currentTheme === 'dark' ? dark : lightfair}
+          customStyle={{
+            background:
+              currentTheme === 'dark'
+                ? 'var(--grayscale-color-900)'
+                : 'var(--grayscale-color-100)',
+          }}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      )}
     </div>
   );
 }

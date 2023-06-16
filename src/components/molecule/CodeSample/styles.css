@@ -14,4 +14,13 @@
   .code-sample .code-sample__header .text {
     @apply ml-2;
   }
+
+  .code-sample pre {
+    @apply animate-fade-in block;
+  }
+
+  .code-sample pre code {
+    @apply inline-block break-all;
+    white-space: pre-wrap !important;
+  }
 }

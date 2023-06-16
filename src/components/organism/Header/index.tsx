@@ -5,6 +5,7 @@ import LanguageSelect from '@/components/organism/LanguageSelect';
 import { HeaderProps } from './types';
 
 import './styles.css';
+import Link from 'next/link';
 
 export default function Header({
   className = '',
@@ -14,7 +15,9 @@ export default function Header({
   return (
     <header className={`header ${className}`.trim()}>
       <div className="left-side">
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
         {leftSideContent && (
           <div className="left-side-content">{leftSideContent}</div>
         )}
