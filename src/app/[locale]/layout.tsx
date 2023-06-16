@@ -1,9 +1,21 @@
-import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { Inter } from 'next/font/google';
+
+import { Providers } from './providers';
+
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
   return [{ locale: 'pt-BR' }, { locale: 'en' }];
 }
+
+export const metadata = {
+  title: 'HarmonyUI',
+  description:
+    'Construindo Harmonia: Crie Aplicações Web com um Design System Moderno',
+};
 
 export default async function LocaleLayout({
   children,
@@ -24,8 +36,14 @@ export default async function LocaleLayout({
   }
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${inter.className} default-scroll dark:bg-[var(--dark-color)]`}
+      >
+        <Providers locale={locale} messages={messages}>
+          {children}
+        </Providers>
+      </body>
+    </html>
   );
 }

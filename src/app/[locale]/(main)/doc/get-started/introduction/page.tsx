@@ -20,20 +20,20 @@ export default function IntroductionPage() {
         {t('Introduction')}
       </Text>
       <Text className="mb-4">
-        {t('Welcome to {{project_name}}!', {
+        {t('Welcome to {project_name}!', {
           project_name: PROJECT_NAME,
         })}
       </Text>
       <Divider className="mb-12" />
 
       <Text size="xl" weight="bold" className="mb-6">
-        {t('About {{project_name}}', {
+        {t('About {project_name}', {
           project_name: PROJECT_NAME,
         })}
       </Text>
       <Text className="mb-6">
         {t(
-          '{{project_name}} is a tool/template for creating consistent and efficient interfaces in web applications It has been carefully designed to facilitate development and promote visual harmony throughout your project',
+          '{project_name} is a tool/template for creating consistent and efficient interfaces in web applications_ It has been carefully designed to facilitate development and promote visual harmony throughout your project_',
           {
             project_name: PROJECT_NAME,
           },
@@ -42,7 +42,7 @@ export default function IntroductionPage() {
       <Divider className="mb-12" />
 
       <Text size="xl" weight="bold" className="mb-6">
-        {t('Why use {{project_name}}?', {
+        {t('Why use {project_name}?', {
           project_name: PROJECT_NAME,
         })}
       </Text>
@@ -53,7 +53,7 @@ export default function IntroductionPage() {
               {t('Visual consistency:')}
             </Text>{' '}
             {t(
-              '{{project_name}} provides a comprehensive library of carefully designed components, styles, and patterns that ensure a consistent appearance across all pages and applications',
+              '{project_name} provides a comprehensive library of carefully designed components, styles, and patterns that ensure a consistent appearance across all pages and applications_',
               {
                 project_name: PROJECT_NAME,
               },
@@ -66,7 +66,7 @@ export default function IntroductionPage() {
               {t('Enhanced Productivity:')}
             </Text>{' '}
             {t(
-              'With a vast collection of reusable components and pre-defined styles, you can quickly and efficiently create impressive interfaces, saving time and effort in the development process',
+              'With a vast collection of reusable components and pre-defined styles, you can quickly and efficiently create impressive interfaces, saving time and effort in the development process_',
             )}
           </Text>
         </li>
@@ -76,7 +76,7 @@ export default function IntroductionPage() {
               {t('Ease of Maintenance:')}
             </Text>{' '}
             {t(
-              '{{project_name}} makes it easy to maintain interfaces and implement updates throughout the project Changes made in one place are automatically reflected in all dependent components, simplifying the maintenance process',
+              '{project_name} makes it easy to maintain interfaces and implement updates throughout the project_ Changes made in one place are automatically reflected in all dependent components, simplifying the maintenance process_',
               {
                 project_name: PROJECT_NAME,
               },
@@ -89,7 +89,7 @@ export default function IntroductionPage() {
               {t('Streamlined Workflow:')}
             </Text>{' '}
             {t(
-              'With a well-defined structure, detailed documentation, and a set of powerful tools, {{project_name}} streamlines your development workflow, allowing you to focus on creating an exceptional user experience',
+              'With a well-defined structure, detailed documentation, and a set of powerful tools, {project_name} streamlines your development workflow, allowing you to focus on creating an exceptional user experience_',
               {
                 project_name: PROJECT_NAME,
               },
@@ -104,12 +104,12 @@ export default function IntroductionPage() {
       </Text>
       <Text className="mb-6">
         {t(
-          'In new projects, it is common to start construction by creating a solid foundation of components before implementing the application screens This helps ensure visual consistency and facilitates the reuse of key elements in different parts of the project However, starting from scratch can be time-consuming and repetitive',
+          'In new projects, it is common to start construction by creating a solid foundation of components before implementing the application screens_ This helps ensure visual consistency and facilitates the reuse of key elements in different parts of the project_ However, starting from scratch can be time-consuming and repetitive_',
         )}
       </Text>
       <Text className="mb-6">
         {t(
-          'This is where {{project_name}} comes into play It was created with the aim of providing a robust foundation of ready-to-use components, eliminating the need to build everything from scratch for each new project With {{project_name}}, you can save time and effort by starting with a solid set of pre-defined components and styles',
+          'This is where {project_name} comes into play It was created with the aim of providing a robust foundation of ready-to-use components, eliminating the need to build everything from scratch for each new project_ With {project_name}, you can save time and effort by starting with a solid set of pre-defined components and styles_',
           {
             project_name: PROJECT_NAME,
           },
@@ -121,7 +121,7 @@ export default function IntroductionPage() {
         {t('Technologies Used:')}
       </Text>
       <Text className="mb-6">
-        {t('{{project_name}} is developed using the powerful combination of', {
+        {t('{project_name} is developed using the powerful combination of', {
           project_name: PROJECT_NAME,
         })}{' '}
         <Button
@@ -151,10 +151,10 @@ export default function IntroductionPage() {
           theme="link-primary"
           className="inline-block text-link"
         >
-          Tailwind CSS
-        </Button>
+          Tailwind CSS.
+        </Button>{' '}
         {t(
-          'These technologies are widely recognized and adopted by the web development community, providing a solid foundation for creating modern and responsive interfaces',
+          'These technologies are widely recognized and adopted by the web development community, providing a solid foundation for creating modern and responsive interfaces_',
         )}
       </Text>
       <Divider className="mb-12" />
@@ -164,7 +164,7 @@ export default function IntroductionPage() {
       </Text>
       <Text className="mb-6">
         {t(
-          'In this documentation, you will find everything you need to start using {{project_name}} in your project We will explore design principles, component structure, style guidelines, and how to easily integrate the design system into your application You will also have access to code examples, interactive demos, and best practices to make the most out of {{project_name}}',
+          'In this documentation, you will find everything you need to start using {project_name} in your project_ We will explore design principles, component structure, style guidelines, and how to easily integrate the design system into your application_ You will also have access to code examples, interactive demos, and best practices to make the most out of {project_name}_',
           {
             project_name: PROJECT_NAME,
           },
@@ -172,7 +172,7 @@ export default function IntroductionPage() {
       </Text>
       <Text className="mb-6">
         {t(
-          'We are excited to have you on board, and we hope that {{project_name}} will help you create amazing and consistent interfaces in your web applications',
+          'We are excited to have you on board, and we hope that {project_name} will help you create amazing and consistent interfaces in your web applications_',
           {
             project_name: PROJECT_NAME,
           },
