@@ -41,7 +41,7 @@ export default function Toaster({
       }, time);
       setToasterTimeout(currentTimeout);
     }
-  }, [show, time]);
+  }, [show, time, toasterContext]);
 
   const positionClasses = {
     'top-left': 'top-0 justify-start',

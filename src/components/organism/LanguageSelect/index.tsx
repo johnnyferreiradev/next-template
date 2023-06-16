@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
@@ -19,32 +19,35 @@ export default function LanguageSelect({
   const pathname = usePathname();
   const locale = useLocale();
 
-  const options: SelectOption[] = [
-    {
-      label: (
-        <Text
-          className="language-option-label py-2 px-3 min-w-max"
-          size="sm"
-          weight="bold"
-        >
-          EN
-        </Text>
-      ),
-      value: 'en',
-    },
-    {
-      label: (
-        <Text
-          className="language-option-label py-2 px-3 min-w-max"
-          size="sm"
-          weight="bold"
-        >
-          PT-BR
-        </Text>
-      ),
-      value: 'pt',
-    },
-  ];
+  const options: SelectOption[] = useMemo(
+    () => [
+      {
+        label: (
+          <Text
+            className="language-option-label py-2 px-3 min-w-max"
+            size="sm"
+            weight="bold"
+          >
+            EN
+          </Text>
+        ),
+        value: 'en',
+      },
+      {
+        label: (
+          <Text
+            className="language-option-label py-2 px-3 min-w-max"
+            size="sm"
+            weight="bold"
+          >
+            PT-BR
+          </Text>
+        ),
+        value: 'pt',
+      },
+    ],
+    [],
+  );
 
   const [selectedOption, setSelectedOption] = useState<SelectOption | null>(
     null,
@@ -72,7 +75,7 @@ export default function LanguageSelect({
       (option) => option.value === locale,
     );
     setSelectedOption(currentLanguageOption || null);
-  }, []);
+  }, [locale, options]);
 
   return (
     <div className={`language-select ${className}`.trim()}>

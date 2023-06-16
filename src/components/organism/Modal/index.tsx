@@ -1,4 +1,4 @@
-import { useContext, useEffect, KeyboardEvent } from 'react';
+import { useContext, useEffect, useCallback } from 'react';
 import { X } from '@phosphor-icons/react';
 
 import { ModalContext } from '@/contexts/ModalContext';
@@ -23,12 +23,12 @@ export default function Modal({
 }: ModalProps) {
   const modalContext = useContext(ModalContext);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     modalContext?.closeModal();
     if (onAfterClose) {
       onAfterClose();
     }
-  };
+  }, [modalContext, onAfterClose]);
 
   const clickAwayListener = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> & {
@@ -42,11 +42,14 @@ export default function Modal({
     }
   };
 
-  const handleKeyPress = (event: globalThis.KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      handleClose();
-    }
-  };
+  const handleKeyPress = useCallback(
+    (event: globalThis.KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleClose();
+      }
+    },
+    [handleClose],
+  );
 
   useEffect(() => {
     if (disableCloseWithEsc) return;
@@ -54,7 +57,7 @@ export default function Modal({
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [disableCloseWithEsc, handleKeyPress]);
 
   return (
     <div className="modal default-scroll" onClick={clickAwayListener}>

@@ -74,7 +74,7 @@ export default function DarkModeSelect({
         </Button>
       ),
     );
-  }, [systemTheme]);
+  }, [systemTheme, theme]);
 
   return (
     <div className={`dark-mode-select ${className}`.trim()}>
