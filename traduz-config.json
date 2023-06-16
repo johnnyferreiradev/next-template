@@ -68,6 +68,11 @@
 		"Now you are ready to start using {project_name} in your project_",
 		"Future Updates",
 		"We are continuously working to make {project_name} even more accessible and user-friendly_ In the near future, we plan to release the design system components as a library on npm, allowing you to install and use them in your project with ease_",
-		"Once this update is available, you will be able to install {project_name} directly in your project using the npm package manager_ Stay tuned for our updates and refer to the official documentation for detailed information on how to install using the npm library_"
+		"Once this update is available, you will be able to install {project_name} directly in your project using the npm package manager_ Stay tuned for our updates and refer to the official documentation for detailed information on how to install using the npm library_",
+		"Get Started",
+		"Atoms",
+		"Molecules",
+		"Organisms",
+		"Coming soon"
 	]
 }

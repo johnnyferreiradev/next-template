@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { List } from '@phosphor-icons/react';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import Header from '@/components/organism/Header';
 import Footer from '@/components/organism/Footer';
@@ -16,6 +17,7 @@ export default function DocumentationLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const t = useTranslations();
   const pathname = usePathname();
   const activeMenuPath = pathname.split('doc')[1];
 
@@ -42,7 +44,7 @@ export default function DocumentationLayout({
               weight="semibold"
               className="mb-1"
             >
-              Get Started
+              {t('Get Started')}
             </Text>
             <Button
               theme={
@@ -54,7 +56,7 @@ export default function DocumentationLayout({
               className="mb-1"
               to="/doc/get-started/introduction"
             >
-              Introduction
+              {t('Introduction')}
             </Button>
             <Button
               theme={
@@ -66,7 +68,7 @@ export default function DocumentationLayout({
               className="mb-1"
               to="/doc/get-started/atomic-design"
             >
-              Atomic Design
+              {t('Atomic Design')}
             </Button>
             <Button
               theme={
@@ -78,7 +80,7 @@ export default function DocumentationLayout({
               className="mb-1"
               to="/doc/get-started/installation"
             >
-              Installation
+              {t('Installation')}
             </Button>
           </div>
           <div className="nav-group">
@@ -88,14 +90,17 @@ export default function DocumentationLayout({
               weight="semibold"
               className="mb-1"
             >
-              Atoms
+              {t('Atoms')}
             </Text>
-            <Button theme="link-gray" size="sm" className="mb-1">
+            {/* <Button theme="link-gray" size="sm" className="mb-1">
               Component 1
             </Button>
             <Button theme="link-gray" size="sm" className="mb-1">
               Component 2
-            </Button>
+            </Button> */}
+            <Text color="grayscale500" size="sm" italic>
+              {t('Coming soon')}
+            </Text>
           </div>
           <div className="nav-group">
             <Text
@@ -104,14 +109,17 @@ export default function DocumentationLayout({
               weight="semibold"
               className="mb-1"
             >
-              Molecules
+              {t('Molecules')}
             </Text>
-            <Button theme="link-gray" size="sm" className="mb-1">
+            {/* <Button theme="link-gray" size="sm" className="mb-1">
               Component 1
             </Button>
             <Button theme="link-gray" size="sm" className="mb-1">
               Component 2
-            </Button>
+            </Button> */}
+            <Text color="grayscale500" size="sm" italic>
+              {t('Coming soon')}
+            </Text>
           </div>
           <div className="nav-group">
             <Text
@@ -120,14 +128,17 @@ export default function DocumentationLayout({
               weight="semibold"
               className="mb-1"
             >
-              Organisms
+              {t('Organisms')}
             </Text>
+            {/* <Button theme="link-gray" size="sm" className="mb-1 pl-0">
+              Component 1
+            </Button>
             <Button theme="link-gray" size="sm" className="mb-1 pl-0">
-              Component 1
-            </Button>
-            <Button theme="link-gray" size="sm" className="mb-1 pl-0">
               Component 2
-            </Button>
+            </Button> */}
+            <Text color="grayscale500" size="sm" italic>
+              {t('Coming soon')}
+            </Text>
           </div>
         </nav>
         <article>{children}</article>
