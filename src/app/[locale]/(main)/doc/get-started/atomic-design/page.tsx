@@ -1,6 +1,6 @@
 'use client';
 
-import { CaretRight } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useTranslations } from 'next-intl';
 
 import { PROJECT_NAME } from '@/settings';
@@ -125,13 +125,19 @@ export default function AtomicDesignPage() {
       <Divider className="mb-12" />
 
       <div className="next-actions flex justify-between items-center mb-16">
-        <span></span>
+        <Button
+          leftIcon={<CaretLeft size={20} />}
+          theme="dark-flat"
+          to="/doc/get-started/introduction"
+        >
+          {t('Introduction')}
+        </Button>
         <Button
           rightIcon={<CaretRight size={20} />}
           theme="dark-flat"
-          to="/doc/get-started/atomic-design"
+          to="/doc/get-started/installation"
         >
-          Atomic Design
+          {t('Installation')}
         </Button>
       </div>
     </div>

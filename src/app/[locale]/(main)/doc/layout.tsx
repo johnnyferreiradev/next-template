@@ -68,6 +68,18 @@ export default function DocumentationLayout({
             >
               Atomic Design
             </Button>
+            <Button
+              theme={
+                activeMenuPath === '/get-started/installation'
+                  ? 'link-primary'
+                  : 'link-gray'
+              }
+              size="sm"
+              className="mb-1"
+              to="/doc/get-started/installation"
+            >
+              Installation
+            </Button>
           </div>
           <div className="nav-group">
             <Text
@@ -124,7 +136,3 @@ export default function DocumentationLayout({
     </div>
   );
 }
-
-
-
-

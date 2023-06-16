@@ -55,6 +55,19 @@
 		"With the Atomic Design component library, interface development becomes more efficient_ Predefined components can be easily incorporated into the project, speeding up the creation process and ensuring consistency across all screens_",
 		"{project_name} and Atomic Design",
 		"{project_name} embraces Atomic Design as the methodology for creating and organizing components_ Our library offers a wide range of ready-to-use atoms, molecules, organisms, templates, and pages, enabling you to build amazing interfaces following the principles of Atomic Design_",
-		"Keep exploring our documentation to learn in detail about each level of Atomic Design and how to use the components from {project_name} in your project_"
+		"Keep exploring our documentation to learn in detail about each level of Atomic Design and how to use the components from {project_name} in your project_",
+		"By breaking down components into hierarchical levels, Atomic Design promotes visual consistency throughout the project_ Each component is designed according to established design guidelines, resulting in a cohesive and harmonious interface_",
+		"Installation",
+		"Cloning the Project Repository",
+		"Currently, to use {project_name}, you can clone the project repository directly from GitHub_ Follow the steps below to get started:",
+		"Open your operating system is terminal_",
+		"Navigate to the directory where you want to clone the project_",
+		"Run the following command to clone the repository:",
+		"After the clone is complete, access the project directory:",
+		"Install the necessary dependencies by running the following command:",
+		"Now you are ready to start using {project_name} in your project_",
+		"Future Updates",
+		"We are continuously working to make {project_name} even more accessible and user-friendly_ In the near future, we plan to release the design system components as a library on npm, allowing you to install and use them in your project with ease_",
+		"Once this update is available, you will be able to install {project_name} directly in your project using the npm package manager_ Stay tuned for our updates and refer to the official documentation for detailed information on how to install using the npm library_"
 	]
 }
